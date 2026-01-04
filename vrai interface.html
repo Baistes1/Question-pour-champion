@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions pour un Champion</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+        
+        body {
+            background-color: #000;
+            color: white;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            position: relative;
+        }
+         /* Étoiles animées */
+        .stars {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            z-index: -1; 
+            pointer-events: none;
+        }
+
+        .star {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Partie supérieure */
+        .top-section {
+            height: 65%;
+            background: linear-gradient(to bottom, #012A6D, #005BBB);
+            display: flex;
+            padding: 20px;
+            position: relative;
+        }
+        
+        /* Colonnes des avatars */
+        .avatar-column {
+            width: 15%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        
+        .player {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .avatar {
+            width: 10vmin;
+            height: 10vmin;
+            min-width: 100px;
+            min-height: 100px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #012A6D, #005BBB);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+            overflow: hidden;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            box-shadow: 0 0 0 4px #F2A900, 0 0 20px #F8D54B, 0 0 15px rgba(0, 0, 0, 0.5);
+            border-color: #F8D54B;
+        }
+        
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .points {
+            margin-top: 10px;
+            background-color: #F2A900;
+            color: #012A6D;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-weight: bold;
+            font-size: 2vmin;
+            text-align: center;
+            min-width: 80px;
+        }
+        
+        /* Zone de question */
+        .question-area {
+            width: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 40px;
+        }
+        
+        .question-box {
+            background-color: rgba(32, 69, 213, 0.1);
+            border: 2px solid rgba(255, 225, 0, 0.742);
+            border-radius: 15px;
+            padding: 30px;
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+        }
+        
+        .question-text {
+            font-size: 4vmin;
+            line-height: 1.4;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Séparateur */
+        .separator {
+            height: 3px;
+            background: linear-gradient(to right, transparent, #F8D54B, transparent);
+            box-shadow: 0 0 10px #F2A900;
+        }
+        
+        /* Partie inférieure */
+        .bottom-section {
+            height: 40%;
+            background-color: #001A4D;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        
+       /* Buzzer Timer */
+        .buzzer-area {
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+        .timer-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .timer {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #ff6b6b, #cc0000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 36px;
+            font-weight: bold;
+            color: white;
+            box-shadow: 
+                0 0 40px rgba(255,71,87,0.8), 
+                0 0 80px rgba(0,0,0,0.4),
+                inset 0 -8px 20px rgba(0,0,0,0.3),
+                inset 0 8px 20px rgba(255,255,255,0.2);
+            animation: buzzerPulse 1s infinite;
+            position: relative;
+            cursor: pointer;
+            border: 8px solid #c11d1d;
+        }
+
+        .timer::before {
+            content: '';
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 4px dashed rgba(155, 41, 41, 0.6);
+            animation: rotate 4s linear infinite;
+        }
+
+        .timer::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.3), transparent);
+            top: 0;
+            left: 0;
+        }
+
+        .timer:active {
+            transform: scale(0.95);
+            box-shadow: 
+                0 0 30px rgba(255,71,87,0.9), 
+                0 0 60px rgba(255,71,87,0.5),
+                inset 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        .timer.buzzed {
+            background: radial-gradient(circle at 30% 30%, #66bb6a, #2e7d32);
+            border-color: #1b5e20;
+            box-shadow: 
+                0 0 40px rgba(102,187,106,0.8), 
+                0 0 80px rgba(102,187,106,0.4),
+                inset 0 -8px 20px rgba(0,0,0,0.3),
+                inset 0 8px 20px rgba(255,255,255,0.2);
+            animation: none;
+        }
+
+        .timer.buzzed::before {
+            border-color: rgba(102,187,106,0.6);
+            animation: none;
+        }
+        
+        @keyframes buzzerPulse {
+            0%, 100% { 
+                transform: scale(1); 
+                box-shadow: 
+                    0 0 40px rgba(255,71,87,0.8), 
+                    0 0 80px rgba(255,71,87,0.4),
+                    inset 0 -8px 20px rgba(0,0,0,0.3),
+                    inset 0 8px 20px rgba(255,255,255,0.2);
+            }
+            50% { 
+                transform: scale(1.05); 
+                box-shadow: 
+                    0 0 60px rgba(255,71,87,1), 
+                    0 0 120px rgba(255,71,87,0.6),
+                    inset 0 -8px 20px rgba(0,0,0,0.3),
+                    inset 0 8px 20px rgba(255,255,255,0.2);
+            }
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+ /*reponses* */
+.answers-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 80%;
+    justify-content: space-between;
+    align-content: space-between;
+    padding: 0px;
+    background-color: #012A6D;
+    border: 3px solid #F8D54B;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.answer-column {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.answer-box {
+    background-color: #F8D54B;
+    color: #012A6D;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 2.6vmin;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 85px;
+    border: 2px solid #F2A900;
+}
+
+.answer-box:hover {
+    background-color: #F2A900;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    border-color: #012A6D;
+}
+
+.answer-box.correct {
+    background-color: #33cc33;
+    color: rgb(254, 254, 254);
+    border-color: #229922;
+}
+
+.answer-box.wrong {
+    background-color: #cc0000;
+    color: white;
+    border-color: #990000;
+}
+        /* Animation pour le buzzer qui change de couleur */
+        @keyframes buzzerPulse {
+            0% { background: radial-gradient(circle at 30% 30%, #ff3333, #cc0000); }
+            100% { background: radial-gradient(circle at 30% 30%, #cc3333, #990000); }
+        }
+        
+        .buzzer.pulsing {
+            animation: buzzerPulse 1s infinite alternate;
+        }
+        
+        /* Classe pour cacher les avatars en attente */
+        .avatar-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            color: white;
+            font-size: 3vmin;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="stars" id="stars"></div>
+    
+    <div class="container">
+    </div>   
+    <!-- Partie supérieure -->
+    <div class="top-section">
+        <!-- Colonne des avatars gauche -->
+        <div class="avatar-column left">
+            <div class="player" data-player="1">
+                <div class="avatar active">
+                    <img src="page.html index/jaune.png" alt="Joueur 1" class="avatar-img">
+                    <div class="avatar-placeholder">1</div>
+                </div>
+                <div class="points">450 pts</div>
+            </div>
+            <div class="player" data-player="2">
+                <div class="avatar">
+                    <img src="page.html index/Nouveau dossier/orange.png" alt="Joueur 2" class="avatar-img">
+                    <div class="avatar-placeholder">2</div>
+                </div>
+                <div class="points">380 pts</div>
+            </div>
+        </div>
+        
+        <!-- Zone de question -->
+        <div class="question-area">
+            <div class="question-box">
+                <div class="question-text">Quelle est la capitale de la Norvège, pays scandinave connu pour ses fjords et ses aurores boréales ?</div>
+            </div>
+        </div>
+        
+        <!-- Colonne des avatars droite -->
+        <div class="avatar-column right">
+            <div class="player" data-player="3">
+                <div class="avatar">
+                    <img src="page.html index/rose.png" alt="Joueur 3" class="avatar-img">
+                    <div class="avatar-placeholder">3</div>
+                </div>
+                <div class="points">520 pts</div>
+            </div>
+            <div class="player" data-player="4">
+                <div class="avatar">
+                    <img src="page.html index/turquoi.png" alt="Joueur 4" class="avatar-img">
+                    <div class="avatar-placeholder">4</div>
+                </div>
+                <div class="points">290 pts</div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <!-- Séparateur lumineux -->
+    <div class="separator"></div>
+    
+    <!-- Partie inférieure -->
+    <div class="bottom-section">
+        <!-- Buzzer avec timer -->
+        <div class="buzzer-area">
+            <div class="buzzer pulsing">
+                <div class="timer">12s</div>
+            </div>
+        </div>
+        
+        <!-- Réponses -->
+        <div class="answers-container">
+            <div class="answer-column left">
+                <div class="answer-box" data-answer="a">Stockholm</div>
+                <div class="answer-box" data-answer="b">Helsinki</div>
+            </div>
+            <div class="answer-column right">
+                <div class="answer-box" data-answer="c">Oslo</div>
+                <div class="answer-box" data-answer="d">Copenhague</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Création des étoiles - VERSION CORRIGÉE
+const starsContainer = document.getElementById('stars');
+const numberOfStars = 150; // Augmentez le nombre pour plus d'effet
+
+for (let i = 0; i < numberOfStars; i++) {
+    const star = document.createElement('div');
+    star.className = 'star';
+    
+    // Ajoutez des tailles différentes
+    const size = Math.random();
+    if (size < 0.3) star.classList.add('small');
+    else if (size < 0.7) star.classList.add('medium');
+    else star.classList.add('large');
+    
+    // Position aléatoire
+    star.style.left = Math.random() * 100 + '%';
+    star.style.top = Math.random() * 100 + '%';
+    
+    // Animation plus réaliste avec délais et durées variables
+    star.style.animationDelay = Math.random() * 5 + 's';
+    star.style.animationDuration = (2 + Math.random() * 4) + 's';
+    
+    // Opacité variable pour effet de profondeur
+    star.style.opacity = 0.2 + Math.random() * 0.8;
+    
+    // Pour certaines étoiles, ajoutez une couleur
+    if (Math.random() > 0.8) {
+        const colors = ['#FFD700', '#87CEEB', '#FF6B6B', '#98FB98'];
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        star.style.backgroundColor = color;
+        star.style.boxShadow = `0 0 ${2 + Math.random() * 4}px ${color}`;
+    }
+    
+    starsContainer.appendChild(star);
+}
+
+        // Configuration des avatars
+        const avatarsConfig = {
+            'bleu': { name: "Le Calme", color: "BLEU", filename: "bleu.png" },
+            'gris': { name: "Le Sage", color: "GRIS", filename: "gris.png" },
+            'jaune': { name: "L'Optimiste", color: "JAUNE", filename: "jaune.png" },
+            'orange': { name: "L'Énergique", color: "ORANGE", filename: "orange.png" },
+            'rose': { name: "Le Romantique", color: "ROSE", filename: "rose.png" },
+            'rouge': { name: "Le Passionné", color: "ROUGE", filename: "rouge.png" },
+            'turquoise': { name: "Le Créatif", color: "TURQUOISE", filename: "turquoi.png" },
+            'vert': { name: "L'Écologique", color: "VERT", filename: "vert.png" },
+            'violet': { name: "Le Mystique", color: "VIOLET", filename: "violet.png" }
+        };
+        
+        // Avatars assignés aux joueurs (peut être personnalisé)
+        const playersAvatars = {
+            '1': 'rose',
+            '2': 'turquoise', 
+            '3': 'jaune',
+            '4': 'orange'
+        };
+        
+        // Charger les avatars depuis le localStorage
+        function loadPlayerAvatars() {
+            const players = document.querySelectorAll('.player');
+            
+            players.forEach(player => {
+                const playerNum = player.dataset.player;
+                const avatarType = playersAvatars[playerNum];
+                const avatarImg = player.querySelector('.avatar-img');
+                const placeholder = player.querySelector('.avatar-placeholder');
+                
+                if (avatarType && avatarsConfig[avatarType]) {
+                    avatarImg.src = avatarsConfig[avatarType].filename;
+                    avatarImg.alt = `Joueur ${playerNum} - ${avatarsConfig[avatarType].name}`;
+                    
+                    // Gestion d'erreur d'image
+                    avatarImg.onerror = function() {
+                        this.style.display = 'none';
+                        placeholder.style.display = 'flex';
+                        placeholder.textContent = playerNum;
+                        placeholder.style.backgroundColor = getColorForAvatar(avatarType);
+                    };
+                    
+                    avatarImg.onload = function() {
+                        placeholder.style.display = 'none';
+                        this.style.display = 'block';
+                    };
+                }
+            });
+        }
+        
+        // Couleurs de secours pour chaque avatar
+        function getColorForAvatar(avatarType) {
+            const colorMap = {
+                'bleu': '#3b82f6',
+                'gris': '#6b7280',
+                'jaune': '#f59e0b',
+                'orange': '#f97316',
+                'rose': '#ec4899',
+                'rouge': '#ef4444',
+                'turquoise': '#06b6d4',
+                'vert': '#10b981',
+                'violet': '#8b5cf6'
+            };
+            return colorMap[avatarType] || '#475569';
+        }
+        
+        // Animation du buzzer qui change de couleur avec le temps
+        const buzzer = document.querySelector('.buzzer');
+        const timerElement = document.querySelector('.timer');
+        let timeLeft = 12;
+        let timerInterval;
+        
+        function startTimer() {
+            timeLeft = 12;
+            timerElement.textContent = timeLeft + 's';
+            buzzer.classList.add('pulsing');
+            
+            timerInterval = setInterval(updateTimer, 1000);
+        }
+        
+        function updateTimer() {
+            timeLeft--;
+            timerElement.textContent = timeLeft + 's';
+            
+            // Calcul du pourcentage de temps restant
+            const percent = timeLeft / 12;
+            
+            // Mise à jour de la couleur du buzzer
+            const redValue = Math.floor(255 * (1 - percent * 0.5));
+            buzzer.style.background = `radial-gradient(circle at 30% 30%, rgb(${redValue}, 50, 50), rgb(${redValue-50}, 0, 0))`;
+            
+            if (timeLeft <= 0) {
+                clearInterval(timerInterval);
+                buzzer.classList.remove('pulsing');
+                buzzer.style.background = 'radial-gradient(circle at 30% 30%, #666666, #333333)';
+                timerElement.textContent = '0s';
+                
+                // Désactiver les réponses
+                answerBoxes.forEach(box => {
+                    box.style.pointerEvents = 'none';
+                    box.style.opacity = '0.6';
+                });
+            }
+        }
+        
+        // Gestion du clic sur les réponses
+        const answerBoxes = document.querySelectorAll('.answer-box');
+        let answerSelected = false;
+        const correctAnswer = 'c'; // Oslo est la bonne réponse
+        
+        answerBoxes.forEach(box => {
+            box.addEventListener('click', function() {
+                if (answerSelected || timeLeft <= 0) return;
+                
+                answerSelected = true;
+                clearInterval(timerInterval);
+                buzzer.classList.remove('pulsing');
+                
+                const userAnswer = this.dataset.answer;
+                
+                // Animation de sélection
+                answerBoxes.forEach(b => {
+                    b.style.pointerEvents = 'none';
+                    if (b === this) {
+                        if (userAnswer === correctAnswer) {
+                            b.classList.add('correct');
+                            b.style.backgroundColor = '#33cc33';
+                        } else {
+                            b.classList.add('wrong');
+                            b.style.backgroundColor = '#cc0000';
+                        }
+                        b.style.transform = 'scale(1.05)';
+                    } else {
+                        b.style.opacity = '0.6';
+                        if (b.dataset.answer === correctAnswer) {
+                            b.classList.add('correct');
+                            b.style.backgroundColor = '#33cc33';
+                            b.style.opacity = '1';
+                        }
+                    }
+                });
+                
+                // Mettre à jour les points du joueur actif
+                if (userAnswer === correctAnswer) {
+                    updatePlayerScore(50);
+                }
+            });
+        });
+        
+        // Gestion du buzzer
+        buzzer.addEventListener('click', function() {
+            if (timeLeft > 0 && !answerSelected) {
+                this.style.animation = 'none';
+                this.style.background = 'radial-gradient(circle at 30% 30%, #33cc33, #009900)';
+                clearInterval(timerInterval);
+                
+                // Activer le premier joueur (celui qui a buzzé)
+                activatePlayer(1);
+            }
+        });
+        
+        // Fonction pour activer un joueur
+        function activatePlayer(playerNum) {
+            document.querySelectorAll('.avatar').forEach(avatar => {
+                avatar.classList.remove('active');
+            });
+            
+            const playerAvatar = document.querySelector(`[data-player="${playerNum}"] .avatar`);
+            if (playerAvatar) {
+                playerAvatar.classList.add('active');
+            }
+        }
+        
+        // Fonction pour mettre à jour le score
+        function updatePlayerScore(points) {
+            const activePlayer = document.querySelector('.avatar.active').closest('.player');
+            const pointsElement = activePlayer.querySelector('.points');
+            const currentPoints = parseInt(pointsElement.textContent.replace(' pts', ''));
+            pointsElement.textContent = (currentPoints + points) + ' pts';
+        }
+        
+        // Initialisation
+        document.addEventListener('DOMContentLoaded', function() {
+            loadPlayerAvatars();
+            startTimer();
+            
+            // Récupérer l'avatar du joueur principal depuis localStorage
+            const savedAvatar = localStorage.getItem('playerAvatar');
+            if (savedAvatar) {
+                try {
+                    const avatar = JSON.parse(savedAvatar);
+                    // Assigner cet avatar au joueur 1 (joueur principal)
+                    playersAvatars['1'] = Object.keys(avatarsConfig).find(key => 
+                        avatarsConfig[key].name === avatar.name && 
+                        avatarsConfig[key].color === avatar.color
+                    ) || 'bleu';
+                    
+                    // Recharger les avatars
+                    loadPlayerAvatars();
+                } catch (e) {
+                    console.log("Erreur lors du chargement de l'avatar sauvegardé");
+                }
+            }
+        });
+    </script>
+</body>
+</html>
