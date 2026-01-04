@@ -1,0 +1,51 @@
+<!-- Player.html (sans changer tes classes / attributs) -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Question pour un champion | Jeu en ligne hestim</title>
+  <link rel="stylesheet" href="Player.css" />
+  <link rel="shortcut icon" href="icon.ico" type="image/x-icon" />
+  <script defer src="Player.js"></script>
+</head>
+
+<body>
+  <div class="stars" id="stars"></div>
+  <header></header>
+
+  <main>
+    <!-- 1) Choix avatar -->
+    <form action="" class="avatar">
+      <label class="title1">Selectionnez un personnage</label>
+
+      <div class="choice_player">
+        <div class="choice"><img src="/images/avatar/bleu.png" alt="Avatar bleu" /></div>
+        <div class="choice"><img src="/images/avatar/gris.png" alt="Avatar gris" /></div>
+        <div class="choice"><img src="/images/avatar/jaune.png" alt="Avatar jaune" /></div>
+        <div class="choice"><img src="/images/avatar/rose.png" alt="Avatar rose" /></div>
+        <div class="choice"><img src="/images/avatar/vert.png" alt="Avatar vert" /></div>
+        <div class="choice"><img src="/images/avatar/violet.png" alt="Avatar violet" /></div>
+      </div>
+
+      <!-- IMPORTANT: ne soumet pas le form -->
+      <button type="button" class="next">SUIVANT</button>
+    </form>
+
+    <!-- 2) Pseudo + lancement -->
+    <form action="" class="username">
+      <label class="nom" for="username">Nom du Joueur</label>
+
+      <div class="avatar_select">
+        <img id="notre_avatar" src="" alt="Joueur_choisi" />
+        
+      </div>
+
+      <input type="text" name="user_input" id="username" placeholder="Ex: Arthur" />
+      <button type="submit" class="start">Commencer</button>
+    </form>
+  </main>
+
+  <footer></footer>
+</body>
+</html>
