@@ -56,7 +56,7 @@ if (form) {
     if (!name) return;
 
     localStorage.setItem('username', name);
-    window.location.href = 'test.html';
+    window.location.href = 'Epreuve1.html';
   });
 }
 
@@ -72,6 +72,7 @@ if (starsContainer) {
     starsContainer.appendChild(star);
   }
 }
+
 
 
 
