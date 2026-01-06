@@ -2,242 +2,242 @@
         
         {
             "id": 1,
-            "difficulty": "facile",
+        
             "question": "Quelle est la capitale de la France ?",
-            "correctAnswer": "Paris",
+            "Good": "Paris",
             "answers": ["Paris", "Londres", "Berlin", "Madrid"]
         },
 
         {
             "id": 2,
-            "difficulty": "facile",
+        
             "question": "Combien de continents y a-t-il sur Terre ?",
-            "correctAnswer": "7",
+            "Good": "7",
             "answers": ["5", "6", "7", "8"]
         },
 
 
         {
             "id": 3,
-            "difficulty": "facile",
+        
             "question": "Quelle planète est surnommée 'la planète rouge' ?",
-            "correctAnswer": "Mars",
+            "Good": "Mars",
             "answers": ["Vénus", "Mars", "Jupiter", "Saturne"]
         },
 
         {
             "id": 4,
-            "difficulty": "facile",
+        
             "question": "En quelle année a eu lieu la Révolution française ?",
-            "correctAnswer": "1789",
+            "Good": "1789",
             "answers": ["1776", "1789", "1799", "1804"]
         },
 
         {
             "id": 5,
-            "difficulty": "facile",
+        
             "question": "Quel est l'océan le plus grand du monde ?",
-            "correctAnswer": "Pacifique",
+            "Good": "Pacifique",
             "answers": ["Atlantique", "Indien", "Pacifique", "Arctique"]
         },
 
         {
             "id": 6,
-            "difficulty": "facile",
+        
             "question": "Qui a peint la Joconde ?",
-            "correctAnswer": "Léonard de Vinci",
+            "Good": "Léonard de Vinci",
             "answers": ["Michel-Ange", "Léonard de Vinci", "Rembrandt", "Picasso"]
         },
 
         {
             "id": 7,
-            "difficulty": "facile",
+        
             "question": "Quelle est la plus grande forêt tropicale du monde ?",
-            "correctAnswer": "Amazonie",
+            "Good": "Amazonie",
             "answers": ["Congo", "Amazonie", "Bornéo", "Taïga"]
         },
 
         {
             "id": 8,
-            "difficulty": "facile",
+        
             "question": "Combien de joueurs y a-t-il dans une équipe de football ?",
-            "correctAnswer": "11",
+            "Good": "11",
             "answers": ["9", "10", "11", "12"]
         },
 
         {
             "id": 9,
-            "difficulty": "facile",
+        
             "question": "Quel est le symbole chimique de l'or ?",
-            "correctAnswer": "Au",
+            "Good": "Au",
             "answers": ["Ag", "Au", "Fe", "Pb"]
         },
 
         {
             "id": 10,
-            "difficulty": "facile",
+        
             "question": "Quelle est la langue la plus parlée au monde ?",
-            "correctAnswer": "Mandarin",
+            "Good": "Mandarin",
             "answers": ["Anglais", "Espagnol", "Mandarin", "Hindi"]
         },
 
         {
             "id": 11,
-            "difficulty": "facile",
+        
             "question": "Quel animal est le roi de la jungle ?",
-            "correctAnswer": "Lion",
+            "Good": "Lion",
             "answers": ["Tigre", "Lion", "Éléphant", "Gorille"]
         },
 
         {
             "id": 12,
-            "difficulty": "facile",
+        
             "question": "Qui a écrit 'Roméo et Juliette' ?",
-            "correctAnswer": "William Shakespeare",
+            "Good": "William Shakespeare",
             "answers": ["Victor Hugo", "Molière", "William Shakespeare", "Charles Dickens"]
         },
 
         {
             "id": 13,
-            "difficulty": "facile",
+        
             "question": "Combien de jours y a-t-il dans une année bissextile ?",
-            "correctAnswer": "366",
+            "Good": "366",
             "answers": ["365", "366", "364", "367"]
         },
 
         {
             "id": 14,
-            "difficulty": "facile",
+        
             "question": "Quel est le plus grand désert du monde ?",
-            "correctAnswer": "Antarctique",
+            "Good": "Antarctique",
             "answers": ["Sahara", "Antarctique", "Gobi", "Arabie"]
         },
 
         {
             "id": 15,
-            "difficulty": "facile",
+        
             "question": "Quelle est la monnaie du Japon ?",
-            "correctAnswer": "Yen",
+            "Good": "Yen",
             "answers": ["Won", "Yuan", "Yen", "Ringgit"]
         },
 
         {
             "id": 16,
-            "difficulty": "facile",
+        
             "question": "Qui a découvert l'Amérique en 1492 ?",
-            "correctAnswer": "Christophe Colomb",
+            "Good": "Christophe Colomb",
             "answers": ["Vasco de Gama", "Christophe Colomb", "Marco Polo", "Ferdinand Magellan"]
         },
 
         {
             "id": 17,
-            "difficulty": "facile",
+        
             "question": "Combien de côtés a un triangle ?",
-            "correctAnswer": "3",
+            "Good": "3",
             "answers": ["3", "4", "5", "6"]
         },
 
         {
             "id": 18,
-            "difficulty": "facile",
+        
             "question": "Quel est l'organe responsable de la pompe du sang ?",
-            "correctAnswer": "Cœur",
+            "Good": "Cœur",
             "answers": ["Poumon", "Foie", "Cœur", "Cerveau"]
         },
 
         {
             "id": 19,
-            "difficulty": "facile",
+        
             "question": "Quelle est la couleur du ciel par temps clair ?",
-            "correctAnswer": "Bleu",
+            "Good": "Bleu",
             "answers": ["Bleu", "Vert", "Rouge", "Jaune"]
         },
 
         {
             "id": 20,
-            "difficulty": "facile",
+        
             "question": "Qui est l'auteur de 'Harry Potter' ?",
-            "correctAnswer": "J.K. Rowling",
+            "Good": "J.K. Rowling",
             "answers": ["J.R.R. Tolkien", "J.K. Rowling", "Stephen King", "George R.R. Martin"]
         },
 
         {
             "id": 21,
-            "difficulty": "facile",
+        
             "question": "Quelle est la planète la plus proche du Soleil ?",
-            "correctAnswer": "Mercure",
+            "Good": "Mercure",
             "answers": ["Vénus", "Mercure", "Terre", "Mars"]
         },
 
         {
             "id": 22,
-            "difficulty": "facile",
+        
             "question": "Combien de notes y a-t-il dans une octave ?",
-            "correctAnswer": "8",
+            "Good": "8",
             "answers": ["7", "8", "12", "24"]
         },
 
         {
             "id": 23,
-            "difficulty": "facile",
+        
             "question": "Quel pays a inventé la pizza ?",
-            "correctAnswer": "Italie",
+            "Good": "Italie",
             "answers": ["France", "Italie", "États-Unis", "Grèce"]
         },
 
         {
             "id": 24,
-            "difficulty": "facile",
+        
             "question": "Quel est le plus grand mammifère du monde ?",
-            "correctAnswer": "Baleine bleue",
+            "Good": "Baleine bleue",
             "answers": ["Éléphant", "Girafe", "Baleine bleue", "Rhinocéros"]
         },
 
         {
             "id": 25,
-            "difficulty": "facile",
+        
             "question": "Qui a peint 'La Nuit étoilée' ?",
-            "correctAnswer": "Vincent van Gogh",
+            "Good": "Vincent van Gogh",
             "answers": ["Claude Monet", "Vincent van Gogh", "Pablo Picasso", "Salvador Dalí"]
         },
 
         {
             "id": 26,
-            "difficulty": "facile",
+        
             "question": "Quelle est la capitale de l'Italie ?",
-            "correctAnswer": "Rome",
+            "Good": "Rome",
             "answers": ["Milan", "Venise", "Rome", "Naples"]
         },
 
         {
             "id": 27,
-            "difficulty": "facile",
+        
             "question": "Combien de temps met la Terre pour tourner autour du Soleil ?",
-            "correctAnswer": "365 jours",
+            "Good": "365 jours",
             "answers": ["24 heures", "28 jours", "365 jours", "12 mois"]
         },
 
         {
             "id": 28,
-            "difficulty": "facile",
+        
             "question": "Quel est le gaz le plus abondant dans l'atmosphère terrestre ?",
-            "correctAnswer": "Azote",
+            "Good": "Azote",
             "answers": ["Oxygène", "Azote", "Dioxyde de carbone", "Hélium"]
         },
 
         {
             "id": 29,
-            "difficulty": "facile",
+        
             "question": "Qui a inventé le téléphone ?",
-            "correctAnswer": "Alexander Graham Bell",
+            "Good": "Alexander Graham Bell",
             "answers": ["Thomas Edison", "Alexander Graham Bell", "Nikola Tesla", "Albert Einstein"]
         },
 
         {
             "id": 30,
-            "difficulty": "facile",
+        
             "question": "Quelle est la langue officielle du Brésil ?",
-            "correctAnswer": "Portugais",
+            "Good": "Portugais",
             "answers": ["Espagnol", "Portugais", "Anglais", "Français"]
         },
 
@@ -245,97 +245,85 @@
 
         {
             "id": 31,
-            "difficulty": "moyen",
-            "question": "Quel élément chimique a pour symbole 'Ag' ?",
-            "correctAnswer": "Argent",
+                    "question": "Quel élément chimique a pour symbole 'Ag' ?",
+            "Good": "Argent",
             "answers": ["Or", "Argent", "Aluminium", "Argon"]
         },
 
         {
             "id": 32,
-            "difficulty": "moyen",
-            "question": "En quelle année a été signé le traité de Versailles ?",
-            "correctAnswer": "1919",
+                    "question": "En quelle année a été signé le traité de Versailles ?",
+            "Good": "1919",
             "answers": ["1918", "1919", "1920", "1921"]
         },
 
         {
             "id": 33,
-            "difficulty": "moyen",
-            "question": "Qui a écrit 'Les Misérables' ?",
-            "correctAnswer": "Victor Hugo",
+                    "question": "Qui a écrit 'Les Misérables' ?",
+            "Good": "Victor Hugo",
             "answers": ["Émile Zola", "Victor Hugo", "Gustave Flaubert", "Honoré de Balzac"]
         },
 
         {
             "id": 34,
-            "difficulty": "moyen",
-            "question": "Quelle est la plus haute montagne d'Afrique ?",
-            "correctAnswer": "Kilimandjaro",
+                    "question": "Quelle est la plus haute montagne d'Afrique ?",
+            "Good": "Kilimandjaro",
             "answers": ["Mont Kenya", "Kilimandjaro", "Mont Stanley", "Ras Dashan"]
         },
 
         {
             "id": 35,
-            "difficulty": "moyen",
-            "question": "Combien de symphonies Beethoven a-t-il composées ?",
-            "correctAnswer": "9",
+                    "question": "Combien de symphonies Beethoven a-t-il composées ?",
+            "Good": "9",
             "answers": ["5", "9", "12", "41"]
         },
 
         {
             "id": 36,
-            "difficulty": "moyen",
-            "question": "Quelle est la vitesse de la lumière dans le vide ?",
-            "correctAnswer": "299 792 458 m/s",
+                    "question": "Quelle est la vitesse de la lumière dans le vide ?",
+            "Good": "299 792 458 m/s",
             "answers": ["300 000 km/s", "299 792 458 m/s", "150 000 km/s", "1 080 000 000 km/h"]
         },
 
         {
             "id": 37,
-            "difficulty": "moyen",
-            "question": "Qui a découvert la pénicilline ?",
-            "correctAnswer": "Alexander Fleming",
+                    "question": "Qui a découvert la pénicilline ?",
+            "Good": "Alexander Fleming",
             "answers": ["Louis Pasteur", "Alexander Fleming", "Marie Curie", "Robert Koch"]
         },
 
         {
             "id": 38,
-            "difficulty": "moyen",
-            "question": "Quelle est la capitale de l'Australie ?",
-            "correctAnswer": "Canberra",
+                    "question": "Quelle est la capitale de l'Australie ?",
+            "Good": "Canberra",
             "answers": ["Sydney", "Melbourne", "Canberra", "Perth"]
         },
 
         {
             "id": 39,
-            "difficulty": "moyen",
-            "question": "Combien de départements y a-t-il en France ?",
-            "correctAnswer": "101",
+                    "question": "Combien de départements y a-t-il en France ?",
+            "Good": "101",
             "answers": ["96", "100", "101", "102"]
         },
 
         {
             "id": 40,
-            "difficulty": "moyen",
-            "question": "Quel est le plus grand lac d'eau douce du monde ?",
-            "correctAnswer": "Lac Supérieur",
+                    "question": "Quel est le plus grand lac d'eau douce du monde ?",
+            "Good": "Lac Supérieur",
             "answers": ["Lac Victoria", "Lac Supérieur", "Lac Baïkal", "Grand Lac des Esclaves"]
         },
 
         {
             "id": 41,
-            "difficulty": "moyen",
-            "question": "Qui a peint 'La Création d'Adam' ?",
-            "correctAnswer": "Michel-Ange",
+                    "question": "Qui a peint 'La Création d'Adam' ?",
+            "Good": "Michel-Ange",
             "answers": ["Léonard de Vinci", "Raphaël", "Michel-Ange", "Donatello"]
         },
 
         {
             "id": 42,
-            "difficulty": "moyen",
-            "question": "Quelle est la devise de la France ?",
-            "correctAnswer": "Liberté, Égalité, Fraternité",
+                    "question": "Quelle est la devise de la France ?",
+            "Good": "Liberté, Égalité, Fraternité",
             "answers": [
                 "Liberté, Égalité, Fraternité",
                 "Un pour tous, tous pour un",
@@ -346,225 +334,197 @@
 
         {
             "id": 43,
-            "difficulty": "moyen",
-            "question": "Quel est le plus long fleuve d'Europe ?",
-            "correctAnswer": "Volga",
+                    "question": "Quel est le plus long fleuve d'Europe ?",
+            "Good": "Volga",
             "answers": ["Danube", "Volga", "Rhin", "Seine"]
         },
 
         {
             "id": 44,
-            "difficulty": "moyen",
-            "question": "Qui a écrit '1984' ?",
-            "correctAnswer": "George Orwell",
+                    "question": "Qui a écrit '1984' ?",
+            "Good": "George Orwell",
             "answers": ["Aldous Huxley", "George Orwell", "Ray Bradbury", "H.G. Wells"]
         },
 
         {
             "id": 45,
-            "difficulty": "moyen",
-            "question": "Quel est le nombre d'or ?",
-            "correctAnswer": "1,618",
+                    "question": "Quel est le nombre d'or ?",
+            "Good": "1,618",
             "answers": ["3,14", "1,618", "2,718", "1,414"]
         },
 
         {
             "id": 46,
-            "difficulty": "moyen",
-            "question": "Quelle est la langue officielle de l'Argentine ?",
-            "correctAnswer": "Espagnol",
+                    "question": "Quelle est la langue officielle de l'Argentine ?",
+            "Good": "Espagnol",
             "answers": ["Portugais", "Espagnol", "Anglais", "Français"]
         },
 
         {
             "id": 47,
-            "difficulty": "moyen",
-            "question": "Qui a découvert la loi de la gravité ?",
-            "correctAnswer": "Isaac Newton",
+                    "question": "Qui a découvert la loi de la gravité ?",
+            "Good": "Isaac Newton",
             "answers": ["Galilée", "Isaac Newton", "Albert Einstein", "Copernic"]
         },
 
         {
             "id": 48,
-            "difficulty": "moyen",
-            "question": "Combien d'os y a-t-il dans le corps humain adulte ?",
-            "correctAnswer": "206",
+                    "question": "Combien d'os y a-t-il dans le corps humain adulte ?",
+            "Good": "206",
             "answers": ["196", "206", "216", "226"]
         },
 
         {
             "id": 49,
-            "difficulty": "moyen",
-            "question": "Quelle est la monnaie de l'Inde ?",
-            "correctAnswer": "Roupie",
+                    "question": "Quelle est la monnaie de l'Inde ?",
+            "Good": "Roupie",
             "answers": ["Roupie", "Yuan", "Baht", "Ringgit"]
         },
 
         {
             "id": 50,
-            "difficulty": "moyen",
-            "question": "Qui a fondé Microsoft ?",
-            "correctAnswer": "Bill Gates",
+                    "question": "Qui a fondé Microsoft ?",
+            "Good": "Bill Gates",
             "answers": ["Steve Jobs", "Bill Gates", "Mark Zuckerberg", "Larry Page"]
         },
 
         {
             "id": 51,
-            "difficulty": "moyen",
-            "question": "Quelle est la température d'ébullition de l'eau ?",
-            "correctAnswer": "100°C",
+                    "question": "Quelle est la température d'ébullition de l'eau ?",
+            "Good": "100°C",
             "answers": ["90°C", "100°C", "110°C", "120°C"]
         },
 
         {
             "id": 52,
-            "difficulty": "moyen",
-            "question": "Quel pays a remporté le plus de coupes du monde de football ?",
-            "correctAnswer": "Brésil",
+                    "question": "Quel pays a remporté le plus de coupes du monde de football ?",
+            "Good": "Brésil",
             "answers": ["Allemagne", "Italie", "Brésil", "Argentine"]
         },
 
         {
             "id": 53,
-            "difficulty": "moyen",
-            "question": "Qui a écrit 'Le Petit Prince' ?",
-            "correctAnswer": "Antoine de Saint-Exupéry",
+                    "question": "Qui a écrit 'Le Petit Prince' ?",
+            "Good": "Antoine de Saint-Exupéry",
             "answers": ["Jules Verne", "Antoine de Saint-Exupéry", "Marcel Proust", "Albert Camus"]
         },
 
         {
             "id": 54,
-            "difficulty": "moyen",
-            "question": "Quel est le plus grand pays d'Afrique ?",
-            "correctAnswer": "Algérie",
+                    "question": "Quel est le plus grand pays d'Afrique ?",
+            "Good": "Algérie",
             "answers": ["Algérie", "République Démocratique du Congo", "Soudan", "Libye"]
         },
 
         {
             "id": 55,
-            "difficulty": "moyen",
-            "question": "Quelle est la capitale du Canada ?",
-            "correctAnswer": "Ottawa",
+                    "question": "Quelle est la capitale du Canada ?",
+            "Good": "Ottawa",
             "answers": ["Toronto", "Vancouver", "Ottawa", "Montréal"]
         },
 
         {
             "id": 56,
-            "difficulty": "moyen",
-            "question": "Combien de temps dure une grossesse humaine ?",
-            "correctAnswer": "9 mois",
+                    "question": "Combien de temps dure une grossesse humaine ?",
+            "Good": "9 mois",
             "answers": ["8 mois", "9 mois", "10 mois", "40 semaines"]
         },
 
         {
             "id": 57,
-            "difficulty": "moyen",
-            "question": "Qui a peint 'Guernica' ?",
-            "correctAnswer": "Pablo Picasso",
+                    "question": "Qui a peint 'Guernica' ?",
+            "Good": "Pablo Picasso",
             "answers": ["Pablo Picasso", "Salvador Dalí", "Joan Miró", "Diego Rivera"]
         },
 
         {
             "id": 58,
-            "difficulty": "moyen",
-            "question": "Quel est le plus grand désert chaud du monde ?",
-            "correctAnswer": "Sahara",
+                    "question": "Quel est le plus grand désert chaud du monde ?",
+            "Good": "Sahara",
             "answers": ["Sahara", "Arabie", "Gobi", "Kalahari"]
         },
 
         {
             "id": 59,
-            "difficulty": "moyen",
-            "question": "Qui a découvert les rayons X ?",
-            "correctAnswer": "Wilhelm Röntgen",
+                    "question": "Qui a découvert les rayons X ?",
+            "Good": "Wilhelm Röntgen",
             "answers": ["Marie Curie", "Wilhelm Röntgen", "Henri Becquerel", "Albert Einstein"]
         },
 
         {
             "id": 60,
-            "difficulty": "moyen",
-            "question": "Quelle est la langue la plus parlée en Amérique du Sud ?",
-            "correctAnswer": "Espagnol",
+                    "question": "Quelle est la langue la plus parlée en Amérique du Sud ?",
+            "Good": "Espagnol",
             "answers": ["Portugais", "Espagnol", "Anglais", "Français"]
         },
 
         {
             "id": 61,
-            "difficulty": "moyen",
-            "question": "Combien de planètes dans le système solaire ont des anneaux ?",
-            "correctAnswer": "4",
+                    "question": "Combien de planètes dans le système solaire ont des anneaux ?",
+            "Good": "4",
             "answers": ["2", "3", "4", "5"]
         },
 
         {
             "id": 62,
-            "difficulty": "moyen",
-            "question": "Qui a écrit 'Les Trois Mousquetaires' ?",
-            "correctAnswer": "Alexandre Dumas",
+                    "question": "Qui a écrit 'Les Trois Mousquetaires' ?",
+            "Good": "Alexandre Dumas",
             "answers": ["Victor Hugo", "Alexandre Dumas", "Jules Verne", "Honoré de Balzac"]
         },
 
         {
             "id": 63,
-            "difficulty": "moyen",
-            "question": "Quelle est la vitesse du son dans l'air ?",
-            "correctAnswer": "343 m/s",
+                    "question": "Quelle est la vitesse du son dans l'air ?",
+            "Good": "343 m/s",
             "answers": ["300 m/s", "343 m/s", "400 m/s", "1235 km/h"]
         },
 
         {
             "id": 64,
-            "difficulty": "moyen",
-            "question": "Quel pays a inventé le papier ?",
-            "correctAnswer": "Chine",
+                    "question": "Quel pays a inventé le papier ?",
+            "Good": "Chine",
             "answers": ["Égypte", "Chine", "Grèce", "Mésopotamie"]
         },
 
         {
             "id": 65,
-            "difficulty": "moyen",
-            "question": "Qui est l'auteur de 'L'Odyssée' ?",
-            "correctAnswer": "Homère",
+                    "question": "Qui est l'auteur de 'L'Odyssée' ?",
+            "Good": "Homère",
             "answers": ["Virgile", "Homère", "Sophocle", "Hésiode"]
         },
 
         {
             "id": 66,
-            "difficulty": "moyen",
-            "question": "Quelle est la plus grande île de la Méditerranée ?",
-            "correctAnswer": "Sicile",
+                    "question": "Quelle est la plus grande île de la Méditerranée ?",
+            "Good": "Sicile",
             "answers": ["Sardaigne", "Sicile", "Crète", "Corse"]
         },
 
         {
             "id": 67,
-            "difficulty": "moyen",
-            "question": "Combien de côtes a un humain normalement ?",
-            "correctAnswer": "24",
+                    "question": "Combien de côtes a un humain normalement ?",
+            "Good": "24",
             "answers": ["22", "24", "26", "28"]
         },
 
         {
             "id": 68,
-            "difficulty": "moyen",
-            "question": "Qui a fondé la psychanalyse ?",
-            "correctAnswer": "Sigmund Freud",
+                    "question": "Qui a fondé la psychanalyse ?",
+            "Good": "Sigmund Freud",
             "answers": ["Carl Jung", "Sigmund Freud", "Alfred Adler", "Wilhelm Reich"]
         },
 
         {
             "id": 69,
-            "difficulty": "moyen",
-            "question": "Quelle est la capitale de l'Égypte ?",
-            "correctAnswer": "Le Caire",
+                    "question": "Quelle est la capitale de l'Égypte ?",
+            "Good": "Le Caire",
             "answers": ["Alexandrie", "Le Caire", "Gizeh", "Louxor"]
         },
 
         {
             "id": 70,
-            "difficulty": "moyen",
-            "question": "Quel est l'animal national de l'Australie ?",
-            "correctAnswer": "Kangourou",
+                    "question": "Quel est l'animal national de l'Australie ?",
+            "Good": "Kangourou",
             "answers": ["Koala", "Kangourou", "Émeu", "Ornithorynque"]
         },
 
@@ -572,97 +532,97 @@
     
         {
             "id": 71,
-            "difficulty": "difficile",
+        
             "question": "Quel philosophe a dit 'Je pense, donc je suis' ?",
-            "correctAnswer": "René Descartes",
+            "Good": "René Descartes",
             "answers": ["Platon", "Aristote", "René Descartes", "Emmanuel Kant"]
         },
 
         {
             "id": 72,
-            "difficulty": "difficile",
+        
             "question": "En quelle année a été fondée l'Organisation des Nations Unies (ONU ?",
-            "correctAnswer": "1945",
+            "Good": "1945",
             "answers": ["1919", "1945", "1955", "1965"]
         },
 
         {
             "id": 73,
-            "difficulty": "difficile",
+        
             "question": "Quel est le point le plus profond des océans ?",
-            "correctAnswer": "Fosse des Mariannes",
+            "Good": "Fosse des Mariannes",
             "answers": ["Fosse des Tonga", "Fosse des Mariannes", "Fosse de Porto Rico", "Fosse des Kouriles"]
         },
 
         {
             "id": 74,
-            "difficulty": "difficile",
+        
             "question": "Qui a composé 'La Flûte enchantée' ?",
-            "correctAnswer": "Wolfgang Amadeus Mozart",
+            "Good": "Wolfgang Amadeus Mozart",
             "answers": ["Johann Sebastian Bach", "Ludwig van Beethoven", "Wolfgang Amadeus Mozart", "Richard Wagner"]
         },
 
         {
             "id": 75,
-            "difficulty": "difficile",
+        
             "question": "Quel est le plus petit pays du monde ?",
-            "correctAnswer": "Vatican",
+            "Good": "Vatican",
             "answers": ["Monaco", "Nauru", "Vatican", "Saint-Marin"]
         },
 
         {
             "id": 76,
-            "difficulty": "difficile",
+        
             "question": "Qui a découvert la structure en double hélice de l'ADN ?",
-            "correctAnswer": "Watson et Crick",
+            "Good": "Watson et Crick",
             "answers": ["Mendel", "Watson et Crick", "Darwin", "Pasteur"]
         },
 
         {
             "id": 77,
-            "difficulty": "difficile",
+        
             "question": "Quelle est la capitale de la Mongolie ?",
-            "correctAnswer": "Oulan-Bator",
+            "Good": "Oulan-Bator",
             "answers": ["Oulan-Bator", "Astana", "Bichkek", "Douchambé"]
         },
 
         {
             "id": 78,
-            "difficulty": "difficile",
+        
             "question": "Combien de fois la France a-t-elle remporté la Coupe du Monde de football ?",
-            "correctAnswer": "2",
+            "Good": "2",
             "answers": ["1", "2", "3", "4"]
         },
 
         {
             "id": 79,
-            "difficulty": "difficile",
+        
             "question": "Qui a peint 'Le Cri' ?",
-            "correctAnswer": "Edvard Munch",
+            "Good": "Edvard Munch",
             "answers": ["Vincent van Gogh", "Edvard Munch", "Paul Gauguin", "Henri Matisse"]
         },
 
         {
             "id": 80,
-            "difficulty": "difficile",
+        
             "question": "Quel est l'élément le plus abondant dans l'univers ?",
-            "correctAnswer": "Hydrogène",
+            "Good": "Hydrogène",
             "answers": ["Hélium", "Hydrogène", "Oxygène", "Carbone"]
         },
 
         {
             "id": 81,
-            "difficulty": "difficile",
+        
             "question": "Qui a écrit 'Cent ans de solitude' ?",
-            "correctAnswer": "Gabriel García Márquez",
+            "Good": "Gabriel García Márquez",
             "answers": ["Jorge Luis Borges", "Gabriel García Márquez", "Pablo Neruda", "Isabel Allende"]
         },
 
         {
             "id": 82,
-            "difficulty": "difficile",
+        
             "question": "Quelle est la profondeur de la fosse des Mariannes ?",
-            "correctAnswer": "Environ 11 000 mètres",
+            "Good": "Environ 11 000 mètres",
             "answers": [
                 "Environ 8 000 mètres",
                 "Environ 9 000 mètres",
@@ -673,129 +633,129 @@
 
         {
             "id": 83,
-            "difficulty": "difficile",
+        
             "question": "Qui a été le premier homme dans l'espace ?",
-            "correctAnswer": "Youri Gagarine",
+            "Good": "Youri Gagarine",
             "answers": ["Neil Armstrong", "Youri Gagarine", "John Glenn", "Alan Shepard"]
         },
 
         {
             "id": 84,
-            "difficulty": "difficile",
+        
             "question": "Quelle est la formule chimique de l'eau oxygénée ?",
-            "correctAnswer": "H₂O₂",
+            "Good": "H₂O₂",
             "answers": ["H₂O", "H₂O₂", "HO₂", "H₃O⁺"]
         },
 
         {
             "id": 85,
-            "difficulty": "difficile",
+        
             "question": "Quel empereur romain a construit le Mur d'Hadrien ?",
-            "correctAnswer": "Hadrien",
+            "Good": "Hadrien",
             "answers": ["César", "Auguste", "Hadrien", "Trajan"]
         },
 
         {
             "id": 86,
-            "difficulty": "difficile",
+        
             "question": "Combien de constellations y a-t-il officiellement ?",
-            "correctAnswer": "88",
+            "Good": "88",
             "answers": ["48", "88", "108", "12"]
         },
 
         {
             "id": 87,
-            "difficulty": "difficile",
+        
             "question": "Qui a inventé le World Wide Web ?",
-            "correctAnswer": "Tim Berners-Lee",
+            "Good": "Tim Berners-Lee",
             "answers": ["Bill Gates", "Steve Jobs", "Tim Berners-Lee", "Mark Zuckerberg"]
         },
 
         {
             "id": 88,
-            "difficulty": "difficile",
+       
             "question": "Quelle est la vitesse de rotation de la Terre à l'équateur ?",
-            "correctAnswer": "1670 km/h",
+            "Good": "1670 km/h",
             "answers": ["1000 km/h", "1670 km/h", "2000 km/h", "500 km/h"]
         },
 
         {
             "id": 89,
-            "difficulty": "difficile",
+       
             "question": "Qui a écrit 'L'Étranger' ?",
-            "correctAnswer": "Albert Camus",
+            "Good": "Albert Camus",
             "answers": ["Jean-Paul Sartre", "Albert Camus", "Simone de Beauvoir", "André Gide"]
         },
 
         {
             "id": 90,
-            "difficulty": "difficile",
+       
             "question": "Quel est le plus grand cratère d'impact visible sur Terre ?",
-            "correctAnswer": "Cratère de Vredefort",
+            "Good": "Cratère de Vredefort",
             "answers": ["Cratère de Chicxulub", "Cratère de Vredefort", "Cratère du Meteor", "Cratère de Sudbury"]
         },
 
         {
             "id": 91,
-            "difficulty": "difficile",
+       
             "question": "Qui a composé les 'Quatre Saisons' ?",
-            "correctAnswer": "Antonio Vivaldi",
+            "Good": "Antonio Vivaldi",
             "answers": ["Johann Sebastian Bach", "Antonio Vivaldi", "Georg Friedrich Haendel", "Franz Joseph Haydn"]
         },
 
         {
             "id": 92,
-            "difficulty": "difficile",
+       
             "question": "Quelle est la température à la surface du Soleil ?",
-            "correctAnswer": "5500°C",
+            "Good": "5500°C",
             "answers": ["1500°C", "5500°C", "10000°C", "15000°C"]
         },
 
         {
             "id": 93,
-            "difficulty": "difficile",
+       
             "question": "Qui a fondé l'empire mongol ?",
-            "correctAnswer": "Gengis Khan",
+            "Good": "Gengis Khan",
             "answers": ["Attila", "Gengis Khan", "Kubilai Khan", "Tamerlan"]
         },
 
         {
             "id": 94,
-            "difficulty": "difficile",
+       
             "question": "Combien de satellites naturels possède Jupiter ?",
-            "correctAnswer": "95 (connus à ce jour",
+            "Good": "95 (connus à ce jour",
             "answers": ["4", "16", "79", "95 (connus à ce jour"]
         },
 
         {
             "id": 95,
-            "difficulty": "difficile",
+       
             "question": "Qui a écrit 'Le Prince' ?",
-            "correctAnswer": "Nicolas Machiavel",
+            "Good": "Nicolas Machiavel",
             "answers": ["Thomas More", "Nicolas Machiavel", "Érasme", "Montesquieu"]
         },
 
         {
             "id": 96,
-            "difficulty": "difficile",
+       
             "question": "Quelle est la capitale de l'Islande ?",
-            "correctAnswer": "Reykjavik",
+            "Good": "Reykjavik",
             "answers": ["Reykjavik", "Oslo", "Helsinki", "Stockholm"]
         },
 
         {
             "id": 97,
-            "difficulty": "difficile",
+       
             "question": "Qui a peint 'Les Demoiselles d'Avignon' ?",
-            "correctAnswer": "Pablo Picasso",
+            "Good": "Pablo Picasso",
             "answers": ["Pablo Picasso", "Georges Braque", "Henri Matisse", "Juan Gris"]
         },
 
         {
             "id": 98,
-            "difficulty": "difficile",
+       
             "question": "Quel est le poids de l'atmosphère terrestre ?",
-            "correctAnswer": "5,5 x 10^18 kg",
+            "Good": "5,5 x 10^18 kg",
             "answers": [
                 "1,2 x 10^18 kg",
                 "5,5 x 10^18 kg",
@@ -806,17 +766,17 @@
 
         {
             "id": 99,
-            "difficulty": "difficile",
+       
             "question": "Qui a découvert le neutron ?",
-            "correctAnswer": "James Chadwick",
+            "Good": "James Chadwick",
             "answers": ["Ernest Rutherford", "James Chadwick", "J.J. Thomson", "Niels Bohr"]
         },
 
         {
             "id": 100,
-            "difficulty": "difficile",
+       
             "question": "Quelle est la longueur totale du réseau sanguin humain ?",
-            "correctAnswer": "Environ 100 000 km",
+            "Good": "Environ 100 000 km",
             "answers": [
                 "Environ 10 000 km",
                 "Environ 40 000 km",

@@ -439,186 +439,468 @@
     </section>
   </main>
 
-  <script>
-    // ===== Stars (simple) =====
-   const starsContainer = document.getElementById("stars");
-const STAR_COUNT = 160;
+<script>
+/* =========================
+   1 PLAYER vs 3 BOTS
+   Manche 1: 9 points - 20s/question
+   Questions via JSON/epreuve1.json
+   Modèle JSON:
+   {
+     "id": 94,
+     "question": "...",
+     "Good": "bonne réponse",
+     "answers": ["A","B","C","D"]
+   }
+   ========================= */
 
-for(let i = 0; i < STAR_COUNT; i++){
-  const star = document.createElement("div");
-  star.classList.add("star");
+(function () {
+  // ---------- CONFIG ----------
+  const POINTS_VICTOIRE = 9;
+  const TEMPS_LIMITE = 20;
+  const QUESTIONS_URL = "Question-pour-champion/JSON/epreuve1.json";
 
-  // tailles réalistes
-  const r = Math.random();
-  if(r < 0.6) star.classList.add("small");
-  else if(r < 0.9) star.classList.add("medium");
-  else star.classList.add("large");
+  const HUMAN = 1;
+  const BOTS = [2, 3, 4];
 
-  // position
-  star.style.left = Math.random() * 100 + "%";
-  star.style.top  = Math.random() * 100 + "%";
+  // Ajuste la difficulté ici
+  const BOT_CONFIG = {
+    2: { buzzChance: 0.60, buzzDelayMin: 600,  buzzDelayMax: 3500, accuracy: 0.60 },
+    3: { buzzChance: 0.50, buzzDelayMin: 700,  buzzDelayMax: 4500, accuracy: 0.50 },
+    4: { buzzChance: 0.40, buzzDelayMin: 900,  buzzDelayMax: 6000, accuracy: 0.40 },
+  };
 
-  // animation unique
-  star.style.animationDuration = (2 + Math.random() * 4) + "s";
-  star.style.animationDelay = Math.random() * 5 + "s";
+  // ---------- DOM (TON HTML) ----------
+  const $ = (sel) => document.querySelector(sel);
+  const $$ = (sel) => Array.from(document.querySelectorAll(sel));
 
-  // légère variation de couleur (étoiles froides/chaudes)
-  if(Math.random() > 0.85){
-    const colors = ["#ffffff", "#ffe9c4", "#d4fbff"];
-    const c = colors[Math.floor(Math.random() * colors.length)];
-    star.style.background = c;
-    star.style.boxShadow = `
-      0 0 6px ${c},
-      0 0 14px ${c},
-      0 0 28px ${c}
-    `;
+  const dom = {
+    questionText: $("#questionText"),
+    hint: $(".hint"),
+    buzzer: $("#buzzer"),
+    answers: $$("#answers .answer"),
+    pts: {
+      1: $("#pts-1"),
+      2: $("#pts-2"),
+      3: $("#pts-3"),
+      4: $("#pts-4"),
+    },
+    playerCards: $$(".player"),
+  };
+
+  if (!dom.questionText || !dom.buzzer || dom.answers.length !== 4) {
+    throw new Error("DOM incomplet: vérifie #questionText, #buzzer, et 4 éléments .answer dans #answers.");
   }
 
-  starsContainer.appendChild(star);
-}
+  // ---------- STATE ----------
+  const state = {
+    scores: { 1: 0, 2: 0, 3: 0, 4: 0 },
 
+    // questions normalisées:
+    // { id, text, choices[4], correctIndex }
+    questions: [],
+    questionIndex: 0,
+    questionNumber: 1,
 
-    // ===== Avatars (simple + robuste) =====
-    const playersAvatars = {
-      "1": "rose.png",
-      "2": "turquoi.png",
-      "3": "jaune.png",
-      "4": "orange.png"
-    };
+    gagnant_trouve: false,
 
-    function loadAvatars() {
-      document.querySelectorAll(".player").forEach((p) => {
-        const id = p.dataset.player;
-        const img = p.querySelector(".avatar-img");
-        const fb = p.querySelector(".fallback");
+    // buzz
+    buzzOpen: false,
+    respondingPlayer: null,
+    awaitingHumanAnswer: false,
 
-        img.src = playersAvatars[id] || "";
-        img.onerror = () => { img.style.display = "none"; fb.style.display = "grid"; };
-        img.onload  = () => { fb.style.display = "none"; img.style.display = "block"; };
-      });
+    // question courante
+    correctIndex: null,
+
+    // timer
+    remaining: TEMPS_LIMITE,
+    timerId: null,
+
+    // bot timers
+    botTimeouts: [],
+  };
+
+  // ---------- UI HELPERS ----------
+  function setHint(msg) {
+    if (dom.hint) dom.hint.textContent = msg;
+  }
+
+  function setBuzzerText(sec) {
+    dom.buzzer.textContent = `${sec}s`;
+  }
+
+  function setBuzzerState(mode) {
+    dom.buzzer.classList.remove("buzzed", "timeup", "flash");
+    if (mode === "buzzed") dom.buzzer.classList.add("buzzed");
+    if (mode === "timeup") dom.buzzer.classList.add("timeup");
+  }
+
+  function flashBuzzer() {
+    dom.buzzer.classList.add("flash");
+    setTimeout(() => dom.buzzer.classList.remove("flash"), 200);
+  }
+
+  function renderScores() {
+    for (let p = 1; p <= 4; p++) {
+      if (dom.pts[p]) dom.pts[p].textContent = `${state.scores[p]} pts`;
     }
+  }
 
-    // ===== Game logic (simple) =====
-    const buzzer = document.getElementById("buzzer");
-    const answers = Array.from(document.querySelectorAll(".answer"));
-    const correctAnswer = "c";
-    let timeLeft = 12;
-    let interval = null;
-    let locked = false;
+  function setActivePlayer(p) {
+    dom.playerCards.forEach((card) => {
+      const id = Number(card.dataset.player);
+      card.classList.toggle("active", id === p);
+    });
+  }
 
-    function setActivePlayer(n) {
-      document.querySelectorAll(".player").forEach(p => p.classList.remove("active"));
-      const el = document.querySelector(`.player[data-player="${n}"]`);
-      if (el) el.classList.add("active");
-    }
+  function resetAnswersUI() {
+    dom.answers.forEach((a) => {
+      a.classList.remove("correct", "wrong", "disabled");
+    });
+  }
 
-    function setBuzzerState(state) {
-      buzzer.classList.remove("buzzed", "timeup");
-      if (state) buzzer.classList.add(state);
-    }
+  function disableAnswers(disabled) {
+    dom.answers.forEach((a) => {
+      a.classList.toggle("disabled", disabled);
+    });
+  }
 
-    function disableAnswers(disabled) {
-      answers.forEach(a => {
-        a.classList.toggle("disabled", disabled);
-      });
-    }
+  function renderQuestion(q) {
+    dom.questionText.textContent = `Question ${state.questionNumber} — ${q.text}`;
+    dom.answers.forEach((el, i) => {
+      el.textContent = q.choices[i] ?? `Réponse ${i + 1}`;
+    });
+  }
 
-    function flashBuzzer() {
-      buzzer.classList.add("flash");
-      setTimeout(() => buzzer.classList.remove("flash"), 200);
-    }
+  // ---------- TIMER ----------
+  function stopTimer() {
+    if (state.timerId) clearInterval(state.timerId);
+    state.timerId = null;
+  }
 
-    function updateScore(points) {
-      const active = document.querySelector(".player.active");
-      if (!active) return;
-      const id = active.dataset.player;
-      const ptsEl = document.getElementById(`pts-${id}`);
-      const current = parseInt(ptsEl.textContent.replace(" pts", ""), 10) || 0;
-      ptsEl.textContent = (current + points) + " pts";
-    }
+  function startTimer() {
+    stopTimer();
+    state.remaining = TEMPS_LIMITE;
+    setBuzzerText(state.remaining);
 
-    function resetAnswersVisual() {
-      answers.forEach(a => {
-        a.classList.remove("correct", "wrong");
-        a.style.opacity = "1";
-        a.style.transform = "";
-      });
-    }
+    state.timerId = setInterval(() => {
+      state.remaining -= 1;
+      setBuzzerText(state.remaining);
 
-    function tick() {
-      timeLeft--;
-      buzzer.textContent = timeLeft + "s";
-
-      if (timeLeft <= 0) {
-        clearInterval(interval);
-        interval = null;
-        setBuzzerState("timeup");
-        buzzer.textContent = "0s";
-        disableAnswers(true);
+      if (state.remaining <= 0) {
+        stopTimer();
+        onTimeElapsed();
       }
+    }, 1000);
+  }
+
+  // ---------- UTILS ----------
+  function randInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function clearBotSchedules() {
+    state.botTimeouts.forEach(clearTimeout);
+    state.botTimeouts = [];
+  }
+
+  function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+
+  // ---------- JSON LOADER + NORMALISATION ----------
+  function normalizeQuestions(raw) {
+    if (!Array.isArray(raw)) {
+      throw new Error("Le JSON doit être un tableau de questions.");
     }
 
-    function startTimer() {
-      locked = false;
-      timeLeft = 12;
-      buzzer.textContent = "12s";
-      setBuzzerState(""); // running = animation par défaut
-      disableAnswers(false);
-      resetAnswersVisual();
+    const normalized = raw.map((item, idx) => {
+      const id = item?.id ?? idx;
+      const text = String(item?.question ?? "").trim();
+      const good = String(item?.Good ?? "").trim();
+      const answers = Array.isArray(item?.answers) ? item.answers.map(a => String(a).trim()) : [];
 
-      clearInterval(interval);
-      interval = setInterval(tick, 1000);
-    }
+      if (!text) throw new Error(`Question invalide (id=${id}): champ "question" manquant.`);
+      if (answers.length !== 4) throw new Error(`Question invalide (id=${id}): "answers" doit contenir 4 réponses.`);
+      if (!good) throw new Error(`Question invalide (id=${id}): champ "Good" manquant.`);
 
-    // Click buzzer: "je buzz"
-    buzzer.addEventListener("click", () => {
-      if (locked) return;
-      if (timeLeft <= 0) return;
+      const correctIndex = answers.findIndex(a => a === good);
+      if (correctIndex === -1) {
+        throw new Error(
+          `Question invalide (id=${id}): "Good" doit correspondre EXACTEMENT à une valeur de "answers".`
+        );
+      }
 
-      flashBuzzer();
-      setBuzzerState("buzzed");
-      clearInterval(interval);
-      interval = null;
-
-      // joueur 1 buzz en démo
-      setActivePlayer(1);
+      return { id, text, choices: answers, correctIndex };
     });
 
-    // Click answer
-    answers.forEach(a => {
-      a.addEventListener("click", () => {
-        if (locked) return;
-        if (timeLeft <= 0) return;
+    return normalized;
+  }
 
-        locked = true;
-        disableAnswers(true);
-        clearInterval(interval);
-        interval = null;
+  async function loadQuestions() {
+    setHint("Chargement des questions…");
+    setBuzzerText("…");
+    setBuzzerState("idle");
+    disableAnswers(true);
 
-        const choice = a.dataset.answer;
+    try {
+      const res = await fetch(QUESTIONS_URL, { cache: "no-store" });
+      if (!res.ok) {
+        throw new Error(`HTTP ${res.status} sur ${QUESTIONS_URL}`);
+      }
 
-        answers.forEach(x => {
-          x.style.opacity = "0.55";
-          if (x.dataset.answer === correctAnswer) {
-            x.classList.add("correct");
-            x.style.opacity = "1";
-          }
-        });
+      const raw = await res.json();
+      const normalized = normalizeQuestions(raw);
 
-        if (choice === correctAnswer) {
-          a.classList.add("correct");
-          updateScore(50);
-        } else {
-          a.classList.add("wrong");
-        }
+      // optionnel: mélanger l’ordre des questions
+      state.questions = shuffle(normalized);
+
+      // reset game
+      state.scores = { 1: 0, 2: 0, 3: 0, 4: 0 };
+      state.questionIndex = 0;
+      state.questionNumber = 1;
+      state.gagnant_trouve = false;
+
+      renderScores();
+      setHint("Questions chargées. Clique sur le buzzer (ou espace) pour buzzer.");
+
+      runQuestion();
+    } catch (err) {
+      console.error(err);
+      setBuzzerText("ERR");
+      setBuzzerState("timeup");
+      setHint(`Erreur chargement JSON: ${err.message}`);
+    }
+  }
+
+  // ---------- GAME FLOW ----------
+  function openBuzz() {
+    state.buzzOpen = true;
+    state.respondingPlayer = null;
+    state.awaitingHumanAnswer = false;
+
+    setBuzzerState("idle");
+    resetAnswersUI();
+    disableAnswers(true);
+    setActivePlayer(0);
+
+    setHint(`Buzz ouvert (${TEMPS_LIMITE}s). Clique sur le buzzer (ou espace) pour répondre.`);
+
+    scheduleBotsBuzz();
+    startTimer();
+  }
+
+  function closeBuzz() {
+    state.buzzOpen = false;
+    clearBotSchedules();
+  }
+
+  function onTimeElapsed() {
+    if (state.respondingPlayer === null) {
+      setBuzzerState("timeup");
+      setHint(`Temps écoulé (${TEMPS_LIMITE}s). Question suivante.`);
+      nextQuestion();
+      return;
+    }
+    setHint("Temps écoulé. Question suivante.");
+    nextQuestion();
+  }
+
+  function scheduleBotsBuzz() {
+    clearBotSchedules();
+
+    for (const bot of BOTS) {
+      const cfg = BOT_CONFIG[bot];
+      if (!cfg) continue;
+      if (Math.random() > cfg.buzzChance) continue;
+
+      const delay = randInt(cfg.buzzDelayMin, cfg.buzzDelayMax);
+      const t = setTimeout(() => {
+        if (state.buzzOpen && state.respondingPlayer === null) onBuzz(bot);
+      }, delay);
+
+      state.botTimeouts.push(t);
+    }
+  }
+
+  function onBuzz(player) {
+    if (!state.buzzOpen) return;
+    if (state.respondingPlayer !== null) return;
+
+    state.respondingPlayer = player;
+    closeBuzz();
+    stopTimer();
+
+    flashBuzzer();
+    setBuzzerState("buzzed");
+    setActivePlayer(player);
+
+    if (player === HUMAN) {
+      state.awaitingHumanAnswer = true;
+      disableAnswers(false);
+      setHint("Tu as buzzé. Clique sur une réponse.");
+    } else {
+      disableAnswers(true);
+      setHint(`Joueur ${player} (bot) répond…`);
+      botAnswer(player);
+    }
+  }
+
+  function verifyAnswer(index) {
+    return index === state.correctIndex;
+  }
+
+  function awardPoint(player) {
+    state.scores[player] += 1;
+    renderScores();
+
+    if (state.scores[player] >= POINTS_VICTOIRE) {
+      state.gagnant_trouve = true;
+      setHint(`🏆 Joueur ${player} gagne la Manche 1 avec ${POINTS_VICTOIRE} points.`);
+      endRound();
+    } else {
+      setHint(`✓ Bonne réponse (Joueur ${player}) — ${state.scores[player]} pts. Question suivante.`);
+      nextQuestion();
+    }
+  }
+
+  function handleWrong(player) {
+    setHint(`✗ Mauvaise réponse (Joueur ${player}). Question suivante.`);
+    nextQuestion();
+  }
+
+  function revealAnswerUI(chosenIndex) {
+    dom.answers.forEach((el, i) => {
+      if (i === state.correctIndex) el.classList.add("correct");
+      else if (i === chosenIndex) el.classList.add("wrong");
+      el.classList.add("disabled");
+    });
+  }
+
+  function botAnswer(botPlayer) {
+    const cfg = BOT_CONFIG[botPlayer] || { accuracy: 0.5 };
+    const willBeCorrect = Math.random() < cfg.accuracy;
+
+    let chosenIndex;
+    if (willBeCorrect) chosenIndex = state.correctIndex;
+    else {
+      const pool = [0, 1, 2, 3].filter((i) => i !== state.correctIndex);
+      chosenIndex = pool[randInt(0, pool.length - 1)];
+    }
+
+    const thinkDelay = randInt(600, 1400);
+    setTimeout(() => {
+      revealAnswerUI(chosenIndex);
+
+      const ok = chosenIndex === state.correctIndex;
+      setTimeout(() => {
+        if (ok) awardPoint(botPlayer);
+        else handleWrong(botPlayer);
+      }, 650);
+    }, thinkDelay);
+  }
+
+  function onHumanAnswerClick(index) {
+    if (!state.awaitingHumanAnswer) return;
+
+    state.awaitingHumanAnswer = false;
+    disableAnswers(true);
+
+    revealAnswerUI(index);
+
+    const ok = verifyAnswer(index);
+    setTimeout(() => {
+      if (ok) awardPoint(HUMAN);
+      else handleWrong(HUMAN);
+    }, 650);
+  }
+
+  function runQuestion() {
+    if (state.gagnant_trouve) return;
+    if (!state.questions.length) return;
+
+    const q = state.questions[state.questionIndex];
+    state.correctIndex = q.correctIndex;
+
+    renderQuestion(q);
+    openBuzz();
+  }
+
+  function nextQuestion() {
+    if (state.gagnant_trouve) return;
+
+    stopTimer();
+    closeBuzz();
+    disableAnswers(true);
+
+    state.questionNumber += 1;
+    state.questionIndex += 1;
+    if (state.questionIndex >= state.questions.length) state.questionIndex = 0;
+
+    setTimeout(runQuestion, 450);
+  }
+
+  function endRound() {
+    stopTimer();
+    closeBuzz();
+    disableAnswers(true);
+
+    const classement = [1, 2, 3, 4]
+      .map((p) => ({ player: p, score: state.scores[p] }))
+      .sort((a, b) => b.score - a.score);
+
+    const top3 = classement.slice(0, 3);
+    const last = classement[3];
+
+    setHint(
+      `FIN — Scores: J1=${state.scores[1]} | J2=${state.scores[2]} | J3=${state.scores[3]} | J4=${state.scores[4]} — ` +
+      `Qualifiés: J${top3[0].player}, J${top3[1].player}, J${top3[2].player} — Éliminé: J${last.player}`
+    );
+  }
+
+  // ---------- EVENTS ----------
+  function bindEvents() {
+    dom.buzzer.addEventListener("click", () => onBuzz(HUMAN));
+
+    window.addEventListener("keydown", (e) => {
+      if (e.code === "Space") {
+        e.preventDefault();
+        onBuzz(HUMAN);
+      }
+    });
+
+    dom.answers.forEach((el, i) => {
+      el.addEventListener("click", () => onHumanAnswerClick(i));
+    });
+
+    // fallback avatars si images cassées
+    $$(".avatar-img").forEach((img) => {
+      img.addEventListener("error", () => {
+        const wrap = img.closest(".avatar");
+        if (!wrap) return;
+        img.style.display = "none";
+        const fb = wrap.querySelector(".fallback");
+        if (fb) fb.style.display = "grid";
       });
     });
+  }
 
-    document.addEventListener("DOMContentLoaded", () => {
-      loadAvatars();
-      startTimer();
-    });
-    
-  </script>
+  // ---------- START ----------
+  function startGame() {
+    bindEvents();
+    renderScores();
+    setBuzzerText("…");
+    setHint("Initialisation…");
+
+    loadQuestions();
+  }
+
+  startGame();
+})();
+</script>
+
 </body>
 </html>
