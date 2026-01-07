@@ -28,119 +28,75 @@
       overflow:hidden;
     }
 
-    /* Stars (simple, léger) */
-.stars{
-  position:fixed;
-  inset:0;
-  z-index:-1;
-  pointer-events:none;
-  overflow:hidden;
-}
-
-.star{
-  position:absolute;
-  border-radius:50%;
-  background: white;
-  box-shadow:
-    0 0 4px rgba(255,255,255,.8),
-    0 0 8px rgba(255,255,255,.6),
-    0 0 16px rgba(255,255,255,.4);
-  animation: starTwinkle linear infinite;
-}
-
-/* tailles réalistes */
-.star.small{
-  width:1px;
-  height:1px;
-  opacity:.5;
-}
-
-.star.medium{
-  width:2px;
-  height:2px;
-  opacity:.7;
-}
-
-.star.large{
-  width:3px;
-  height:3px;
-  opacity:1;
-  box-shadow:
-    0 0 6px rgba(255,255,255,1),
-    0 0 14px rgba(255,255,255,.9),
-    0 0 26px rgba(255,255,255,.6);
-}
-
-/* scintillement naturel */
-@keyframes starTwinkle{
-  0%,100%{
-    opacity:.4;
-    transform: scale(1);
-  }
-  50%{
-    opacity:1;
-    transform: scale(1.3);
-  }
-}
-
-
-    /* App layout */
-    .app{
-      height:100vh;
-      display:grid;
-      grid-template-rows: 1fr 3px 0.7fr;
+    /* Stars */
+    .stars{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;}
+    .star{
+      position:absolute;
+      border-radius:50%;
+      background:white;
+      box-shadow:0 0 4px rgba(255,255,255,.8),0 0 8px rgba(255,255,255,.6),0 0 16px rgba(255,255,255,.4);
+      animation: starTwinkle linear infinite;
+    }
+    .star.small{width:1px;height:1px;opacity:.5;}
+    .star.medium{width:2px;height:2px;opacity:.7;}
+    .star.large{
+      width:3px;height:3px;opacity:1;
+      box-shadow:0 0 6px rgba(255,255,255,1),0 0 14px rgba(255,255,255,.9),0 0 26px rgba(255,255,255,.6);
+    }
+    @keyframes starTwinkle{
+      0%,100%{opacity:.4;transform:scale(1);}
+      50%{opacity:1;transform:scale(1.3);}
     }
 
-.top{
-  background: linear-gradient(180deg, rgba(0, 102, 245, 0.35), rgba(7,19,53,.15));
-  padding:18px;
+    /* Layout */
+    .app{height:100vh;display:grid;grid-template-rows:1fr 3px 0.7fr;}
 
-  display:grid;
-  grid-template-columns: 240px minmax(0, 1fr) 240px;
-  gap:18px;
-
-  align-items:center;      /* centre verticalement chaque colonne */
-  justify-items:center;    /* centre horizontalement le contenu des colonnes */
-}
-
+    .top{
+      background: linear-gradient(180deg, rgba(0, 102, 245, 0.35), rgba(7,19,53,.15));
+      padding:18px;
+      display:grid;
+      grid-template-columns:240px minmax(0,1fr) 240px;
+      gap:18px;
+      align-items:center;
+      justify-items:center;
+    }
 
     .divider{
       background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      box-shadow: 0 0 12px rgba(248,213,75,.55);
+      box-shadow:0 0 12px rgba(248,213,75,.55);
     }
 
     .bottom{
       background: linear-gradient(180deg, rgba(11,27,74,.35), rgba(7,19,53,.65));
       padding:18px;
       display:grid;
-      grid-template-columns: 1fr;
+      grid-template-columns:1fr;
       align-items:center;
       justify-items:center;
       position:relative;
     }
 
-    /* Players (simple + propre) */
- .players{
-  height:100%;                 /* prend toute la hauteur de la zone top */
-  display:flex;
-  flex-direction:column;
-  justify-content:center;      /* centre verticalement les joueurs */
-  gap:14px;
-
-  width:100%;
-  max-width:240px;             /* cohérent avec la colonne */
-}
+    /* Players */
+    .players{
+      height:100%;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      gap:14px;
+      width:100%;
+      max-width:240px;
+    }
 
     .player{
       display:grid;
-      grid-template-columns: 64px 1fr;
+      grid-template-columns:64px 1fr;
       gap:12px;
       align-items:center;
       padding:12px;
       border-radius:16px;
       background: rgba(0,0,0,.18);
       border:1px solid rgba(255,255,255,.08);
-      box-shadow: 0 10px 20px rgba(0,0,0,.25);
+      box-shadow:0 10px 20px rgba(0,0,0,.25);
     }
 
     .avatar{
@@ -149,7 +105,7 @@
       display:grid;place-items:center;
       background: radial-gradient(circle at 30% 30%, rgba(248,213,75,.25), rgba(11,79,227,.25));
       border:2px solid rgba(248,213,75,.55);
-      box-shadow: 0 0 0 3px rgba(242,169,0,.18), 0 0 18px rgba(248,213,75,.22);
+      box-shadow:0 0 0 3px rgba(242,169,0,.18), 0 0 18px rgba(248,213,75,.22);
       position:relative;
     }
     .avatar img{width:100%;height:100%;object-fit:cover;display:block}
@@ -166,7 +122,6 @@
       box-shadow: 0 0 0 1px rgba(248,213,75,.35), 0 16px 28px rgba(0,0,0,.35);
     }
 
-
     .meta{display:flex;flex-direction:column;gap:6px}
     .name{font-weight:700;letter-spacing:.2px}
     .pts{
@@ -176,22 +131,22 @@
       color:#0a1e52;
       font-weight:800;
       font-size:13px;
-      box-shadow: 0 8px 18px rgba(242,169,0,.18);
+      box-shadow:0 8px 18px rgba(242,169,0,.18);
     }
 
     /* Question card */
     .question{
       width:min(860px, 100%);
-      padding:22px 22px;
-      border-radius: var(--radius);
+      padding:22px;
+      border-radius:var(--radius);
       background: rgba(0,0,0,.22);
       border:1px solid rgba(248,213,75,.22);
-      box-shadow: var(--shadow);
+      box-shadow:var(--shadow);
       position:relative;
       overflow:hidden;
-    justify-self:center;         /* centre dans la colonne centrale */
-    align-self:center;           /* centre verticalement */
-     margin:0 auto;  
+      justify-self:center;
+      align-self:center;
+      margin:0 auto;
     }
     .question::before{
       content:"";
@@ -215,7 +170,7 @@
       position:relative;
     }
 
-    /* Buzzer (vif mais simple) */
+    /* Buzzer */
     .buzzerWrap{
       position:absolute;
       top:-54px;
@@ -223,7 +178,6 @@
       transform:translateX(-50%);
       z-index:5;
     }
-
     .buzzer{
       width:120px;height:120px;border-radius:50%;
       display:grid;place-items:center;
@@ -243,20 +197,14 @@
       animation: pulse 0.65s infinite ease-in-out;
       position:relative;
     }
-
     .buzzer::after{
       content:"";
-      position:absolute;inset:0;
-      border-radius:50%;
+      position:absolute;inset:0;border-radius:50%;
       background: radial-gradient(circle at 35% 35%, rgba(255,255,255,.45), transparent 55%);
       pointer-events:none;
       opacity:.7;
     }
-
-    .buzzer:active{
-      transform: scale(.94);
-      filter: brightness(1.25);
-    }
+    .buzzer:active{transform: scale(.94); filter: brightness(1.25);}
 
     @keyframes pulse{
       0%,100%{
@@ -305,17 +253,17 @@
         inset 0 10px 22px rgba(255,255,255,.12);
     }
 
-    /* Answers (simple, clean, responsive) */
+    /* Answers */
     .answers{
       width:min(2000px, 100%);
       display:grid;
       grid-template-columns: 1fr 1fr;
       gap:14px 115px;
       padding:18px;
-      border-radius: var(--radius);
+      border-radius:var(--radius);
       background: rgba(0,0,0,.20);
       border:4px solid rgba(239, 224, 8, 0.168);
-      box-shadow: var(--shadow);
+      box-shadow:var(--shadow);
     }
 
     .answer{
@@ -332,25 +280,17 @@
       cursor:pointer;
       user-select:none;
       border:2px solid rgba(0,0,0,.08);
-      box-shadow: 0 10px 20px rgba(0,0,0,.28);
+      box-shadow:0 10px 20px rgba(0,0,0,.28);
       transition: transform .12s ease, filter .12s ease, opacity .12s ease;
       min-height:72px;
     }
 
     .answer:hover{transform: translateY(-2px); filter: brightness(1.02)}
     .answer:active{transform: translateY(0); filter: brightness(.98)}
-
-    .answer.correct{
-      background: linear-gradient(180deg, #3cff6a, #17a63a);
-      color:white;
-    }
-    .answer.wrong{
-      background: linear-gradient(180deg, #ff3d3d, #b50000);
-      color:white;
-    }
+    .answer.correct{background: linear-gradient(180deg, #3cff6a, #17a63a); color:white;}
+    .answer.wrong{background: linear-gradient(180deg, #ff3d3d, #b50000); color:white;}
     .answer.disabled{pointer-events:none;opacity:.55}
 
-    /* Responsive */
     @media (max-width: 900px){
       .top{grid-template-columns: 1fr; grid-template-rows:auto auto auto}
       .players{flex-direction:row; justify-content:space-between}
@@ -370,54 +310,53 @@
       <div class="players" id="leftPlayers">
         <div class="player active" data-player="1">
           <div class="avatar">
-            <img src="page.html index/jaune.png" class="avatar-img" alt="Joueur 1" />
+            <!-- remplacé par JS depuis localStorage -->
+            <img id="avatar-1" class="avatar-img" alt="Joueur 1" />
             <div class="fallback">1</div>
           </div>
           <div class="meta">
-            <div class="name">Joueur 1</div>
-            <div class="pts" id="pts-1">450 pts</div>
+            <div class="name" id="name-1">Joueur 1</div>
+            <div class="pts" id="pts-1">0 pts</div>
           </div>
         </div>
 
         <div class="player" data-player="2">
           <div class="avatar">
-            <img src="page.html index/Nouveau dossier/orange.png" class="avatar-img" alt="Joueur 2" />
+            <img id="avatar-2" class="avatar-img" alt="Bot 1" />
             <div class="fallback">2</div>
           </div>
           <div class="meta">
-            <div class="name">Joueur 2</div>
-            <div class="pts" id="pts-2">380 pts</div>
+            <div class="name" id="name-2">Bot 1</div>
+            <div class="pts" id="pts-2">0 pts</div>
           </div>
         </div>
       </div>
 
       <div class="question">
-        <h1 id="questionText">
-          Quelle est la capitale de la Norvège, pays scandinave connu pour ses fjords et ses aurores boréales ?
-        </h1>
+        <h1 id="questionText">Chargement…</h1>
         <div class="hint">Clique sur le buzzer pour répondre.</div>
       </div>
 
       <div class="players" id="rightPlayers">
         <div class="player" data-player="3">
           <div class="avatar">
-            <img src="page.html index/rose.png" class="avatar-img" alt="Joueur 3" />
+            <img id="avatar-3" class="avatar-img" alt="Bot 2" />
             <div class="fallback">3</div>
           </div>
           <div class="meta">
-            <div class="name">Joueur 3</div>
-            <div class="pts" id="pts-3">520 pts</div>
+            <div class="name" id="name-3">Bot 2</div>
+            <div class="pts" id="pts-3">0 pts</div>
           </div>
         </div>
 
         <div class="player" data-player="4">
           <div class="avatar">
-            <img  src="page.html index/turquoi.png" class="avatar-img" alt="Joueur 4" />
+            <img id="avatar-4" class="avatar-img" alt="Bot 3" />
             <div class="fallback">4</div>
           </div>
           <div class="meta">
-            <div class="name">Joueur 4</div>
-            <div class="pts" id="pts-4">290 pts</div>
+            <div class="name" id="name-4">Bot 3</div>
+            <div class="pts" id="pts-4">0 pts</div>
           </div>
         </div>
       </div>
@@ -427,480 +366,595 @@
 
     <section class="bottom">
       <div class="buzzerWrap">
-        <div class="buzzer" id="buzzer">12s</div>
+        <div class="buzzer" id="buzzer">…</div>
       </div>
 
       <div class="answers" id="answers">
-        <div class="answer" data-answer="a">Stockholm</div>
-        <div class="answer" data-answer="b">Helsinki</div>
-        <div class="answer" data-answer="c">Oslo</div>
-        <div class="answer" data-answer="d">Copenhague</div>
+        <div class="answer">A</div>
+        <div class="answer">B</div>
+        <div class="answer">C</div>
+        <div class="answer">D</div>
       </div>
     </section>
   </main>
 
-<script>
-/* =========================
-   1 PLAYER vs 3 BOTS
-   Manche 1: 9 points - 20s/question
-   Questions via JSON/epreuve1.json
-   Modèle JSON:
-   {
-     "id": 94,
-     "question": "...",
-     "Good": "bonne réponse",
-     "answers": ["A","B","C","D"]
-   }
-   ========================= */
+  <script>
+    /* =========================
+       ÉPREUVE 1
+       - Questions JSON GitHub raw
+       - J1 = joueur sélectionné (nom + avatar via localStorage "qpc_player")
+       - Bots nommés + avatars fixes
+       - Chrono GLOBAL d’épreuve (ne se reset pas) + fenêtre réponse après buzz
+       ========================= */
 
-(function () {
-  // ---------- CONFIG ----------
-  const POINTS_VICTOIRE = 9;
-  const TEMPS_LIMITE = 20;
-  const QUESTIONS_URL = "const QUESTIONS_URL = "https://raw.githubusercontent.com/Baistes1/Question-pour-champion/main/JSON/epreuve1.json";
+    (function () {
+      // ---------- CONFIG ----------
+      const POINTS_VICTOIRE = 9;
 
-  const HUMAN = 1;
-  const BOTS = [2, 3, 4];
+      // Temps "buzz ouvert" / question (affiché sur le buzzer) : tu peux le garder
+      const TEMPS_LIMITE = 20;
 
-  // Ajuste la difficulté ici
-  const BOT_CONFIG = {
-    2: { buzzChance: 0.60, buzzDelayMin: 600,  buzzDelayMax: 3500, accuracy: 0.60 },
-    3: { buzzChance: 0.50, buzzDelayMin: 700,  buzzDelayMax: 4500, accuracy: 0.50 },
-    4: { buzzChance: 0.40, buzzDelayMin: 900,  buzzDelayMax: 6000, accuracy: 0.40 },
-  };
+      // Fenêtre de réponse après buzz HUMAIN
+      const TEMPS_REPONSE_APRES_BUZZ = 5;
 
-  // ---------- DOM (TON HTML) ----------
-  const $ = (sel) => document.querySelector(sel);
-  const $$ = (sel) => Array.from(document.querySelectorAll(sel));
+      // Chrono GLOBAL d’épreuve (NE SE RESET PAS)
+      const EPREUVE_DURATION = 180;
+      const NEXT_PAGE_URL = "./epreuve2.html";
 
-  const dom = {
-    questionText: $("#questionText"),
-    hint: $(".hint"),
-    buzzer: $("#buzzer"),
-    answers: $$("#answers .answer"),
-    pts: {
-      1: $("#pts-1"),
-      2: $("#pts-2"),
-      3: $("#pts-3"),
-      4: $("#pts-4"),
-    },
-    playerCards: $$(".player"),
-  };
+      const QUESTIONS_URL =
+        "https://raw.githubusercontent.com/Baistes1/Question-pour-champion/main/JSON/epreuve1.json";
 
-  if (!dom.questionText || !dom.buzzer || dom.answers.length !== 4) {
-    throw new Error("DOM incomplet: vérifie #questionText, #buzzer, et 4 éléments .answer dans #answers.");
-  }
+      const HUMAN = 1;
+      const BOTS = [2, 3, 4];
 
-  // ---------- STATE ----------
-  const state = {
-    scores: { 1: 0, 2: 0, 3: 0, 4: 0 },
+      const BOT_CONFIG = {
+        2: { buzzChance: 0.60, buzzDelayMin: 600,  buzzDelayMax: 3500, accuracy: 0.60 },
+        3: { buzzChance: 0.50, buzzDelayMin: 700,  buzzDelayMax: 4500, accuracy: 0.50 },
+        4: { buzzChance: 0.40, buzzDelayMin: 900,  buzzDelayMax: 6000, accuracy: 0.40 },
+      };
 
-    // questions normalisées:
-    // { id, text, choices[4], correctIndex }
-    questions: [],
-    questionIndex: 0,
-    questionNumber: 1,
+      // Bots : noms + avatars (mets tes vrais chemins ici)
+      const BOT_PROFILE = {
+        2: { name: "Atlas",  avatar: "Images/bot_orange.png" },
+        3: { name: "Nova",   avatar: "Images/bot_rose.png" },
+        4: { name: "Orion",  avatar: "Images/bot_turquoise.png" },
+      };
 
-    gagnant_trouve: false,
+      // ---------- DOM ----------
+      const $ = (sel) => document.querySelector(sel);
+      const $$ = (sel) => Array.from(document.querySelectorAll(sel));
 
-    // buzz
-    buzzOpen: false,
-    respondingPlayer: null,
-    awaitingHumanAnswer: false,
+      const dom = {
+        starsWrap: $("#stars"),
+        questionText: $("#questionText"),
+        hint: $(".hint"),
+        buzzer: $("#buzzer"),
+        answers: $$("#answers .answer"),
+        pts: { 1: $("#pts-1"), 2: $("#pts-2"), 3: $("#pts-3"), 4: $("#pts-4") },
+        playerCards: $$(".player"),
 
-    // question courante
-    correctIndex: null,
+        name: { 1: $("#name-1"), 2: $("#name-2"), 3: $("#name-3"), 4: $("#name-4") },
+        avatar: { 1: $("#avatar-1"), 2: $("#avatar-2"), 3: $("#avatar-3"), 4: $("#avatar-4") },
+      };
 
-    // timer
-    remaining: TEMPS_LIMITE,
-    timerId: null,
+      if (!dom.questionText || !dom.buzzer || dom.answers.length !== 4) {
+        throw new Error("DOM incomplet: vérifie #questionText, #buzzer, et 4 éléments .answer dans #answers.");
+      }
 
-    // bot timers
-    botTimeouts: [],
-  };
+      // ---------- STARS ----------
+      function buildStars() {
+        if (!dom.starsWrap) return;
+        dom.starsWrap.innerHTML = "";
+        const count = 140;
 
-  // ---------- UI HELPERS ----------
-  function setHint(msg) {
-    if (dom.hint) dom.hint.textContent = msg;
-  }
+        for (let i = 0; i < count; i++) {
+          const s = document.createElement("div");
+          const r = Math.random();
+          s.className = "star " + (r < 0.75 ? "small" : r < 0.95 ? "medium" : "large");
+          s.style.left = `${Math.random() * 100}%`;
+          s.style.top = `${Math.random() * 100}%`;
+          s.style.animationDuration = `${2 + Math.random() * 4}s`;
+          s.style.animationDelay = `${Math.random() * 3}s`;
+          dom.starsWrap.appendChild(s);
+        }
+      }
 
-  function setBuzzerText(sec) {
-    dom.buzzer.textContent = `${sec}s`;
-  }
+      // ---------- PROFILS ----------
+      function safeParseJSON(raw) {
+        try { return JSON.parse(raw); } catch { return null; }
+      }
 
-  function setBuzzerState(mode) {
-    dom.buzzer.classList.remove("buzzed", "timeup", "flash");
-    if (mode === "buzzed") dom.buzzer.classList.add("buzzed");
-    if (mode === "timeup") dom.buzzer.classList.add("timeup");
-  }
+      function getHumanPlayer() {
+        const raw = localStorage.getItem("qpc_player");
+        const parsed = raw ? safeParseJSON(raw) : null;
+        if (!parsed) return { name: "Joueur 1", avatar: "" };
+        return { name: parsed.name || "Joueur 1", avatar: parsed.avatar || "" };
+      }
 
-  function flashBuzzer() {
-    dom.buzzer.classList.add("flash");
-    setTimeout(() => dom.buzzer.classList.remove("flash"), 200);
-  }
+      function applyProfiles() {
+        // J1 = joueur sélectionné
+        const human = getHumanPlayer();
+        if (dom.name[1]) dom.name[1].textContent = human.name;
+        if (dom.avatar[1]) dom.avatar[1].src = human.avatar || "";
 
-  function renderScores() {
-    for (let p = 1; p <= 4; p++) {
-      if (dom.pts[p]) dom.pts[p].textContent = `${state.scores[p]} pts`;
-    }
-  }
+        // Bots
+        for (const p of BOTS) {
+          const profile = BOT_PROFILE[p] || { name: `Bot ${p}`, avatar: "" };
+          if (dom.name[p]) dom.name[p].textContent = profile.name;
+          if (dom.avatar[p] && profile.avatar) dom.avatar[p].src = profile.avatar;
+        }
 
-  function setActivePlayer(p) {
-    dom.playerCards.forEach((card) => {
-      const id = Number(card.dataset.player);
-      card.classList.toggle("active", id === p);
-    });
-  }
+        // fallback images cassées
+        $$(".avatar-img").forEach((img) => {
+          img.addEventListener("error", () => {
+            const wrap = img.closest(".avatar");
+            if (!wrap) return;
+            img.style.display = "none";
+            const fb = wrap.querySelector(".fallback");
+            if (fb) fb.style.display = "grid";
+          });
+        });
+      }
 
-  function resetAnswersUI() {
-    dom.answers.forEach((a) => {
-      a.classList.remove("correct", "wrong", "disabled");
-    });
-  }
+      // ---------- STATE ----------
+      const state = {
+        scores: { 1: 0, 2: 0, 3: 0, 4: 0 },
 
-  function disableAnswers(disabled) {
-    dom.answers.forEach((a) => {
-      a.classList.toggle("disabled", disabled);
-    });
-  }
+        questions: [],
+        questionIndex: 0,
+        questionNumber: 1,
 
-  function renderQuestion(q) {
-    dom.questionText.textContent = `Question ${state.questionNumber} — ${q.text}`;
-    dom.answers.forEach((el, i) => {
-      el.textContent = q.choices[i] ?? `Réponse ${i + 1}`;
-    });
-  }
+        gagnant_trouve: false,
 
-  // ---------- TIMER ----------
-  function stopTimer() {
-    if (state.timerId) clearInterval(state.timerId);
-    state.timerId = null;
-  }
+        // buzz fenêtre "question"
+        buzzOpen: false,
+        respondingPlayer: null,
+        awaitingHumanAnswer: false,
 
-  function startTimer() {
-    stopTimer();
-    state.remaining = TEMPS_LIMITE;
-    setBuzzerText(state.remaining);
+        correctIndex: null,
 
-    state.timerId = setInterval(() => {
-      state.remaining -= 1;
-      setBuzzerText(state.remaining);
+        // timer question (buzz ouvert) => affiché sur buzzer
+        remaining: TEMPS_LIMITE,
+        timerId: null,
 
-      if (state.remaining <= 0) {
+        // fenêtre réponse après buzz humain
+        answerWindowRemaining: TEMPS_REPONSE_APRES_BUZZ,
+        answerWindowId: null,
+
+        // bot timers
+        botTimeouts: [],
+
+        // chrono global d’épreuve (NE SE RESET PAS)
+        epreuveRemaining: EPREUVE_DURATION,
+        epreuveTimerId: null,
+      };
+
+      // ---------- UI HELPERS ----------
+      function setHint(msg) {
+        if (dom.hint) dom.hint.textContent = msg;
+      }
+
+      function setBuzzerText(sec) {
+        dom.buzzer.textContent = `${sec}s`;
+      }
+
+      function setBuzzerState(mode) {
+        dom.buzzer.classList.remove("buzzed", "timeup", "flash");
+        if (mode === "buzzed") dom.buzzer.classList.add("buzzed");
+        if (mode === "timeup") dom.buzzer.classList.add("timeup");
+      }
+
+      function flashBuzzer() {
+        dom.buzzer.classList.add("flash");
+        setTimeout(() => dom.buzzer.classList.remove("flash"), 180);
+      }
+
+      function renderScores() {
+        for (let p = 1; p <= 4; p++) {
+          if (dom.pts[p]) dom.pts[p].textContent = `${state.scores[p]} pts`;
+        }
+      }
+
+      function setActivePlayer(p) {
+        dom.playerCards.forEach((card) => {
+          const id = Number(card.dataset.player);
+          card.classList.toggle("active", id === p);
+        });
+      }
+
+      function resetAnswersUI() {
+        dom.answers.forEach((a) => a.classList.remove("correct", "wrong", "disabled"));
+      }
+
+      function disableAnswers(disabled) {
+        dom.answers.forEach((a) => a.classList.toggle("disabled", disabled));
+      }
+
+      function renderQuestion(q) {
+        dom.questionText.textContent = `Question ${state.questionNumber} — ${q.text}`;
+        dom.answers.forEach((el, i) => {
+          el.textContent = q.choices[i] ?? `Réponse ${i + 1}`;
+        });
+      }
+
+      // ---------- TIMER QUESTION (buzz ouvert) ----------
+      function stopTimer() {
+        if (state.timerId) clearInterval(state.timerId);
+        state.timerId = null;
+      }
+
+      function startTimer() {
         stopTimer();
-        onTimeElapsed();
+        state.remaining = TEMPS_LIMITE;
+        setBuzzerText(state.remaining);
+
+        state.timerId = setInterval(() => {
+          state.remaining -= 1;
+          setBuzzerText(state.remaining);
+          if (state.remaining <= 0) {
+            stopTimer();
+            onTimeElapsed();
+          }
+        }, 1000);
       }
-    }, 1000);
-  }
 
-  // ---------- UTILS ----------
-  function randInt(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+      // ---------- TIMER fenêtre réponse après buzz humain ----------
+      function stopAnswerWindow() {
+        if (state.answerWindowId) clearInterval(state.answerWindowId);
+        state.answerWindowId = null;
+      }
 
-  function clearBotSchedules() {
-    state.botTimeouts.forEach(clearTimeout);
-    state.botTimeouts = [];
-  }
+      function startAnswerWindow() {
+        stopAnswerWindow();
+        state.answerWindowRemaining = TEMPS_REPONSE_APRES_BUZZ;
 
-  function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
-    }
-    return array;
-  }
+        setHint(`Tu as buzzé. Tu as ${state.answerWindowRemaining}s pour cliquer une réponse.`);
 
-  // ---------- JSON LOADER + NORMALISATION ----------
-  function normalizeQuestions(raw) {
-    if (!Array.isArray(raw)) {
-      throw new Error("Le JSON doit être un tableau de questions.");
-    }
+        state.answerWindowId = setInterval(() => {
+          if (!state.awaitingHumanAnswer) {
+            stopAnswerWindow();
+            return;
+          }
 
-    const normalized = raw.map((item, idx) => {
-      const id = item?.id ?? idx;
-      const text = String(item?.question ?? "").trim();
-      const good = String(item?.Good ?? "").trim();
-      const answers = Array.isArray(item?.answers) ? item.answers.map(a => String(a).trim()) : [];
+          state.answerWindowRemaining -= 1;
 
-      if (!text) throw new Error(`Question invalide (id=${id}): champ "question" manquant.`);
-      if (answers.length !== 4) throw new Error(`Question invalide (id=${id}): "answers" doit contenir 4 réponses.`);
-      if (!good) throw new Error(`Question invalide (id=${id}): champ "Good" manquant.`);
+          if (state.answerWindowRemaining <= 0) {
+            stopAnswerWindow();
+            state.awaitingHumanAnswer = false;
+            disableAnswers(true);
+            setHint("Temps dépassé après le buzz. Question suivante.");
+            nextQuestion();
+            return;
+          }
 
-      const correctIndex = answers.findIndex(a => a === good);
-      if (correctIndex === -1) {
-        throw new Error(
-          `Question invalide (id=${id}): "Good" doit correspondre EXACTEMENT à une valeur de "answers".`
+          setHint(`Tu as buzzé. Tu as ${state.answerWindowRemaining}s pour cliquer une réponse.`);
+        }, 1000);
+      }
+
+      // ---------- TIMER GLOBAL ÉPREUVE (NE SE RESET PAS) ----------
+      function stopEpreuveTimer() {
+        if (state.epreuveTimerId) clearInterval(state.epreuveTimerId);
+        state.epreuveTimerId = null;
+      }
+
+      function goNextEpreuve() {
+        stopTimer();
+        stopAnswerWindow();
+        closeBuzz();
+        stopEpreuveTimer();
+        window.location.href = NEXT_PAGE_URL;
+      }
+
+      function startEpreuveTimerOnce() {
+        if (state.epreuveTimerId) return; // déjà lancé
+        state.epreuveRemaining = EPREUVE_DURATION;
+
+        state.epreuveTimerId = setInterval(() => {
+          state.epreuveRemaining -= 1;
+
+          // IMPORTANT : on ne reset jamais, on ne touche à rien ailleurs
+          if (state.epreuveRemaining <= 0) {
+            setHint("Temps total de l’épreuve terminé.");
+            goNextEpreuve();
+          }
+        }, 1000);
+      }
+
+      // ---------- UTILS ----------
+      function randInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
+
+      function clearBotSchedules() {
+        state.botTimeouts.forEach(clearTimeout);
+        state.botTimeouts = [];
+      }
+
+      function shuffle(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+      }
+
+      // ---------- JSON LOADER ----------
+      function normalizeQuestions(raw) {
+        if (!Array.isArray(raw)) throw new Error("Le JSON doit être un tableau de questions.");
+
+        return raw.map((item, idx) => {
+          const id = item?.id ?? idx;
+          const text = String(item?.question ?? "").trim();
+          const good = String(item?.Good ?? "").trim();
+          const answers = Array.isArray(item?.answers) ? item.answers.map(a => String(a).trim()) : [];
+
+          if (!text) throw new Error(`Question invalide (id=${id}): champ "question" manquant.`);
+          if (answers.length !== 4) throw new Error(`Question invalide (id=${id}): "answers" doit contenir 4 réponses.`);
+          if (!good) throw new Error(`Question invalide (id=${id}): champ "Good" manquant.`);
+
+          const correctIndex = answers.findIndex(a => a === good);
+          if (correctIndex === -1) {
+            throw new Error(`Question invalide (id=${id}): "Good" doit correspondre EXACTEMENT à une valeur de "answers".`);
+          }
+
+          return { id, text, choices: answers, correctIndex };
+        });
+      }
+
+      async function loadQuestions() {
+        setHint("Chargement des questions…");
+        setBuzzerText("…");
+        setBuzzerState("idle");
+        disableAnswers(true);
+
+        try {
+          const res = await fetch(QUESTIONS_URL, { cache: "no-store" });
+          if (!res.ok) throw new Error(`HTTP ${res.status} sur ${QUESTIONS_URL}`);
+
+          const raw = await res.json();
+          state.questions = shuffle(normalizeQuestions(raw));
+
+          state.scores = { 1: 0, 2: 0, 3: 0, 4: 0 };
+          state.questionIndex = 0;
+          state.questionNumber = 1;
+          state.gagnant_trouve = false;
+
+          renderScores();
+          setHint("Questions chargées. Clique sur le buzzer (ou espace) pour buzzer.");
+          runQuestion();
+        } catch (err) {
+          console.error(err);
+          setBuzzerText("ERR");
+          setBuzzerState("timeup");
+          setHint(`Erreur chargement JSON: ${err.message}`);
+        }
+      }
+
+      // ---------- GAME FLOW ----------
+      function openBuzz() {
+        state.buzzOpen = true;
+        state.respondingPlayer = null;
+        state.awaitingHumanAnswer = false;
+        stopAnswerWindow();
+
+        setBuzzerState("idle");
+        resetAnswersUI();
+        disableAnswers(true);
+        setActivePlayer(0);
+
+        setHint(`Buzz ouvert (${TEMPS_LIMITE}s). Clique sur le buzzer (ou espace) pour répondre.`);
+        scheduleBotsBuzz();
+        startTimer();
+      }
+
+      function closeBuzz() {
+        state.buzzOpen = false;
+        clearBotSchedules();
+      }
+
+      function onTimeElapsed() {
+        if (state.respondingPlayer === null) {
+          setBuzzerState("timeup");
+          setHint(`Temps écoulé (${TEMPS_LIMITE}s). Question suivante.`);
+          nextQuestion();
+          return;
+        }
+        setHint("Temps écoulé. Question suivante.");
+        nextQuestion();
+      }
+
+      function scheduleBotsBuzz() {
+        clearBotSchedules();
+
+        for (const bot of BOTS) {
+          const cfg = BOT_CONFIG[bot];
+          if (!cfg) continue;
+          if (Math.random() > cfg.buzzChance) continue;
+
+          const delay = randInt(cfg.buzzDelayMin, cfg.buzzDelayMax);
+          const t = setTimeout(() => {
+            if (state.buzzOpen && state.respondingPlayer === null) onBuzz(bot);
+          }, delay);
+
+          state.botTimeouts.push(t);
+        }
+      }
+
+      function onBuzz(player) {
+        if (!state.buzzOpen) return;
+        if (state.respondingPlayer !== null) return;
+
+        state.respondingPlayer = player;
+        closeBuzz();
+        stopTimer();
+
+        flashBuzzer();
+        setBuzzerState("buzzed");
+        setActivePlayer(player);
+
+        if (player === HUMAN) {
+          state.awaitingHumanAnswer = true;
+          disableAnswers(false);
+          startAnswerWindow();
+        } else {
+          disableAnswers(true);
+          setHint(`${dom.name[player]?.textContent || `Joueur ${player}`} répond…`);
+          botAnswer(player);
+        }
+      }
+
+      function revealAnswerUI(chosenIndex) {
+        dom.answers.forEach((el, i) => {
+          if (i === state.correctIndex) el.classList.add("correct");
+          else if (i === chosenIndex) el.classList.add("wrong");
+          el.classList.add("disabled");
+        });
+      }
+
+      function awardPoint(player) {
+        state.scores[player] += 1;
+        renderScores();
+
+        const pName = dom.name[player]?.textContent || `Joueur ${player}`;
+
+        if (state.scores[player] >= POINTS_VICTOIRE) {
+          state.gagnant_trouve = true;
+          setHint(`🏆 ${pName} gagne la Manche 1 avec ${POINTS_VICTOIRE} points.`);
+          endRound();
+        } else {
+          setHint(`✓ Bonne réponse (${pName}) — ${state.scores[player]} pts. Question suivante.`);
+          nextQuestion();
+        }
+      }
+
+      function handleWrong(player) {
+        const pName = dom.name[player]?.textContent || `Joueur ${player}`;
+        setHint(`✗ Mauvaise réponse (${pName}). Question suivante.`);
+        nextQuestion();
+      }
+
+      function botAnswer(botPlayer) {
+        const cfg = BOT_CONFIG[botPlayer] || { accuracy: 0.5 };
+        const willBeCorrect = Math.random() < cfg.accuracy;
+
+        let chosenIndex;
+        if (willBeCorrect) chosenIndex = state.correctIndex;
+        else {
+          const pool = [0, 1, 2, 3].filter((i) => i !== state.correctIndex);
+          chosenIndex = pool[randInt(0, pool.length - 1)];
+        }
+
+        const thinkDelay = randInt(600, 1400);
+        setTimeout(() => {
+          revealAnswerUI(chosenIndex);
+
+          const ok = chosenIndex === state.correctIndex;
+          setTimeout(() => {
+            if (ok) awardPoint(botPlayer);
+            else handleWrong(botPlayer);
+          }, 650);
+        }, thinkDelay);
+      }
+
+      function onHumanAnswerClick(index) {
+        if (!state.awaitingHumanAnswer) return;
+
+        state.awaitingHumanAnswer = false;
+        stopAnswerWindow();
+        disableAnswers(true);
+
+        revealAnswerUI(index);
+
+        const ok = index === state.correctIndex;
+        setTimeout(() => {
+          if (ok) awardPoint(HUMAN);
+          else handleWrong(HUMAN);
+        }, 650);
+      }
+
+      function runQuestion() {
+        if (state.gagnant_trouve) return;
+        if (!state.questions.length) return;
+
+        const q = state.questions[state.questionIndex];
+        state.correctIndex = q.correctIndex;
+
+        renderQuestion(q);
+        openBuzz();
+      }
+
+      function nextQuestion() {
+        if (state.gagnant_trouve) return;
+
+        stopTimer();
+        stopAnswerWindow();
+        closeBuzz();
+        disableAnswers(true);
+
+        state.questionNumber += 1;
+        state.questionIndex += 1;
+        if (state.questionIndex >= state.questions.length) state.questionIndex = 0;
+
+        setTimeout(runQuestion, 450);
+      }
+
+      function endRound() {
+        stopTimer();
+        stopAnswerWindow();
+        closeBuzz();
+        disableAnswers(true);
+
+        const classement = [1, 2, 3, 4]
+          .map((p) => ({ player: p, score: state.scores[p] }))
+          .sort((a, b) => b.score - a.score);
+
+        const top3 = classement.slice(0, 3);
+        const last = classement[3];
+
+        setHint(
+          `FIN — Scores: ${dom.name[1].textContent}=${state.scores[1]} | ` +
+          `${dom.name[2].textContent}=${state.scores[2]} | ` +
+          `${dom.name[3].textContent}=${state.scores[3]} | ` +
+          `${dom.name[4].textContent}=${state.scores[4]} — ` +
+          `Qualifiés: ${dom.name[top3[0].player].textContent}, ${dom.name[top3[1].player].textContent}, ${dom.name[top3[2].player].textContent} — ` +
+          `Éliminé: ${dom.name[last.player].textContent}`
         );
+
+        setTimeout(goNextEpreuve, 1500);
       }
 
-      return { id, text, choices: answers, correctIndex };
-    });
+      // ---------- EVENTS ----------
+      function bindEvents() {
+        dom.buzzer.addEventListener("click", () => onBuzz(HUMAN));
 
-    return normalized;
-  }
+        window.addEventListener("keydown", (e) => {
+          if (e.code === "Space") {
+            e.preventDefault();
+            onBuzz(HUMAN);
+          }
+        });
 
-  async function loadQuestions() {
-    setHint("Chargement des questions…");
-    setBuzzerText("…");
-    setBuzzerState("idle");
-    disableAnswers(true);
-
-    try {
-      const res = await fetch(QUESTIONS_URL, { cache: "no-store" });
-      if (!res.ok) {
-        throw new Error(`HTTP ${res.status} sur ${QUESTIONS_URL}`);
+        dom.answers.forEach((el, i) => el.addEventListener("click", () => onHumanAnswerClick(i)));
       }
 
-      const raw = await res.json();
-      const normalized = normalizeQuestions(raw);
+      // ---------- START ----------
+      function startGame() {
+        buildStars();
+        applyProfiles();
+        bindEvents();
+        renderScores();
+        setBuzzerText("…");
+        setHint("Début de l’épreuve 1.");
 
-      // optionnel: mélanger l’ordre des questions
-      state.questions = shuffle(normalized);
+        // IMPORTANT : chrono global d’épreuve, une seule fois
+        startEpreuveTimerOnce();
 
-      // reset game
-      state.scores = { 1: 0, 2: 0, 3: 0, 4: 0 };
-      state.questionIndex = 0;
-      state.questionNumber = 1;
-      state.gagnant_trouve = false;
-
-      renderScores();
-      setHint("Questions chargées. Clique sur le buzzer (ou espace) pour buzzer.");
-
-      runQuestion();
-    } catch (err) {
-      console.error(err);
-      setBuzzerText("ERR");
-      setBuzzerState("timeup");
-      setHint(`Erreur chargement JSON: ${err.message}`);
-    }
-  }
-
-  // ---------- GAME FLOW ----------
-  function openBuzz() {
-    state.buzzOpen = true;
-    state.respondingPlayer = null;
-    state.awaitingHumanAnswer = false;
-
-    setBuzzerState("idle");
-    resetAnswersUI();
-    disableAnswers(true);
-    setActivePlayer(0);
-
-    setHint(`Buzz ouvert (${TEMPS_LIMITE}s). Clique sur le buzzer (ou espace) pour répondre.`);
-
-    scheduleBotsBuzz();
-    startTimer();
-  }
-
-  function closeBuzz() {
-    state.buzzOpen = false;
-    clearBotSchedules();
-  }
-
-  function onTimeElapsed() {
-    if (state.respondingPlayer === null) {
-      setBuzzerState("timeup");
-      setHint(`Temps écoulé (${TEMPS_LIMITE}s). Question suivante.`);
-      nextQuestion();
-      return;
-    }
-    setHint("Temps écoulé. Question suivante.");
-    nextQuestion();
-  }
-
-  function scheduleBotsBuzz() {
-    clearBotSchedules();
-
-    for (const bot of BOTS) {
-      const cfg = BOT_CONFIG[bot];
-      if (!cfg) continue;
-      if (Math.random() > cfg.buzzChance) continue;
-
-      const delay = randInt(cfg.buzzDelayMin, cfg.buzzDelayMax);
-      const t = setTimeout(() => {
-        if (state.buzzOpen && state.respondingPlayer === null) onBuzz(bot);
-      }, delay);
-
-      state.botTimeouts.push(t);
-    }
-  }
-
-  function onBuzz(player) {
-    if (!state.buzzOpen) return;
-    if (state.respondingPlayer !== null) return;
-
-    state.respondingPlayer = player;
-    closeBuzz();
-    stopTimer();
-
-    flashBuzzer();
-    setBuzzerState("buzzed");
-    setActivePlayer(player);
-
-    if (player === HUMAN) {
-      state.awaitingHumanAnswer = true;
-      disableAnswers(false);
-      setHint("Tu as buzzé. Clique sur une réponse.");
-    } else {
-      disableAnswers(true);
-      setHint(`Joueur ${player} (bot) répond…`);
-      botAnswer(player);
-    }
-  }
-
-  function verifyAnswer(index) {
-    return index === state.correctIndex;
-  }
-
-  function awardPoint(player) {
-    state.scores[player] += 1;
-    renderScores();
-
-    if (state.scores[player] >= POINTS_VICTOIRE) {
-      state.gagnant_trouve = true;
-      setHint(`🏆 Joueur ${player} gagne la Manche 1 avec ${POINTS_VICTOIRE} points.`);
-      endRound();
-    } else {
-      setHint(`✓ Bonne réponse (Joueur ${player}) — ${state.scores[player]} pts. Question suivante.`);
-      nextQuestion();
-    }
-  }
-
-  function handleWrong(player) {
-    setHint(`✗ Mauvaise réponse (Joueur ${player}). Question suivante.`);
-    nextQuestion();
-  }
-
-  function revealAnswerUI(chosenIndex) {
-    dom.answers.forEach((el, i) => {
-      if (i === state.correctIndex) el.classList.add("correct");
-      else if (i === chosenIndex) el.classList.add("wrong");
-      el.classList.add("disabled");
-    });
-  }
-
-  function botAnswer(botPlayer) {
-    const cfg = BOT_CONFIG[botPlayer] || { accuracy: 0.5 };
-    const willBeCorrect = Math.random() < cfg.accuracy;
-
-    let chosenIndex;
-    if (willBeCorrect) chosenIndex = state.correctIndex;
-    else {
-      const pool = [0, 1, 2, 3].filter((i) => i !== state.correctIndex);
-      chosenIndex = pool[randInt(0, pool.length - 1)];
-    }
-
-    const thinkDelay = randInt(600, 1400);
-    setTimeout(() => {
-      revealAnswerUI(chosenIndex);
-
-      const ok = chosenIndex === state.correctIndex;
-      setTimeout(() => {
-        if (ok) awardPoint(botPlayer);
-        else handleWrong(botPlayer);
-      }, 650);
-    }, thinkDelay);
-  }
-
-  function onHumanAnswerClick(index) {
-    if (!state.awaitingHumanAnswer) return;
-
-    state.awaitingHumanAnswer = false;
-    disableAnswers(true);
-
-    revealAnswerUI(index);
-
-    const ok = verifyAnswer(index);
-    setTimeout(() => {
-      if (ok) awardPoint(HUMAN);
-      else handleWrong(HUMAN);
-    }, 650);
-  }
-
-  function runQuestion() {
-    if (state.gagnant_trouve) return;
-    if (!state.questions.length) return;
-
-    const q = state.questions[state.questionIndex];
-    state.correctIndex = q.correctIndex;
-
-    renderQuestion(q);
-    openBuzz();
-  }
-
-  function nextQuestion() {
-    if (state.gagnant_trouve) return;
-
-    stopTimer();
-    closeBuzz();
-    disableAnswers(true);
-
-    state.questionNumber += 1;
-    state.questionIndex += 1;
-    if (state.questionIndex >= state.questions.length) state.questionIndex = 0;
-
-    setTimeout(runQuestion, 450);
-  }
-
-  function endRound() {
-    stopTimer();
-    closeBuzz();
-    disableAnswers(true);
-
-    const classement = [1, 2, 3, 4]
-      .map((p) => ({ player: p, score: state.scores[p] }))
-      .sort((a, b) => b.score - a.score);
-
-    const top3 = classement.slice(0, 3);
-    const last = classement[3];
-
-    setHint(
-      `FIN — Scores: J1=${state.scores[1]} | J2=${state.scores[2]} | J3=${state.scores[3]} | J4=${state.scores[4]} — ` +
-      `Qualifiés: J${top3[0].player}, J${top3[1].player}, J${top3[2].player} — Éliminé: J${last.player}`
-    );
-  }
-
-  // ---------- EVENTS ----------
-  function bindEvents() {
-    dom.buzzer.addEventListener("click", () => onBuzz(HUMAN));
-
-    window.addEventListener("keydown", (e) => {
-      if (e.code === "Space") {
-        e.preventDefault();
-        onBuzz(HUMAN);
+        loadQuestions();
       }
-    });
 
-    dom.answers.forEach((el, i) => {
-      el.addEventListener("click", () => onHumanAnswerClick(i));
-    });
-
-    // fallback avatars si images cassées
-    $$(".avatar-img").forEach((img) => {
-      img.addEventListener("error", () => {
-        const wrap = img.closest(".avatar");
-        if (!wrap) return;
-        img.style.display = "none";
-        const fb = wrap.querySelector(".fallback");
-        if (fb) fb.style.display = "grid";
-      });
-    });
-  }
-
-  // ---------- START ----------
-  function startGame() {
-    bindEvents();
-    renderScores();
-    setBuzzerText("…");
-    setHint("Initialisation…");
-
-    loadQuestions();
-  }
-
-  startGame();
-})();
-</script>
-
+      // go
+      startGame();
+    })();
+  </script>
 </body>
 </html>

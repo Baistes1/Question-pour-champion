@@ -55,10 +55,20 @@ if (form) {
     const name = usernameInput ? usernameInput.value.trim() : '';
     if (!name) return;
 
+    // (optionnel) tu peux garder
     localStorage.setItem('username', name);
+    localStorage.setItem('selectedAvatar', selectedSrc);
+
+    // IMPORTANT: profil complet pour l’épreuve 1
+    localStorage.setItem("qpc_player", JSON.stringify({
+      name,
+      avatar: selectedSrc
+    }));
+
     window.location.href = '/Question-pour-champion/HTML/epreuve1.html';
   });
 }
+
 
 /* stars */
 const starsContainer = document.getElementById('stars');
