@@ -390,14 +390,157 @@
       // QUESTIONS (exemple)
       // =========================
       const questions = [
-        { question: "Quelle est la capitale de la France ?", correct: "Paris", answers: ["Paris", "Bruxelles", "Genève", "Dakar"] },
-        { question: "Quelle est la capitale de l'Italie ?", correct: "Rome", answers: ["Rome", "Milan", "Naples", "Turin"] },
-        { question: "Quelle est la capitale de l'Espagne ?", correct: "Madrid", answers: ["Madrid", "Barcelone", "Séville", "Valence"] },
-        { question: "Quelle est la capitale de l'Allemagne ?", correct: "Berlin", answers: ["Berlin", "Munich", "Hambourg", "Francfort"] },
-        { question: "Quelle est la capitale du Royaume-Uni ?", correct: "Londres", answers: ["Londres", "Manchester", "Liverpool", "Édimbourg"] },
-        { question: "Quelle est la capitale du Portugal ?", correct: "Lisbonne", answers: ["Lisbonne", "Porto", "Coimbra", "Faro"] },
-        { question: "Quelle est la capitale de la Belgique ?", correct: "Bruxelles", answers: ["Bruxelles", "Anvers", "Gand", "Liège"] },
-      ];
+  {
+    question: "Quel fleuve traverse à la fois Vienne, Bratislava, Budapest et Belgrade ?",
+    correct: "Le Danube",
+    answers: ["Le Danube", "Le Rhin", "L'Elbe", "La Vistule"],
+  },
+  {
+    question: "Quelle mer borde à la fois l’Italie, la Croatie et le Monténégro ?",
+    correct: "La mer Adriatique",
+    answers: ["La mer Adriatique", "La mer Ionienne", "La mer Tyrrhénienne", "La mer Égée"],
+  },
+  {
+    question: "Quel pays d’Afrique n’a qu’une seule frontière terrestre et celle-ci est avec l’Afrique du Sud ?",
+    correct: "Le Lesotho",
+    answers: ["Le Lesotho", "L’Eswatini", "Le Botswana", "La Namibie"],
+  },
+  {
+    question: "Quelle est la capitale de l’Australie ?",
+    correct: "Canberra",
+    answers: ["Canberra", "Sydney", "Melbourne", "Brisbane"],
+  },
+  {
+    question: "Quelle est la capitale de la Bolivie (siège du gouvernement) ?",
+    correct: "La Paz",
+    answers: ["La Paz", "Sucre", "Santa Cruz", "Cochabamba"],
+  },
+  {
+    question: "Quel est le plus grand lac entièrement situé en Afrique ?",
+    correct: "Le lac Victoria",
+    answers: ["Le lac Victoria", "Le lac Tanganyika", "Le lac Malawi", "Le lac Tchad"],
+  },
+  {
+    question: "Quel pays possède l’exclave de Kaliningrad sur la mer Baltique ?",
+    correct: "La Russie",
+    answers: ["La Russie", "La Pologne", "La Lituanie", "La Lettonie"],
+  },
+  {
+    question: "Quelle est la capitale du Canada ?",
+    correct: "Ottawa",
+    answers: ["Ottawa", "Toronto", "Montréal", "Vancouver"],
+  },
+  {
+    question: "Quel détroit sépare l’Espagne du Maroc ?",
+    correct: "Le détroit de Gibraltar",
+    answers: ["Le détroit de Gibraltar", "Le détroit du Bosphore", "Le détroit de Béring", "Le détroit des Dardanelles"],
+  },
+  {
+    question: "Quel est le point culminant du Japon ?",
+    correct: "Le mont Fuji",
+    answers: ["Le mont Fuji", "Le mont Aso", "Le mont Tate", "Le mont Haku"],
+  },
+  {
+    question: "Quelle ville est la capitale administrative de l’Afrique du Sud ?",
+    correct: "Pretoria",
+    answers: ["Pretoria", "Le Cap", "Bloemfontein", "Johannesburg"],
+  },
+  {
+    question: "Quel pays a pour devise officielle « Le bonheur national brut » (concept politique) ?",
+    correct: "Le Bhoutan",
+    answers: ["Le Bhoutan", "Le Népal", "Le Laos", "Le Sri Lanka"],
+  },
+  {
+    question: "Quel fleuve se jette dans la mer Noire et traverse notamment l’Allemagne ?",
+    correct: "Le Danube",
+    answers: ["Le Danube", "Le Rhin", "La Seine", "Le Pô"],
+  },
+  {
+    question: "Quelle est la capitale de la Nouvelle-Zélande ?",
+    correct: "Wellington",
+    answers: ["Wellington", "Auckland", "Christchurch", "Dunedin"],
+  },
+  {
+    question: "Quel pays est traversé par l’isthme de Kra, zone stratégique en Thaïlande ?",
+    correct: "La Thaïlande",
+    answers: ["La Thaïlande", "Le Vietnam", "Le Cambodge", "La Malaisie"],
+  },
+  {
+    question: "Quel est le plus long fleuve d’Europe (selon la plupart des classements) ?",
+    correct: "La Volga",
+    answers: ["La Volga", "Le Danube", "Le Rhin", "Le Dniepr"],
+  },
+  {
+    question: "Quelle mer borde la Jordanie via le golfe d’Aqaba ?",
+    correct: "La mer Rouge",
+    answers: ["La mer Rouge", "La mer Morte", "La mer Méditerranée", "La mer d’Arabie"],
+  },
+  {
+    question: "Quelle est la capitale de la Turquie ?",
+    correct: "Ankara",
+    answers: ["Ankara", "Istanbul", "Izmir", "Bursa"],
+  },
+  {
+    question: "Quel pays a pour capitale « Nur-Sultan » entre 2019 et 2022 (avant retour au nom précédent) ?",
+    correct: "Le Kazakhstan",
+    answers: ["Le Kazakhstan", "L’Ouzbékistan", "Le Kirghizistan", "Le Turkménistan"],
+  },
+  {
+    question: "Quel archipel est partagé entre l’Espagne et le Portugal dans l’Atlantique ?",
+    correct: "Aucun (ils ont des archipels distincts)",
+    answers: ["Aucun (ils ont des archipels distincts)", "Les Açores", "Les Canaries", "Madère"],
+  },
+  {
+    question: "Quelle chaîne de montagnes sépare en partie l’Espagne et la France ?",
+    correct: "Les Pyrénées",
+    answers: ["Les Pyrénées", "Les Alpes", "Les Carpates", "Les Apennins"],
+  },
+  {
+    question: "Quelle est la capitale du Sri Lanka (capitale administrative) ?",
+    correct: "Sri Jayawardenepura Kotte",
+    answers: ["Sri Jayawardenepura Kotte", "Colombo", "Kandy", "Galle"],
+  },
+  {
+    question: "Quel pays enclavé d’Asie centrale a pour capitale Tachkent ?",
+    correct: "L’Ouzbékistan",
+    answers: ["L’Ouzbékistan", "Le Tadjikistan", "Le Kirghizistan", "Le Kazakhstan"],
+  },
+  {
+    question: "Quel désert s’étend sur une grande partie de la Mongolie et du nord de la Chine ?",
+    correct: "Le désert de Gobi",
+    answers: ["Le désert de Gobi", "Le Sahara", "Le Taklamakan", "Le Kyzylkoum"],
+  },
+  {
+    question: "Quel pays a pour capitale Reykjavik ?",
+    correct: "L’Islande",
+    answers: ["L’Islande", "La Norvège", "La Finlande", "Le Danemark"],
+  },
+  {
+    question: "Quelle est la capitale du Maroc ?",
+    correct: "Rabat",
+    answers: ["Rabat", "Casablanca", "Fès", "Marrakech"],
+  },
+  {
+    question: "Quel est le plus grand pays d’Amérique du Sud par superficie ?",
+    correct: "Le Brésil",
+    answers: ["Le Brésil", "L’Argentine", "La Colombie", "Le Pérou"],
+  },
+  {
+    question: "Quel détroit sépare l’Europe de l’Asie à Istanbul ?",
+    correct: "Le Bosphore",
+    answers: ["Le Bosphore", "Gibraltar", "Béring", "Les Dardanelles"],
+  },
+  {
+    question: "Quel pays partage l’île d’Hispaniola avec Haïti ?",
+    correct: "La République dominicaine",
+    answers: ["La République dominicaine", "Cuba", "La Jamaïque", "Porto Rico"],
+  },
+  {
+    question: "Quel pays a pour capitale Addis-Abeba ?",
+    correct: "L’Éthiopie",
+    answers: ["L’Éthiopie", "L’Érythrée", "Le Kenya", "Le Soudan"],
+  },
+];
 
       // =========================
       // STATE
