@@ -300,6 +300,7 @@ body::before {
   color: var(--primary-blue);
   box-shadow: var(--shadow-md), inset 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: var(--transition-smooth);
+  
 
   height: 240px;
  
@@ -307,11 +308,14 @@ body::before {
     25% 5%, 75% 5%, 100% 50%,
     75% 95%, 25% 95%, 0% 50%);
 }
+
+
 .t1{
      width: 7vmin;
   height: 7vmin;
     padding: 20px;
 }
+
 .t2{
      width: 8vmin;
   height: 7vmin;
@@ -327,6 +331,7 @@ body::before {
   height: 10vmin;
     padding: 40px;
 }
+
 
 
 /* Ordre d'animation pour chaque chiffre */
