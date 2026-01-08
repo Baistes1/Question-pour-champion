@@ -1,0 +1,602 @@
+[
+  {
+    "id": 1,
+    "question": "Quelle est la capitale de la France ?",
+    "answers": ["Paris", "Lyon", "Marseille", "Bordeaux"],
+    "Good": "Paris"
+  },
+  {
+    "id": 2,
+    "question": "Combien de continents y a-t-il sur Terre ?",
+    "answers": ["5", "6", "7", "8"],
+    "Good": "7"
+  },
+  {
+    "id": 3,
+    "question": "Qui a peint La Joconde ?",
+    "answers": ["Léonard de Vinci", "Michel-Ange", "Raphaël", "Donatello"],
+    "Good": "Léonard de Vinci"
+  },
+  {
+    "id": 4,
+    "question": "Quel est le plus grand océan du monde ?",
+    "answers": ["Océan Atlantique", "Océan Indien", "Océan Pacifique", "Océan Arctique"],
+    "Good": "Océan Pacifique"
+  },
+  {
+    "id": 5,
+    "question": "En quelle année l'homme a-t-il marché sur la Lune pour la première fois ?",
+    "answers": ["1965", "1967", "1969", "1971"],
+    "Good": "1969"
+  },
+  {
+    "id": 6,
+    "question": "Quel est le plus haut sommet du monde ?",
+    "answers": ["K2", "Mont Everest", "Kangchenjunga", "Makalu"],
+    "Good": "Mont Everest"
+  },
+  {
+    "id": 7,
+    "question": "Quelle planète est surnommée la planète rouge ?",
+    "answers": ["Vénus", "Jupiter", "Mars", "Saturne"],
+    "Good": "Mars"
+  },
+  {
+    "id": 8,
+    "question": "Qui a écrit Les Misérables ?",
+    "answers": ["Victor Hugo", "Émile Zola", "Gustave Flaubert", "Alexandre Dumas"],
+    "Good": "Victor Hugo"
+  },
+  {
+    "id": 9,
+    "question": "Combien de joueurs y a-t-il dans une équipe de football ?",
+    "answers": ["9", "10", "11", "12"],
+    "Good": "11"
+  },
+  {
+    "id": 10,
+    "question": "Quel est le symbole chimique de l'or ?",
+    "answers": ["Au", "Ag", "Fe", "Or"],
+    "Good": "Au"
+  },
+  {
+    "id": 11,
+    "question": "Dans quelle ville se trouve la tour Eiffel ?",
+    "answers": ["Londres", "Berlin", "Paris", "Rome"],
+    "Good": "Paris"
+  },
+  {
+    "id": 12,
+    "question": "Quel animal est le plus rapide sur terre ?",
+    "answers": ["Guépard", "Lion", "Gazelle", "Antilope"],
+    "Good": "Guépard"
+  },
+  {
+    "id": 13,
+    "question": "Combien de cordes possède une guitare classique ?",
+    "answers": ["4", "5", "6", "7"],
+    "Good": "6"
+  },
+  {
+    "id": 14,
+    "question": "Quel est le plus grand pays du monde par superficie ?",
+    "answers": ["Canada", "Chine", "États-Unis", "Russie"],
+    "Good": "Russie"
+  },
+  {
+    "id": 15,
+    "question": "Qui a découvert l'Amérique en 1492 ?",
+    "answers": ["Christophe Colomb", "Amerigo Vespucci", "Vasco de Gama", "Ferdinand Magellan"],
+    "Good": "Christophe Colomb"
+  },
+  {
+    "id": 16,
+    "question": "Quelle est la langue la plus parlée au monde ?",
+    "answers": ["Anglais", "Espagnol", "Mandarin", "Hindi"],
+    "Good": "Mandarin"
+  },
+  {
+    "id": 17,
+    "question": "Combien de touches possède un piano standard ?",
+    "answers": ["76", "82", "88", "92"],
+    "Good": "88"
+  },
+  {
+    "id": 18,
+    "question": "Quel est le plus petit pays du monde ?",
+    "answers": ["Monaco", "Vatican", "Saint-Marin", "Liechtenstein"],
+    "Good": "Vatican"
+  },
+  {
+    "id": 19,
+    "question": "Qui a inventé l'ampoule électrique ?",
+    "answers": ["Thomas Edison", "Nikola Tesla", "Alexander Graham Bell", "Benjamin Franklin"],
+    "Good": "Thomas Edison"
+  },
+  {
+    "id": 20,
+    "question": "Quelle est la capitale de l'Espagne ?",
+    "answers": ["Barcelone", "Madrid", "Séville", "Valence"],
+    "Good": "Madrid"
+  },
+  {
+    "id": 21,
+    "question": "Combien de faces possède un cube ?",
+    "answers": ["4", "6", "8", "12"],
+    "Good": "6"
+  },
+  {
+    "id": 22,
+    "question": "Quel est le plus long fleuve du monde ?",
+    "answers": ["Amazone", "Nil", "Yangtsé", "Mississippi"],
+    "Good": "Nil"
+  },
+  {
+    "id": 23,
+    "question": "Qui a composé La Symphonie n°9 ?",
+    "answers": ["Mozart", "Beethoven", "Bach", "Chopin"],
+    "Good": "Beethoven"
+  },
+  {
+    "id": 24,
+    "question": "Quel est l'animal emblème de l'Australie ?",
+    "answers": ["Koala", "Kangourou", "Émeu", "Wombat"],
+    "Good": "Kangourou"
+  },
+  {
+    "id": 25,
+    "question": "Combien de degrés font les angles d'un triangle ?",
+    "answers": ["90", "180", "270", "360"],
+    "Good": "180"
+  },
+  {
+    "id": 26,
+    "question": "Quelle est la monnaie du Japon ?",
+    "answers": ["Won", "Yuan", "Yen", "Baht"],
+    "Good": "Yen"
+  },
+  {
+    "id": 27,
+    "question": "Qui a écrit Roméo et Juliette ?",
+    "answers": ["William Shakespeare", "Charles Dickens", "Oscar Wilde", "Jane Austen"],
+    "Good": "William Shakespeare"
+  },
+  {
+    "id": 28,
+    "question": "Combien de secondes y a-t-il dans une heure ?",
+    "answers": ["3000", "3200", "3400", "3600"],
+    "Good": "3600"
+  },
+  {
+    "id": 29,
+    "question": "Quel gaz les plantes absorbent-elles pour la photosynthèse ?",
+    "answers": ["Oxygène", "Azote", "Dioxyde de carbone", "Hydrogène"],
+    "Good": "Dioxyde de carbone"
+  },
+  {
+    "id": 30,
+    "question": "Dans quel pays se trouve le Taj Mahal ?",
+    "answers": ["Pakistan", "Inde", "Bangladesh", "Népal"],
+    "Good": "Inde"
+  },
+  {
+    "id": 31,
+    "question": "Combien y a-t-il de mois dans une année ?",
+    "answers": ["10", "11", "12", "13"],
+    "Good": "12"
+  },
+  {
+    "id": 32,
+    "question": "Quelle est la capitale de l'Italie ?",
+    "answers": ["Milan", "Rome", "Venise", "Florence"],
+    "Good": "Rome"
+  },
+  {
+    "id": 33,
+    "question": "Qui a écrit Harry Potter ?",
+    "answers": ["J.K. Rowling", "J.R.R. Tolkien", "C.S. Lewis", "Suzanne Collins"],
+    "Good": "J.K. Rowling"
+  },
+  {
+    "id": 34,
+    "question": "Quelle est la couleur du cheval blanc d'Henri IV ?",
+    "answers": ["Noir", "Brun", "Blanc", "Gris"],
+    "Good": "Blanc"
+  },
+  {
+    "id": 35,
+    "question": "Combien de pattes a une araignée ?",
+    "answers": ["6", "8", "10", "12"],
+    "Good": "8"
+  },
+  {
+    "id": 36,
+    "question": "Quel est l'organe qui pompe le sang dans le corps ?",
+    "answers": ["Le foie", "Le cœur", "Les poumons", "Le cerveau"],
+    "Good": "Le cœur"
+  },
+  {
+    "id": 37,
+    "question": "Quelle est la capitale du Royaume-Uni ?",
+    "answers": ["Manchester", "Londres", "Édimbourg", "Dublin"],
+    "Good": "Londres"
+  },
+  {
+    "id": 38,
+    "question": "Combien font 8 × 7 ?",
+    "answers": ["54", "56", "63", "64"],
+    "Good": "56"
+  },
+  {
+    "id": 39,
+    "question": "Quel est le plus grand désert du monde ?",
+    "answers": ["Sahara", "Gobi", "Antarctique", "Arabie"],
+    "Good": "Antarctique"
+  },
+  {
+    "id": 40,
+    "question": "Qui a peint La Nuit étoilée ?",
+    "answers": ["Vincent van Gogh", "Claude Monet", "Pablo Picasso", "Salvador Dalí"],
+    "Good": "Vincent van Gogh"
+  },
+  {
+    "id": 41,
+    "question": "Quelle est la capitale de l'Allemagne ?",
+    "answers": ["Munich", "Berlin", "Hambourg", "Francfort"],
+    "Good": "Berlin"
+  },
+  {
+    "id": 42,
+    "question": "Combien de centimètres y a-t-il dans un mètre ?",
+    "answers": ["10", "50", "100", "1000"],
+    "Good": "100"
+  },
+  {
+    "id": 43,
+    "question": "Quel fruit est traditionnellement utilisé pour faire du cidre ?",
+    "answers": ["La poire", "La pomme", "La pêche", "L'abricot"],
+    "Good": "La pomme"
+  },
+  {
+    "id": 44,
+    "question": "Quelle est la plus grande île du monde ?",
+    "answers": ["Madagascar", "Groenland", "Nouvelle-Guinée", "Bornéo"],
+    "Good": "Groenland"
+  },
+  {
+    "id": 45,
+    "question": "Combien de côtés possède un hexagone ?",
+    "answers": ["5", "6", "7", "8"],
+    "Good": "6"
+  },
+  {
+    "id": 46,
+    "question": "Quelle est la capitale du Canada ?",
+    "answers": ["Toronto", "Montréal", "Ottawa", "Vancouver"],
+    "Good": "Ottawa"
+  },
+  {
+    "id": 47,
+    "question": "Quel est le plus petit os du corps humain ?",
+    "answers": ["L'étrier", "Le marteau", "L'enclume", "Le radius"],
+    "Good": "L'étrier"
+  },
+  {
+    "id": 48,
+    "question": "Dans quel pays se trouve la statue de la Liberté ?",
+    "answers": ["France", "États-Unis", "Angleterre", "Canada"],
+    "Good": "États-Unis"
+  },
+  {
+    "id": 49,
+    "question": "Combien de valeurs y a-t-il dans un jeu de cartes standard ?",
+    "answers": ["13", "26", "52", "104"],
+    "Good": "13"
+  },
+  {
+    "id": 50,
+    "question": "Quelle est la langue officielle du Brésil ?",
+    "answers": ["Espagnol", "Portugais", "Français", "Anglais"],
+    "Good": "Portugais"
+  },
+  {
+    "id": 51,
+    "question": "Qui a écrit L'Odyssée ?",
+    "answers": ["Homère", "Virgile", "Ovide", "Sophocle"],
+    "Good": "Homère"
+  },
+  {
+    "id": 52,
+    "question": "Quel est le symbole chimique de l'eau ?",
+    "answers": ["H2O", "CO2", "O2", "HO"],
+    "Good": "H2O"
+  },
+  {
+    "id": 53,
+    "question": "Combien de joueurs y a-t-il dans une équipe de basket ?",
+    "answers": ["4", "5", "6", "7"],
+    "Good": "5"
+  },
+  {
+    "id": 54,
+    "question": "Quelle est la capitale de la Grèce ?",
+    "answers": ["Thessalonique", "Athènes", "Sparte", "Corinthe"],
+    "Good": "Athènes"
+  },
+  {
+    "id": 55,
+    "question": "Quel est le plus grand mammifère du monde ?",
+    "answers": ["L'éléphant", "La baleine bleue", "Le requin baleine", "La girafe"],
+    "Good": "La baleine bleue"
+  },
+  {
+    "id": 56,
+    "question": "En quelle année a eu lieu la Révolution française ?",
+    "answers": ["1789", "1799", "1804", "1815"],
+    "Good": "1789"
+  },
+  {
+    "id": 57,
+    "question": "Combien de minutes y a-t-il dans deux heures ?",
+    "answers": ["60", "90", "120", "150"],
+    "Good": "120"
+  },
+  {
+    "id": 58,
+    "question": "Quel est le plus grand organe du corps humain ?",
+    "answers": ["Le foie", "Le cerveau", "La peau", "Les poumons"],
+    "Good": "La peau"
+  },
+  {
+    "id": 59,
+    "question": "Quelle est la capitale du Portugal ?",
+    "answers": ["Porto", "Lisbonne", "Faro", "Coimbra"],
+    "Good": "Lisbonne"
+  },
+  {
+    "id": 60,
+    "question": "Qui a inventé le téléphone ?",
+    "answers": ["Thomas Edison", "Alexander Graham Bell", "Nikola Tesla", "Guglielmo Marconi"],
+    "Good": "Alexander Graham Bell"
+  },
+  {
+    "id": 61,
+    "question": "Combien de dents possède un adulte humain ?",
+    "answers": ["28", "30", "32", "34"],
+    "Good": "32"
+  },
+  {
+    "id": 62,
+    "question": "Quelle est la capitale de l'Égypte ?",
+    "answers": ["Alexandrie", "Le Caire", "Louxor", "Gizeh"],
+    "Good": "Le Caire"
+  },
+  {
+    "id": 63,
+    "question": "Quel est le symbole chimique du fer ?",
+    "answers": ["Fe", "Fr", "Fi", "F"],
+    "Good": "Fe"
+  },
+  {
+    "id": 64,
+    "question": "Dans quel pays se trouve la Grande Muraille ?",
+    "answers": ["Japon", "Chine", "Corée", "Mongolie"],
+    "Good": "Chine"
+  },
+  {
+    "id": 65,
+    "question": "Combien de jours y a-t-il en février lors d'une année bissextile ?",
+    "answers": ["28", "29", "30", "31"],
+    "Good": "29"
+  },
+  {
+    "id": 66,
+    "question": "Qui a écrit Le Petit Prince ?",
+    "answers": ["Antoine de Saint-Exupéry", "Albert Camus", "Jean-Paul Sartre", "Marcel Proust"],
+    "Good": "Antoine de Saint-Exupéry"
+  },
+  {
+    "id": 67,
+    "question": "Quelle est la capitale de la Suisse ?",
+    "answers": ["Zurich", "Genève", "Berne", "Lausanne"],
+    "Good": "Berne"
+  },
+  {
+    "id": 68,
+    "question": "Quel est le nom de la galaxie qui contient notre système solaire ?",
+    "answers": ["Andromède", "La Voie lactée", "Le Triangle", "Le Grand Nuage"],
+    "Good": "La Voie lactée"
+  },
+  {
+    "id": 69,
+    "question": "Combien de saisons y a-t-il dans une année ?",
+    "answers": ["2", "3", "4", "5"],
+    "Good": "4"
+  },
+  {
+    "id": 70,
+    "question": "Quelle est la capitale de la Belgique ?",
+    "answers": ["Anvers", "Bruges", "Bruxelles", "Gand"],
+    "Good": "Bruxelles"
+  },
+  {
+    "id": 71,
+    "question": "Quel est le plus petit continent ?",
+    "answers": ["Europe", "Antarctique", "Australie", "Amérique du Sud"],
+    "Good": "Australie"
+  },
+  {
+    "id": 72,
+    "question": "Qui a écrit Cent ans de solitude ?",
+    "answers": ["Gabriel García Márquez", "Pablo Neruda", "Jorge Luis Borges", "Mario Vargas Llosa"],
+    "Good": "Gabriel García Márquez"
+  },
+  {
+    "id": 73,
+    "question": "Combien de grammes y a-t-il dans un kilogramme ?",
+    "answers": ["10", "100", "1000", "10000"],
+    "Good": "1000"
+  },
+  {
+    "id": 74,
+    "question": "Quelle est la capitale des Pays-Bas ?",
+    "answers": ["Rotterdam", "Amsterdam", "La Haye", "Utrecht"],
+    "Good": "Amsterdam"
+  },
+  {
+    "id": 75,
+    "question": "Quel est le plus haut volcan actif d'Europe ?",
+    "answers": ["Le Vésuve", "L'Etna", "Le Stromboli", "Santorin"],
+    "Good": "L'Etna"
+  },
+  {
+    "id": 76,
+    "question": "Qui a composé Les Quatre Saisons ?",
+    "answers": ["Antonio Vivaldi", "Johann Sebastian Bach", "Wolfgang Amadeus Mozart", "Ludwig van Beethoven"],
+    "Good": "Antonio Vivaldi"
+  },
+  {
+    "id": 77,
+    "question": "Combien de zéros y a-t-il dans un million ?",
+    "answers": ["4", "5", "6", "7"],
+    "Good": "6"
+  },
+  {
+    "id": 78,
+    "question": "Quelle est la capitale de l'Autriche ?",
+    "answers": ["Salzbourg", "Vienne", "Graz", "Innsbruck"],
+    "Good": "Vienne"
+  },
+  {
+    "id": 79,
+    "question": "Quel est le symbole chimique de l'argent ?",
+    "answers": ["Ar", "Ag", "Au", "Al"],
+    "Good": "Ag"
+  },
+  {
+    "id": 80,
+    "question": "Dans quel pays se trouve Machu Picchu ?",
+    "answers": ["Mexique", "Pérou", "Bolivie", "Chili"],
+    "Good": "Pérou"
+  },
+  {
+    "id": 81,
+    "question": "Combien de couleurs y a-t-il dans un arc-en-ciel ?",
+    "answers": ["5", "6", "7", "8"],
+    "Good": "7"
+  },
+  {
+    "id": 82,
+    "question": "Qui a découvert la pénicilline ?",
+    "answers": ["Louis Pasteur", "Alexander Fleming", "Marie Curie", "Robert Koch"],
+    "Good": "Alexander Fleming"
+  },
+  {
+    "id": 83,
+    "question": "Quelle est la capitale de la Suède ?",
+    "answers": ["Stockholm", "Göteborg", "Malmö", "Uppsala"],
+    "Good": "Stockholm"
+  },
+  {
+    "id": 84,
+    "question": "Quel est le plus long os du corps humain ?",
+    "answers": ["Le tibia", "Le fémur", "L'humérus", "Le radius"],
+    "Good": "Le fémur"
+  },
+  {
+    "id": 85,
+    "question": "Combien de millilitres y a-t-il dans un litre ?",
+    "answers": ["10", "100", "1000", "10000"],
+    "Good": "1000"
+  },
+  {
+    "id": 86,
+    "question": "Quelle est la capitale de la Norvège ?",
+    "answers": ["Bergen", "Oslo", "Trondheim", "Stavanger"],
+    "Good": "Oslo"
+  },
+  {
+    "id": 87,
+    "question": "Qui a écrit 1984 ?",
+    "answers": ["George Orwell", "Aldous Huxley", "Ray Bradbury", "Isaac Asimov"],
+    "Good": "George Orwell"
+  },
+  {
+    "id": 88,
+    "question": "Quel est le nombre de planètes dans le système solaire ?",
+    "answers": ["7", "8", "9", "10"],
+    "Good": "8"
+  },
+  {
+    "id": 89,
+    "question": "Quelle est la capitale du Danemark ?",
+    "answers": ["Aarhus", "Odense", "Copenhague", "Aalborg"],
+    "Good": "Copenhague"
+  },
+  {
+    "id": 90,
+    "question": "Quel est le symbole chimique du cuivre ?",
+    "answers": ["Cu", "Co", "Cr", "C"],
+    "Good": "Cu"
+  },
+  {
+    "id": 91,
+    "question": "Dans quel océan se trouve l'île de Madagascar ?",
+    "answers": ["Océan Atlantique", "Océan Indien", "Océan Pacifique", "Océan Arctique"],
+    "Good": "Océan Indien"
+  },
+  {
+    "id": 92,
+    "question": "Combien y a-t-il de lettres dans l'alphabet français ?",
+    "answers": ["24", "25", "26", "27"],
+    "Good": "26"
+  },
+  {
+    "id": 93,
+    "question": "Qui a peint Le Cri ?",
+    "answers": ["Edvard Munch", "Vincent van Gogh", "Gustav Klimt", "Egon Schiele"],
+    "Good": "Edvard Munch"
+  },
+  {
+    "id": 94,
+    "question": "Quelle est la capitale de la Finlande ?",
+    "answers": ["Tampere", "Turku", "Helsinki", "Oulu"],
+    "Good": "Helsinki"
+  },
+  {
+    "id": 95,
+    "question": "Quel est le plus grand désert chaud du monde ?",
+    "answers": ["Gobi", "Kalahari", "Sahara", "Arabie"],
+    "Good": "Sahara"
+  },
+  {
+    "id": 96,
+    "question": "Qui a composé La Flûte enchantée ?",
+    "answers": ["Wolfgang Amadeus Mozart", "Ludwig van Beethoven", "Franz Schubert", "Joseph Haydn"],
+    "Good": "Wolfgang Amadeus Mozart"
+  },
+  {
+    "id": 97,
+    "question": "Combien de joueurs y a-t-il dans une équipe de volleyball ?",
+    "answers": ["5", "6", "7", "8"],
+    "Good": "6"
+  },
+  {
+    "id": 98,
+    "question": "Quelle est la capitale de l'Irlande ?",
+    "answers": ["Cork", "Galway", "Dublin", "Limerick"],
+    "Good": "Dublin"
+  },
+  {
+    "id": 99,
+    "question": "Quel est le symbole chimique de l'oxygène ?",
+    "answers": ["O", "Ox", "O2", "Oz"],
+    "Good": "O"
+  },
+  {
+    "id": 100,
+    "question": "Dans quel pays se trouve Stonehenge ?",
+    "answers": ["Irlande", "Écosse", "Angleterre", "Pays de Galles"],
+    "Good": "Angleterre"
+  }
+]
