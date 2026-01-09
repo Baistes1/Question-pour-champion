@@ -1,665 +1,836 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questions pour un Champion</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
-        }
-        
-        body {
-            background-color: #000;
-            color: white;
-            width: 100vw;
-            height: 100vh;
-            overflow: hidden;
-            position: relative;
-        }
-         /* Étoiles animées */
-        .stars {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -1; 
-            pointer-events: none;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Champions Quest</title>
 
-        .star {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: white;
-            border-radius: 50%;
-            animation: twinkle 3s infinite;
-        }
-
-        @keyframes twinkle {
-            0%, 100% { opacity: 0.3; }
-            50% { opacity: 1; }
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            position: relative;
-            z-index: 1;
-        }
-
-        /* Partie supérieure */
-        .top-section {
-            height: 65%;
-            background: linear-gradient(to bottom, #012A6D, #005BBB);
-            display: flex;
-            padding: 20px;
-            position: relative;
-        }
-        
-        /* Colonnes des avatars */
-        .avatar-column {
-            width: 15%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            align-items: center;
-        }
-        
-        .player {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .avatar {
-            width: 10vmin;
-            height: 10vmin;
-            min-width: 100px;
-            min-height: 100px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #012A6D, #005BBB);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-            overflow: hidden;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            box-shadow: 0 0 0 4px #F2A900, 0 0 20px #F8D54B, 0 0 15px rgba(0, 0, 0, 0.5);
-            border-color: #F8D54B;
-        }
-        
-        .avatar img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        
-        .points {
-            margin-top: 10px;
-            background-color: #F2A900;
-            color: #012A6D;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-weight: bold;
-            font-size: 2vmin;
-            text-align: center;
-            min-width: 80px;
-        }
-        
-        /* Zone de question */
-        .question-area {
-            width: 70%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 0 40px;
-        }
-        
-        .question-box {
-            background-color: rgba(32, 69, 213, 0.1);
-            border: 2px solid rgba(255, 225, 0, 0.742);
-            border-radius: 15px;
-            padding: 30px;
-            width: 100%;
-            max-width: 800px;
-            text-align: center;
-            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-        }
-        
-        .question-text {
-            font-size: 4vmin;
-            line-height: 1.4;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-        
-        /* Séparateur */
-        .separator {
-            height: 3px;
-            background: linear-gradient(to right, transparent, #F8D54B, transparent);
-            box-shadow: 0 0 10px #F2A900;
-        }
-        
-        /* Partie inférieure */
-        .bottom-section {
-            height: 40%;
-            background-color: #001A4D;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
-        
-       /* Buzzer Timer */
-        .buzzer-area {
-            position: absolute;
-            top: -60px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
-        }
-        .timer-container {
-            display: flex;
-            justify-content: center;
-            margin: 30px 0;
-            position: relative;
-        }
-
-        .timer {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            background: radial-gradient(circle at 30% 30%, #ff6b6b, #cc0000);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 36px;
-            font-weight: bold;
-            color: white;
-            box-shadow: 
-                0 0 40px rgba(255,71,87,0.8), 
-                0 0 80px rgba(0,0,0,0.4),
-                inset 0 -8px 20px rgba(0,0,0,0.3),
-                inset 0 8px 20px rgba(255,255,255,0.2);
-            animation: buzzerPulse 1s infinite;
-            position: relative;
-            cursor: pointer;
-            border: 8px solid #c11d1d;
-        }
-
-        .timer::before {
-            content: '';
-            position: absolute;
-            width: 140px;
-            height: 140px;
-            border-radius: 50%;
-            border: 4px dashed rgba(155, 41, 41, 0.6);
-            animation: rotate 4s linear infinite;
-        }
-
-        .timer::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            border-radius: 50%;
-            background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.3), transparent);
-            top: 0;
-            left: 0;
-        }
-
-        .timer:active {
-            transform: scale(0.95);
-            box-shadow: 
-                0 0 30px rgba(255,71,87,0.9), 
-                0 0 60px rgba(255,71,87,0.5),
-                inset 0 4px 15px rgba(0,0,0,0.5);
-        }
-
-        .timer.buzzed {
-            background: radial-gradient(circle at 30% 30%, #66bb6a, #2e7d32);
-            border-color: #1b5e20;
-            box-shadow: 
-                0 0 40px rgba(102,187,106,0.8), 
-                0 0 80px rgba(102,187,106,0.4),
-                inset 0 -8px 20px rgba(0,0,0,0.3),
-                inset 0 8px 20px rgba(255,255,255,0.2);
-            animation: none;
-        }
-
-        .timer.buzzed::before {
-            border-color: rgba(102,187,106,0.6);
-            animation: none;
-        }
-        
-        @keyframes buzzerPulse {
-            0%, 100% { 
-                transform: scale(1); 
-                box-shadow: 
-                    0 0 40px rgba(255,71,87,0.8), 
-                    0 0 80px rgba(255,71,87,0.4),
-                    inset 0 -8px 20px rgba(0,0,0,0.3),
-                    inset 0 8px 20px rgba(255,255,255,0.2);
-            }
-            50% { 
-                transform: scale(1.05); 
-                box-shadow: 
-                    0 0 60px rgba(255,71,87,1), 
-                    0 0 120px rgba(255,71,87,0.6),
-                    inset 0 -8px 20px rgba(0,0,0,0.3),
-                    inset 0 8px 20px rgba(255,255,255,0.2);
-            }
-        }
-
-        @keyframes rotate {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
- /*reponses* */
-.answers-container {
-    display: flex;
-    flex-wrap: wrap;
-    width: 100%;
-    height: 80%;
-    justify-content: space-between;
-    align-content: space-between;
-    padding: 0px;
-    background-color: #012A6D;
-    border: 3px solid #F8D54B;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.answer-column {
-    width: 45%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 100%;
-}
-
-.answer-box {
-    background-color: #F8D54B;
-    color: #012A6D;
-    padding: 20px;
-    border-radius: 10px;
-    font-size: 2.6vmin;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    transition: all 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 85px;
-    border: 2px solid #F2A900;
-}
-
-.answer-box:hover {
-    background-color: #F2A900;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-    border-color: #012A6D;
-}
-
-.answer-box.correct {
-    background-color: #33cc33;
-    color: rgb(254, 254, 254);
-    border-color: #229922;
-}
-
-.answer-box.wrong {
-    background-color: #cc0000;
-    color: white;
-    border-color: #990000;
-}
-        /* Animation pour le buzzer qui change de couleur */
-        @keyframes buzzerPulse {
-            0% { background: radial-gradient(circle at 30% 30%, #ff3333, #cc0000); }
-            100% { background: radial-gradient(circle at 30% 30%, #cc3333, #990000); }
-        }
-        
-        .buzzer.pulsing {
-            animation: buzzerPulse 1s infinite alternate;
-        }
-        
-        /* Classe pour cacher les avatars en attente */
-        .avatar-placeholder {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-            color: white;
-            font-size: 3vmin;
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-    <div class="stars" id="stars"></div>
-    
-    <div class="container">
-    </div>   
-    <!-- Partie supérieure -->
-    <div class="top-section">
-        <!-- Colonne des avatars gauche -->
-        <div class="avatar-column left">
-            <div class="player" data-player="1">
-                <div class="avatar active">
-                    <img src="page.html index/jaune.png" alt="Joueur 1" class="avatar-img">
-                    <div class="avatar-placeholder">1</div>
-                </div>
-                <div class="points">450 pts</div>
-            </div>
-            <div class="player" data-player="2">
-                <div class="avatar">
-                    <img src="page.html index/Nouveau dossier/orange.png" alt="Joueur 2" class="avatar-img">
-                    <div class="avatar-placeholder">2</div>
-                </div>
-                <div class="points">380 pts</div>
-            </div>
-        </div>
-        
-        <!-- Zone de question -->
-        <div class="question-area">
-            <div class="question-box">
-                <div class="question-text">Quelle est la capitale de la Norvège, pays scandinave connu pour ses fjords et ses aurores boréales ?</div>
-            </div>
-        </div>
-        
-        <!-- Colonne des avatars droite -->
-        <div class="avatar-column right">
-            <div class="player" data-player="3">
-                <div class="avatar">
-                    <img src="page.html index/rose.png" alt="Joueur 3" class="avatar-img">
-                    <div class="avatar-placeholder">3</div>
-                </div>
-                <div class="points">520 pts</div>
-            </div>
-            <div class="player" data-player="4">
-                <div class="avatar">
-                    <img src="page.html index/turquoi.png" alt="Joueur 4" class="avatar-img">
-                    <div class="avatar-placeholder">4</div>
-                </div>
-                <div class="points">290 pts</div>
-            </div>
-        </div>
-    </div>
-    
-    
-    <!-- Séparateur lumineux -->
-    <div class="separator"></div>
-    
-    <!-- Partie inférieure -->
-    <div class="bottom-section">
-        <!-- Buzzer avec timer -->
-        <div class="buzzer-area">
-            <div class="buzzer pulsing">
-                <div class="timer">12s</div>
-            </div>
-        </div>
-        
-        <!-- Réponses -->
-        <div class="answers-container">
-            <div class="answer-column left">
-                <div class="answer-box" data-answer="a">Stockholm</div>
-                <div class="answer-box" data-answer="b">Helsinki</div>
-            </div>
-            <div class="answer-column right">
-                <div class="answer-box" data-answer="c">Oslo</div>
-                <div class="answer-box" data-answer="d">Copenhague</div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        // Création des étoiles - VERSION CORRIGÉE
-const starsContainer = document.getElementById('stars');
-const numberOfStars = 150; // Augmentez le nombre pour plus d'effet
-
-for (let i = 0; i < numberOfStars; i++) {
-    const star = document.createElement('div');
-    star.className = 'star';
-    
-    // Ajoutez des tailles différentes
-    const size = Math.random();
-    if (size < 0.3) star.classList.add('small');
-    else if (size < 0.7) star.classList.add('medium');
-    else star.classList.add('large');
-    
-    // Position aléatoire
-    star.style.left = Math.random() * 100 + '%';
-    star.style.top = Math.random() * 100 + '%';
-    
-    // Animation plus réaliste avec délais et durées variables
-    star.style.animationDelay = Math.random() * 5 + 's';
-    star.style.animationDuration = (2 + Math.random() * 4) + 's';
-    
-    // Opacité variable pour effet de profondeur
-    star.style.opacity = 0.2 + Math.random() * 0.8;
-    
-    // Pour certaines étoiles, ajoutez une couleur
-    if (Math.random() > 0.8) {
-        const colors = ['#FFD700', '#87CEEB', '#FF6B6B', '#98FB98'];
-        const color = colors[Math.floor(Math.random() * colors.length)];
-        star.style.backgroundColor = color;
-        star.style.boxShadow = `0 0 ${2 + Math.random() * 4}px ${color}`;
+  <style>
+    :root{
+      --bgA:#012A6D; --bgB:#005BBB;
+      --text:#fff; --muted:rgba(255,255,255,.78);
+      --gold:#ffcc00; --gold2:#f2b400;
+      --ok:#36d399; --bad:#ff5c5c;
+      --shadow:0 24px 70px rgba(0,0,0,.42);
+      --shadow2:0 16px 42px rgba(0,0,0,.32);
+      --radius:22px; --focus:rgba(255,204,0,.35);
     }
-    
-    starsContainer.appendChild(star);
-}
+    *{box-sizing:border-box;margin:0;padding:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif}
+    body{
+      min-height:100vh;color:var(--text);
+      background:
+        radial-gradient(900px 520px at 50% -10%, rgba(255,204,0,.10), transparent 60%),
+        radial-gradient(900px 520px at 15% 10%, rgba(27,102,255,.22), transparent 55%),
+        radial-gradient(900px 520px at 90% 20%, rgba(255,255,255,.08), transparent 60%),
+        linear-gradient(to bottom, var(--bgA), var(--bgB));
+      overflow:hidden;
+    }
+    @media (max-width: 840px){ body{overflow:auto} }
 
-        // Configuration des avatars
-        const avatarsConfig = {
-            'bleu': { name: "Le Calme", color: "BLEU", filename: "bleu.png" },
-            'gris': { name: "Le Sage", color: "GRIS", filename: "gris.png" },
-            'jaune': { name: "L'Optimiste", color: "JAUNE", filename: "jaune.png" },
-            'orange': { name: "L'Énergique", color: "ORANGE", filename: "orange.png" },
-            'rose': { name: "Le Romantique", color: "ROSE", filename: "rose.png" },
-            'rouge': { name: "Le Passionné", color: "ROUGE", filename: "rouge.png" },
-            'turquoise': { name: "Le Créatif", color: "TURQUOISE", filename: "turquoi.png" },
-            'vert': { name: "L'Écologique", color: "VERT", filename: "vert.png" },
-            'violet': { name: "Le Mystique", color: "VIOLET", filename: "violet.png" }
-        };
-        
-        // Avatars assignés aux joueurs (peut être personnalisé)
-        const playersAvatars = {
-            '1': 'rose',
-            '2': 'turquoise', 
-            '3': 'jaune',
-            '4': 'orange'
-        };
-        
-        // Charger les avatars depuis le localStorage
-        function loadPlayerAvatars() {
-            const players = document.querySelectorAll('.player');
-            
-            players.forEach(player => {
-                const playerNum = player.dataset.player;
-                const avatarType = playersAvatars[playerNum];
-                const avatarImg = player.querySelector('.avatar-img');
-                const placeholder = player.querySelector('.avatar-placeholder');
-                
-                if (avatarType && avatarsConfig[avatarType]) {
-                    avatarImg.src = avatarsConfig[avatarType].filename;
-                    avatarImg.alt = `Joueur ${playerNum} - ${avatarsConfig[avatarType].name}`;
-                    
-                    // Gestion d'erreur d'image
-                    avatarImg.onerror = function() {
-                        this.style.display = 'none';
-                        placeholder.style.display = 'flex';
-                        placeholder.textContent = playerNum;
-                        placeholder.style.backgroundColor = getColorForAvatar(avatarType);
-                    };
-                    
-                    avatarImg.onload = function() {
-                        placeholder.style.display = 'none';
-                        this.style.display = 'block';
-                    };
-                }
-            });
-        }
-        
-        // Couleurs de secours pour chaque avatar
-        function getColorForAvatar(avatarType) {
-            const colorMap = {
-                'bleu': '#3b82f6',
-                'gris': '#6b7280',
-                'jaune': '#f59e0b',
-                'orange': '#f97316',
-                'rose': '#ec4899',
-                'rouge': '#ef4444',
-                'turquoise': '#06b6d4',
-                'vert': '#10b981',
-                'violet': '#8b5cf6'
-            };
-            return colorMap[avatarType] || '#475569';
-        }
-        
-        // Animation du buzzer qui change de couleur avec le temps
-        const buzzer = document.querySelector('.buzzer');
-        const timerElement = document.querySelector('.timer');
-        let timeLeft = 12;
-        let timerInterval;
-        
-        function startTimer() {
-            timeLeft = 12;
-            timerElement.textContent = timeLeft + 's';
-            buzzer.classList.add('pulsing');
-            
-            timerInterval = setInterval(updateTimer, 1000);
-        }
-        
-        function updateTimer() {
-            timeLeft--;
-            timerElement.textContent = timeLeft + 's';
-            
-            // Calcul du pourcentage de temps restant
-            const percent = timeLeft / 12;
-            
-            // Mise à jour de la couleur du buzzer
-            const redValue = Math.floor(255 * (1 - percent * 0.5));
-            buzzer.style.background = `radial-gradient(circle at 30% 30%, rgb(${redValue}, 50, 50), rgb(${redValue-50}, 0, 0))`;
-            
-            if (timeLeft <= 0) {
-                clearInterval(timerInterval);
-                buzzer.classList.remove('pulsing');
-                buzzer.style.background = 'radial-gradient(circle at 30% 30%, #666666, #333333)';
-                timerElement.textContent = '0s';
-                
-                // Désactiver les réponses
-                answerBoxes.forEach(box => {
-                    box.style.pointerEvents = 'none';
-                    box.style.opacity = '0.6';
-                });
-            }
-        }
-        
-        // Gestion du clic sur les réponses
-        const answerBoxes = document.querySelectorAll('.answer-box');
-        let answerSelected = false;
-        const correctAnswer = 'c'; // Oslo est la bonne réponse
-        
-        answerBoxes.forEach(box => {
-            box.addEventListener('click', function() {
-                if (answerSelected || timeLeft <= 0) return;
-                
-                answerSelected = true;
-                clearInterval(timerInterval);
-                buzzer.classList.remove('pulsing');
-                
-                const userAnswer = this.dataset.answer;
-                
-                // Animation de sélection
-                answerBoxes.forEach(b => {
-                    b.style.pointerEvents = 'none';
-                    if (b === this) {
-                        if (userAnswer === correctAnswer) {
-                            b.classList.add('correct');
-                            b.style.backgroundColor = '#33cc33';
-                        } else {
-                            b.classList.add('wrong');
-                            b.style.backgroundColor = '#cc0000';
-                        }
-                        b.style.transform = 'scale(1.05)';
-                    } else {
-                        b.style.opacity = '0.6';
-                        if (b.dataset.answer === correctAnswer) {
-                            b.classList.add('correct');
-                            b.style.backgroundColor = '#33cc33';
-                            b.style.opacity = '1';
-                        }
-                    }
-                });
-                
-                // Mettre à jour les points du joueur actif
-                if (userAnswer === correctAnswer) {
-                    updatePlayerScore(50);
-                }
-            });
-        });
-        
-        // Gestion du buzzer
-        buzzer.addEventListener('click', function() {
-            if (timeLeft > 0 && !answerSelected) {
-                this.style.animation = 'none';
-                this.style.background = 'radial-gradient(circle at 30% 30%, #33cc33, #009900)';
-                clearInterval(timerInterval);
-                
-                // Activer le premier joueur (celui qui a buzzé)
-                activatePlayer(1);
-            }
-        });
-        
-        // Fonction pour activer un joueur
-        function activatePlayer(playerNum) {
-            document.querySelectorAll('.avatar').forEach(avatar => {
-                avatar.classList.remove('active');
-            });
-            
-            const playerAvatar = document.querySelector(`[data-player="${playerNum}"] .avatar`);
-            if (playerAvatar) {
-                playerAvatar.classList.add('active');
-            }
-        }
-        
-        // Fonction pour mettre à jour le score
-        function updatePlayerScore(points) {
-            const activePlayer = document.querySelector('.avatar.active').closest('.player');
-            const pointsElement = activePlayer.querySelector('.points');
-            const currentPoints = parseInt(pointsElement.textContent.replace(' pts', ''));
-            pointsElement.textContent = (currentPoints + points) + ' pts';
-        }
-        
-        // Initialisation
-        document.addEventListener('DOMContentLoaded', function() {
-            loadPlayerAvatars();
-            startTimer();
-            
-            // Récupérer l'avatar du joueur principal depuis localStorage
-            const savedAvatar = localStorage.getItem('playerAvatar');
-            if (savedAvatar) {
-                try {
-                    const avatar = JSON.parse(savedAvatar);
-                    // Assigner cet avatar au joueur 1 (joueur principal)
-                    playersAvatars['1'] = Object.keys(avatarsConfig).find(key => 
-                        avatarsConfig[key].name === avatar.name && 
-                        avatarsConfig[key].color === avatar.color
-                    ) || 'bleu';
-                    
-                    // Recharger les avatars
-                    loadPlayerAvatars();
-                } catch (e) {
-                    console.log("Erreur lors du chargement de l'avatar sauvegardé");
-                }
-            }
-        });
-    </script>
+    /* étoiles */
+    .stars{position:fixed;inset:0;z-index:-1;pointer-events:none}
+    .star{
+      position:absolute;border-radius:50%;
+      background:rgba(255,255,255,.92);
+      box-shadow:0 0 18px rgba(255,255,255,.16);
+      animation:twinkle var(--dur) infinite ease-in-out;
+      opacity:var(--op);
+      transform: translateZ(0) scale(var(--sc));
+    }
+    @keyframes twinkle{
+      0%,100%{opacity:calc(var(--op) * .30)}
+      50%{opacity:var(--op)}
+    }
+
+    /* screens */
+    .screen{display:none}
+    .screen.active{display:block}
+
+    /* topbar FIXE (Paramètres toujours présent) */
+    .topbar{
+      position:fixed; top:0; left:0; right:0;
+      display:flex; justify-content:flex-end; align-items:center;
+      padding: 14px 18px;
+      z-index:50;
+      pointer-events:none; /* seuls les boutons dedans seront cliquables */
+    }
+    .topbar > *{pointer-events:auto}
+
+    .btn-top{
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(0,0,0,.18);
+      color: rgba(255,255,255,.92);
+      padding: 10px 12px;
+      border-radius: 14px;
+      cursor:pointer;
+      font-weight:900;
+      letter-spacing:.4px;
+      box-shadow: 0 14px 30px rgba(0,0,0,.22);
+      transition: transform .10s ease, filter .12s ease;
+    }
+    .btn-top:hover{transform: translateY(-1px); filter: brightness(1.06)}
+    .btn-top:active{transform: translateY(1px)}
+
+    /* layout générique */
+    .wrap{
+      width:min(1080px, 92vw);
+      margin:0 auto;
+      padding: 78px 0 36px; /* laisse la place à la topbar */
+      display:grid;
+      gap:18px;
+    }
+
+    .hero{
+      position:relative;
+      border-radius: calc(var(--radius) + 10px);
+      padding: 26px 20px;
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.05));
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(12px);
+      overflow:hidden;
+      text-align:center;
+    }
+    .big-title{
+      font-size: clamp(30px, 4.5vw, 52px);
+      letter-spacing:.6px; line-height:1.02;
+      color: var(--gold);
+      text-shadow: 0 18px 50px rgba(0,0,0,.35);
+    }
+    .subtitle{color:var(--muted); margin-top:10px}
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:18px;
+    }
+    @media (max-width: 840px){ .grid{grid-template-columns:1fr} }
+
+    .card{
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.095), rgba(255,255,255,.05));
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: var(--shadow2);
+      backdrop-filter: blur(12px);
+      overflow:hidden;
+    }
+    .card h2{
+      padding: 16px 16px 12px;
+      font-size:16px; letter-spacing:.35px;
+      border-bottom: 1px solid rgba(255,255,255,.12);
+      background: rgba(0,0,0,.10);
+    }
+    .card .body{padding: 14px 16px 16px}
+
+    .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:10px}
+
+    .btn, .btn2{
+      cursor:pointer;
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-weight: 900;
+      letter-spacing:.7px;
+      border:none;
+      outline:none;
+      transition: transform .10s ease, filter .12s ease, box-shadow .12s ease, opacity .12s ease;
+      box-shadow: 0 14px 30px rgba(0,0,0,.24);
+    }
+    .btn{color:#0b1025;background: linear-gradient(180deg, var(--gold), var(--gold2));}
+    .btn2{
+      color:var(--text);
+      border:1px solid rgba(255,255,255,.14);
+      background: linear-gradient(180deg, rgba(27,102,255,.95), rgba(10,58,168,.95));
+    }
+    .btn:hover, .btn2:hover{transform: translateY(-1px); filter: brightness(1.06)}
+    .btn:active, .btn2:active{transform: translateY(1px)}
+    .btn[disabled]{opacity:.50; cursor:not-allowed; filter: grayscale(.30); transform:none !important}
+
+    .field{display:flex;flex-direction:column;gap:6px;margin-top:10px}
+    label{font-size:12px;color:rgba(255,255,255,.88)}
+    input{
+      width:100%;
+      padding:12px;
+      border-radius:14px;
+      border:1px solid rgba(255,255,255,.15);
+      background: rgba(0,0,0,.14);
+      color:var(--text);
+      outline:none;
+    }
+    .code{
+      margin-top:12px;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+      font-size:12px;
+      color:rgba(255,255,255,.92);
+      background: rgba(0,0,0,.14);
+      border:1px solid rgba(255,255,255,.14);
+      border-radius: 14px;
+      padding: 12px;
+      line-height:1.55;
+    }
+
+    /* tes classes existantes (compat) */
+    .stars-bg{position:absolute; inset:0; pointer-events:none; opacity:.35}
+    .content-wrapper{
+      position:relative;
+      width:min(1080px, 92vw);
+      margin:0 auto;
+      padding: 78px 0 40px;
+      display:grid;
+      gap:18px;
+    }
+    .btn-back{
+      width: fit-content;
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.14);
+      color: rgba(255,255,255,.92);
+      padding: 10px 12px;
+      border-radius: 14px;
+      cursor:pointer;
+      font-weight:900;
+      letter-spacing:.4px;
+      box-shadow: 0 14px 30px rgba(0,0,0,.22);
+    }
+    .screen-title{
+      text-align:center;
+      letter-spacing:.8px;
+      font-weight:900;
+      margin: 10px 0 6px;
+      color: var(--gold);
+      text-shadow: 0 18px 50px rgba(0,0,0,.35);
+    }
+
+    /* MODE MENU */
+    .mode-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    @media (max-width: 840px){ .mode-grid{grid-template-columns:1fr} }
+    .mode-card-large{
+      position:relative;
+      border-radius: var(--radius);
+      padding: 18px 16px 16px;
+      background: linear-gradient(180deg, rgba(255,255,255,.095), rgba(255,255,255,.05));
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: var(--shadow2);
+      backdrop-filter: blur(12px);
+      cursor:pointer;
+    }
+    .mode-badge-new{position:absolute;top:12px;right:12px;font-size:11px;font-weight:900;padding:7px 10px;border-radius:999px;background: rgba(255,204,0,.18);border: 1px solid rgba(255,204,0,.48);}
+    .mode-icon-large{font-size:38px;margin-top:6px}
+    .mode-features{margin-top:10px;padding-left:18px;line-height:1.7;font-size:13px}
+
+    /* SETTINGS */
+    .settings-panel{
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.095), rgba(255,255,255,.05));
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: var(--shadow2);
+      backdrop-filter: blur(12px);
+      padding: 16px;
+      display:grid;
+      gap:14px;
+    }
+    .setting-block{border-radius: 16px;border: 1px solid rgba(255,255,255,.12);background: rgba(0,0,0,.12);padding: 12px;}
+    .setting-label{display:flex;align-items:center;gap:10px;font-weight:900}
+    .slider-container{margin-top:10px;display:flex;align-items:center;gap:12px}
+    input[type="range"]{flex:1}
+    .btn-group-setting{margin-top:10px;display:flex;flex-wrap:wrap;gap:10px}
+    .btn-setting{
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.14);
+      color: rgba(255,255,255,.92);
+      padding: 10px 12px;
+      border-radius: 14px;
+      cursor:pointer;
+      font-weight:900;
+      letter-spacing:.4px;
+    }
+    .btn-setting.active{background: rgba(255,204,0,.18);border-color: rgba(255,204,0,.48)}
+    .btn-danger{
+      width:100%;
+      border:none;border-radius: 14px;
+      padding: 12px 14px;
+      font-weight: 900;letter-spacing:.6px;
+      cursor:pointer;
+      color: rgba(255,255,255,.95);
+      background: linear-gradient(180deg, rgba(255,92,92,.95), rgba(180,40,40,.95));
+    }
+
+    /* LAN responsive choice */
+    .lan-choice{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .lan-choice button{
+      border:1px solid rgba(255,255,255,.14);
+      background: rgba(0,0,0,.18);
+      color: rgba(255,255,255,.92);
+      padding: 10px 14px;
+      border-radius: 14px;
+      cursor:pointer;
+      font-weight:900;
+      letter-spacing:.4px;
+    }
+    .lan-choice button.active{
+      background: rgba(255,204,0,.18);
+      border-color: rgba(255,204,0,.48);
+      color: var(--gold);
+    }
+    @media (max-width: 840px){
+      .grid.lan-grid[data-view="create"] #card-join{display:none}
+      .grid.lan-grid[data-view="join"] #card-create{display:none}
+    }
+
+    /* Characters */
+    .character-grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap:14px;
+    }
+    @media (max-width: 840px){
+      .character-grid{grid-template-columns: repeat(2, 1fr)}
+    }
+    .character-card{
+      border-radius: 18px;
+      padding: 16px;
+      background: linear-gradient(180deg, rgba(255,255,255,.10), rgba(255,255,255,.05));
+      border: 1px solid rgba(255,255,255,.16);
+      box-shadow: var(--shadow2);
+      text-align:center;
+      cursor:pointer;
+      transition: transform .10s ease, filter .12s ease, box-shadow .12s ease;
+    }
+    .character-card:hover{transform: translateY(-2px); filter: brightness(1.05)}
+    .character-card.active{
+      border-color: rgba(255,204,0,.55);
+      box-shadow: 0 0 0 2px rgba(255,204,0,.25), var(--shadow2);
+    }
+    .character-avatar{font-size:34px}
+    .character-name{margin-top:6px;font-weight:900;letter-spacing:.4px}
+  </style>
+</head>
+
+<body>
+  <div class="stars" id="stars"></div>
+
+  <!-- PARAMÈTRES toujours visible -->
+  <div class="topbar">
+    <button class="btn-top" id="btnSettingsCorner">⚙️ Paramètres</button>
+  </div>
+
+  <!-- 1) LAN FIRST -->
+  <main class="wrap screen active" id="screen-lan">
+    <section class="hero">
+      <h1 class="big-title">The Champions Quest</h1>
+      <p class="subtitle">Étape 1 — Crée ou rejoins une room (obligatoire)</p>
+    </section>
+
+    <div class="row lan-choice" id="lanChoice">
+      <button type="button" data-view="create" class="active">Créer une room</button>
+      <button type="button" data-view="join">Rejoindre une room</button>
+    </div>
+
+    <section class="grid lan-grid" id="lanGrid" data-view="create">
+      <article class="card" id="card-create">
+        <h2>CRÉER ROOM</h2>
+        <div class="body">
+          <div class="field">
+            <label for="roomName">Nom de room</label>
+            <input id="roomName" type="text" placeholder="HESTIM" maxlength="24" />
+          </div>
+
+          <div class="row">
+            <button class="btn2" id="btnCreate">CRÉER</button>
+            <button class="btn" id="btnCopy" disabled>COPIER CODE</button>
+          </div>
+
+          <div class="code">Code room : <b id="roomCode">—</b></div>
+        </div>
+      </article>
+
+      <article class="card" id="card-join">
+        <h2>REJOINDRE</h2>
+        <div class="body">
+          <div class="field">
+            <label for="joinCode">Code de room</label>
+            <input id="joinCode" type="text" placeholder="Ex: 8F2KQ" maxlength="10" />
+          </div>
+
+          <div class="row">
+            <button class="btn2" id="btnJoin">REJOINDRE</button>
+            <button class="btn" id="btnPaste">COLLER</button>
+          </div>
+
+          <div class="code">Statut : <span id="joinStatus">en attente</span></div>
+        </div>
+      </article>
+    </section>
+
+    <article class="card">
+      <h2>Progression</h2>
+      <div class="body">
+        <div class="code" id="progressLan">Room : <b>non validée</b> → Mode de jeu verrouillé</div>
+      </div>
+    </article>
+  </main>
+
+  <!-- 2) MODE DE JEU -->
+  <section id="screen-mode-menu" class="screen">
+    <div class="stars-bg"></div>
+    <div class="content-wrapper">
+      <button class="btn-back" onclick="navigation.goToLan()">← Retour</button>
+      <h2 class="screen-title">MODE DE JEU (Étape 2)</h2>
+
+      <div class="mode-grid">
+        <div class="mode-card-large" onclick="navigation.selectGameMode('championnat')">
+          <div class="mode-badge-new">OFFICIEL</div>
+          <div class="mode-icon-large">👑</div>
+          <h3>CHAMPIONNAT</h3>
+          <p>Le vrai jeu TV</p>
+          <ul class="mode-features">
+            <li>9 Points Gagnants</li>
+            <li>4 à la Suite</li>
+            <li>Face à Face</li>
+          </ul>
+        </div>
+
+        <div class="mode-card-large" onclick="navigation.selectGameMode('training')">
+          <div class="mode-icon-large">🎓</div>
+          <h3>ENTRAÎNEMENT</h3>
+          <p>Progressez à votre rythme</p>
+          <ul class="mode-features">
+            <li>Choisir la catégorie</li>
+            <li>Sans chronomètre</li>
+            <li>Voir les erreurs</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3) PERSONNAGE -->
+  <section id="screen-character" class="screen">
+    <div class="stars-bg"></div>
+    <div class="content-wrapper">
+      <button class="btn-back" onclick="navigation.goToMode()">← Mode</button>
+      <h2 class="screen-title">CHOIX DU PERSONNAGE (Étape 3)</h2>
+
+      <div class="card">
+        <h2>Choisir ton personnage</h2>
+        <div class="body">
+          <div class="character-grid" id="characterGrid">
+            <button class="character-card" data-character="Astra">
+              <div class="character-avatar">🌟</div>
+              <div class="character-name">Astra</div>
+              <div class="subtitle">Rapide & précise</div>
+            </button>
+            <button class="character-card" data-character="Orion">
+              <div class="character-avatar">🛡️</div>
+              <div class="character-name">Orion</div>
+              <div class="subtitle">Calme & solide</div>
+            </button>
+            <button class="character-card" data-character="Nova">
+              <div class="character-avatar">⚡</div>
+              <div class="character-name">Nova</div>
+              <div class="subtitle">Énergique</div>
+            </button>
+            <button class="character-card" data-character="Lyra">
+              <div class="character-avatar">🎵</div>
+              <div class="character-name">Lyra</div>
+              <div class="subtitle">Stratège</div>
+            </button>
+            <button class="character-card" data-character="Atlas">
+              <div class="character-avatar">🧭</div>
+              <div class="character-name">Atlas</div>
+              <div class="subtitle">Explorateur</div>
+            </button>
+            <button class="character-card" data-character="Vega">
+              <div class="character-avatar">🔥</div>
+              <div class="character-name">Vega</div>
+              <div class="subtitle">Déterminé</div>
+            </button>
+          </div>
+
+          <div class="row">
+            <button class="btn2" id="btnBackFromCharacter">← Mode</button>
+            <button class="btn" id="btnConfirmCharacter" disabled>VALIDER & CONTINUER</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4) START (Étape finale) -->
+  <main class="wrap screen" id="screen-start">
+    <section class="hero">
+      <h1 class="big-title">Prêt.</h1>
+      <p class="subtitle">Étape finale — Tu peux démarrer uniquement si Room + Mode + Personnage sont validés.</p>
+    </section>
+
+    <article class="card">
+      <h2>Récap</h2>
+      <div class="body">
+        <div class="code" id="recapBox">—</div>
+
+        <div class="row">
+          <button class="btn2" id="btnBackMode">← Personnage</button>
+          <button class="btn" id="btnStart" disabled>COMMENCER</button>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <!-- PARAMÈTRES (toujours accessible via bouton topbar) -->
+  <section id="screen-settings" class="screen">
+    <div class="stars-bg"></div>
+    <div class="content-wrapper">
+      <button class="btn-back" onclick="navigation.goBack()">← Retour</button>
+      <h2 class="screen-title">⚙️ PARAMÈTRES</h2>
+
+      <div class="settings-panel">
+        <div class="setting-block">
+          <label class="setting-label"><span>🎵</span><span>Volume Musique</span></label>
+          <div class="slider-container">
+            <input type="range" id="music-volume" min="0" max="100" value="50" oninput="settings.setMusicVolume(this.value)">
+            <span id="music-volume-val">50%</span>
+          </div>
+        </div>
+
+        <div class="setting-block">
+          <label class="setting-label"><span>🔊</span><span>Volume Effets</span></label>
+          <div class="slider-container">
+            <input type="range" id="sfx-volume" min="0" max="100" value="70" oninput="settings.setSfxVolume(this.value)">
+            <span id="sfx-volume-val">70%</span>
+          </div>
+        </div>
+
+        <div class="setting-block">
+          <label class="setting-label"><span>📊</span><span>Difficulté</span></label>
+          <div class="btn-group-setting">
+            <button class="btn-setting" data-diff="facile" onclick="settings.setDifficulty('facile')">Facile</button>
+            <button class="btn-setting active" data-diff="moyen" onclick="settings.setDifficulty('moyen')">Moyen</button>
+            <button class="btn-setting" data-diff="difficile" onclick="settings.setDifficulty('difficile')">Difficile</button>
+          </div>
+        </div>
+
+        <div class="setting-block">
+          <label class="setting-label"><span>⏱️</span><span>Temps par question</span></label>
+          <div class="btn-group-setting">
+            <button class="btn-setting" data-timer="20" onclick="settings.setTimer(20)">20s</button>
+            <button class="btn-setting active" data-timer="30" onclick="settings.setTimer(30)">30s</button>
+            <button class="btn-setting" data-timer="45" onclick="settings.setTimer(45)">45s</button>
+          </div>
+        </div>
+
+        <div class="setting-block">
+          <button class="btn-danger" onclick="settings.resetData()">🗑️ Réinitialiser toutes les données</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<script>
+  /* étoiles */
+  (function createStars(){
+    const stars = document.getElementById("stars");
+    const count = 150;
+    for(let i=0;i<count;i++){
+      const s = document.createElement("div");
+      s.className = "star";
+      const size = Math.random() < 0.10 ? 3 : (Math.random() < 0.35 ? 2 : 1);
+      s.style.width = size + "px";
+      s.style.height = size + "px";
+      s.style.left = (Math.random()*100) + "%";
+      s.style.top  = (Math.random()*100) + "%";
+      s.style.setProperty("--op", (0.25 + Math.random()*0.75).toFixed(2));
+      s.style.setProperty("--sc", (0.9 + Math.random()*1.6).toFixed(2));
+      s.style.setProperty("--dur", (2.2 + Math.random()*3.2).toFixed(2) + "s");
+      s.style.animationDelay = (Math.random()*2.5) + "s";
+      stars.appendChild(s);
+    }
+  })();
+
+  /* screens helpers */
+  function showScreen(id){
+    document.querySelectorAll(".screen").forEach(s => s.classList.remove("active"));
+    const el = document.getElementById(id);
+    if(el) el.classList.add("active");
+    window.scrollTo({top:0, behavior:"instant"});
+  }
+
+  /* ETAT GLOBAL (strict) */
+  const STATE = {
+    roomOk:false,
+    roomLabel:"Aucune",
+    roomCode:"",
+    modeOk:false,
+    mode:"",
+    characterOk:false,
+    character:""
+  };
+
+  const ui = {
+    progressLan: document.getElementById("progressLan"),
+    roomName: document.getElementById("roomName"),
+    roomCode: document.getElementById("roomCode"),
+    btnCreate: document.getElementById("btnCreate"),
+    btnCopy: document.getElementById("btnCopy"),
+    joinCode: document.getElementById("joinCode"),
+    btnJoin: document.getElementById("btnJoin"),
+    btnPaste: document.getElementById("btnPaste"),
+    joinStatus: document.getElementById("joinStatus"),
+    recapBox: document.getElementById("recapBox"),
+    btnStart: document.getElementById("btnStart"),
+    btnBackMode: document.getElementById("btnBackMode"),
+    btnSettingsCorner: document.getElementById("btnSettingsCorner"),
+    lanChoice: document.getElementById("lanChoice"),
+    lanGrid: document.getElementById("lanGrid"),
+    characterGrid: document.getElementById("characterGrid"),
+    btnConfirmCharacter: document.getElementById("btnConfirmCharacter"),
+    btnBackFromCharacter: document.getElementById("btnBackFromCharacter")
+  };
+
+  function refreshLanProgress(){
+    const availability = STATE.roomOk ? "disponible" : "indisponible";
+    ui.progressLan.innerHTML = `Room : <b>${STATE.roomOk ? STATE.roomLabel : "non validée"}</b> → Mode de jeu ${STATE.roomOk ? "déverrouillé" : "verrouillé"} • Statut : <b>${availability}</b>`;
+  }
+
+  function refreshStart(){
+    const canStart = STATE.roomOk && STATE.modeOk && STATE.characterOk;
+    ui.btnStart.disabled = !canStart;
+    ui.recapBox.innerHTML =
+      `Room : <b>${STATE.roomOk ? STATE.roomLabel : "Aucune"}</b> (code: <b>${STATE.roomCode || "—"}</b>)<br/>` +
+      `Mode : <b>${STATE.modeOk ? STATE.mode.toUpperCase() : "Aucun"}</b><br/>` +
+      `Personnage : <b>${STATE.characterOk ? STATE.character : "Aucun"}</b><br/>` +
+      `Statut : <b>${canStart ? "OK → Démarrage autorisé" : "BLOQUÉ → Termine les étapes"}</b>`;
+  }
+
+  /* navigation stricte (ordre imposé) */
+  const navigation = {
+    _stack: [],
+    goToLan(){ showScreen("screen-lan"); },
+    goToMode(){
+      if(!STATE.roomOk){ alert("Tu dois valider une room avant le mode de jeu."); return; }
+      showScreen("screen-mode-menu");
+    },
+    goToStart(){
+      if(!(STATE.roomOk && STATE.modeOk && STATE.characterOk)){ alert("Room + Mode + Personnage obligatoires."); return; }
+      refreshStart();
+      showScreen("screen-start");
+    },
+    goToCharacter(){
+      if(!(STATE.roomOk && STATE.modeOk)){ alert("Room + Mode obligatoires."); return; }
+      showScreen("screen-character");
+    },
+    openSettings(){
+      this._stack.push(document.querySelector(".screen.active")?.id || "screen-lan");
+      showScreen("screen-settings");
+    },
+    goBack(){
+      const prev = this._stack.pop() || "screen-lan";
+      showScreen(prev);
+      if(prev === "screen-start") refreshStart();
+      if(prev === "screen-lan") refreshLanProgress();
+    },
+    selectGameMode(mode){
+      STATE.modeOk = true;
+      STATE.mode = mode;
+      localStorage.setItem("game_mode", mode);
+      // Étape suivante : choix personnage
+      this.goToCharacter();
+    },
+    selectCharacter(name){
+      STATE.characterOk = true;
+      STATE.character = name;
+      localStorage.setItem("player_character", name);
+      this.goToStart();
+    }
+  };
+  window.navigation = navigation;
+
+  /* paramètres toujours accessibles */
+  ui.btnSettingsCorner.addEventListener("click", () => navigation.openSettings());
+
+  /* responsive lan choice */
+  function setLanView(view){
+    ui.lanGrid.dataset.view = view;
+    ui.lanChoice.querySelectorAll("button").forEach(btn => {
+      btn.classList.toggle("active", btn.dataset.view === view);
+    });
+  }
+
+  function syncLanChoice(){
+    const isSmall = window.matchMedia("(max-width: 840px)").matches;
+    ui.lanChoice.style.display = isSmall ? "flex" : "none";
+    if(!isSmall){
+      ui.lanGrid.dataset.view = "";
+      return;
+    }
+    if(!ui.lanGrid.dataset.view){
+      setLanView("create");
+    }
+  }
+
+  ui.lanChoice.addEventListener("click", (event) => {
+    const btn = event.target.closest("button[data-view]");
+    if(!btn) return;
+    setLanView(btn.dataset.view);
+  });
+
+  window.addEventListener("resize", syncLanChoice);
+
+  /* validation helpers */
+  function validRoomName(name){ return (name||"").trim().length >= 3; }
+  function validJoinCode(code){ return (code||"").trim().length >= 4; }
+
+  function genCode(){
+    const chars = "ABCDEFGHJKMNPQRSTUVWXYZ23456789";
+    let out = "";
+    for(let i=0;i<5;i++) out += chars[Math.floor(Math.random()*chars.length)];
+    return out;
+  }
+
+  /* LAN: create */
+  ui.btnCreate.addEventListener("click", () => {
+    const name = (ui.roomName.value||"").trim();
+    if(!validRoomName(name)){ alert("Nom de room obligatoire (min 3 caractères)."); return; }
+
+    const code = genCode();
+    localStorage.setItem("lan_room_name", name);
+    localStorage.setItem("lan_room_code", code);
+    localStorage.setItem("lan_room_available", "true");
+
+    STATE.roomOk = true;
+    STATE.roomLabel = "Créée";
+    STATE.roomCode = code;
+
+    ui.roomCode.textContent = code;
+    ui.btnCopy.disabled = false;
+
+    refreshLanProgress();
+    // Étape suivante : MODE
+    navigation.goToMode();
+  });
+
+  ui.btnCopy.addEventListener("click", async () => {
+    const code = (ui.roomCode.textContent||"").trim();
+    if(!code || code==="—") return;
+    try{ await navigator.clipboard.writeText(code); }
+    catch{
+      const tmp=document.createElement("textarea");
+      tmp.value=code; document.body.appendChild(tmp);
+      tmp.select(); document.execCommand("copy"); tmp.remove();
+    }
+    alert("Code copié.");
+  });
+
+  /* LAN: join */
+  ui.btnPaste.addEventListener("click", async () => {
+    try{
+      const txt = await navigator.clipboard.readText();
+      ui.joinCode.value = (txt||"").trim().slice(0,10).toUpperCase();
+    }catch{ alert("Collage impossible ici. Colle manuellement."); }
+  });
+
+  ui.btnJoin.addEventListener("click", () => {
+    const code = (ui.joinCode.value||"").trim().toUpperCase();
+    if(!validJoinCode(code)){ alert("Entre un code valide (min 4 caractères)."); ui.joinStatus.textContent="en attente"; return; }
+
+    const hostCode = (localStorage.getItem("lan_room_code")||"").trim().toUpperCase();
+    const isAvailable = (localStorage.getItem("lan_room_available")||"false") === "true";
+    if(hostCode && isAvailable && code===hostCode){
+      ui.joinStatus.textContent = "connecté (simulation)";
+      STATE.roomOk = true;
+      STATE.roomLabel = "Rejointe";
+      STATE.roomCode = code;
+      refreshLanProgress();
+      navigation.goToMode();
+    }else{
+      ui.joinStatus.textContent = isAvailable ? "room introuvable (simulation)" : "room indisponible (simulation)";
+      STATE.roomOk = false;
+      STATE.roomLabel = "Aucune";
+      STATE.roomCode = "";
+      refreshLanProgress();
+    }
+  });
+
+  /* start screen controls */
+  ui.btnBackMode.addEventListener("click", () => showScreen("screen-character"));
+  ui.btnBackFromCharacter.addEventListener("click", () => showScreen("screen-mode-menu"));
+
+  ui.btnStart.addEventListener("click", () => {
+    if(!(STATE.roomOk && STATE.modeOk && STATE.characterOk)) return;
+    window.location.href = "/HTML/Player.html";
+  });
+
+  /* SETTINGS persistants */
+  const settings = {
+    setMusicVolume(v){
+      const n=Math.max(0,Math.min(100,Number(v)||0));
+      localStorage.setItem("music_volume", String(n));
+      document.getElementById("music-volume-val").textContent = n+"%";
+    },
+    setSfxVolume(v){
+      const n=Math.max(0,Math.min(100,Number(v)||0));
+      localStorage.setItem("sfx_volume", String(n));
+      document.getElementById("sfx-volume-val").textContent = n+"%";
+    },
+    setDifficulty(diff){
+      localStorage.setItem("difficulty", diff);
+      document.querySelectorAll(".btn-setting[data-diff]").forEach(b => b.classList.toggle("active", b.dataset.diff===diff));
+    },
+    setTimer(t){
+      const n=Number(t)||30;
+      localStorage.setItem("timer_seconds", String(n));
+      document.querySelectorAll(".btn-setting[data-timer]").forEach(b => b.classList.toggle("active", Number(b.dataset.timer)===n));
+    },
+    resetData(){
+      ["music_volume","sfx_volume","difficulty","timer_seconds","game_mode","lan_room_name","lan_room_code","lan_room_available","player_character"]
+        .forEach(k => localStorage.removeItem(k));
+      alert("Données réinitialisées.");
+      location.reload();
+    },
+    hydrate(){
+      const mv=localStorage.getItem("music_volume") ?? "50";
+      const sv=localStorage.getItem("sfx_volume") ?? "70";
+      const diff=localStorage.getItem("difficulty") ?? "moyen";
+      const timer=Number(localStorage.getItem("timer_seconds") ?? 30);
+
+      document.getElementById("music-volume").value = mv;
+      document.getElementById("sfx-volume").value = sv;
+      this.setMusicVolume(mv);
+      this.setSfxVolume(sv);
+      this.setDifficulty(diff);
+      this.setTimer(timer);
+    }
+  };
+  window.settings = settings;
+  settings.hydrate();
+
+  /* characters */
+  function refreshCharacterSelection(){
+    ui.btnConfirmCharacter.disabled = !STATE.characterOk;
+    ui.characterGrid.querySelectorAll(".character-card").forEach(card => {
+      card.classList.toggle("active", card.dataset.character === STATE.character);
+    });
+  }
+
+  ui.characterGrid.addEventListener("click", (event) => {
+    const card = event.target.closest(".character-card");
+    if(!card) return;
+    STATE.characterOk = true;
+    STATE.character = card.dataset.character;
+    refreshCharacterSelection();
+  });
+
+  ui.btnConfirmCharacter.addEventListener("click", () => {
+    if(!STATE.characterOk) return;
+    navigation.selectCharacter(STATE.character);
+  });
+
+  /* init */
+  refreshLanProgress();
+  syncLanChoice();
+  refreshCharacterSelection();
+</script>
 </body>
 </html>
