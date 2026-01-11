@@ -1,0 +1,706 @@
+import React, { useState, useEffect } from 'react';
+import { Shuffle, Trophy, RotateCcw } from 'lucide-react';
+
+const Quiz = () => {
+  const allQuestions = [
+    {
+      "id": 1,
+      "theme": "Géographie",
+      "question": "Quel est le plus long fleuve du monde ?",
+      "answers": ["Amazone", "Nil", "Yangtsé", "Mississippi"],
+      "Good": "Nil"
+    },
+    {
+      "id": 2,
+      "theme": "Géographie",
+      "question": "Quelle est la capitale de l'Australie ?",
+      "answers": ["Sydney", "Canberra", "Melbourne", "Brisbane"],
+      "Good": "Canberra"
+    },
+    {
+      "id": 3,
+      "theme": "Géographie",
+      "question": "Quel pays possède le plus de fuseaux horaires ?",
+      "answers": ["France", "Russie", "États-Unis", "Chine"],
+      "Good": "France"
+    },
+    {
+      "id": 4,
+      "theme": "Géographie",
+      "question": "Quelle mer sépare l'Europe de l'Afrique ?",
+      "answers": ["Mer Noire", "Mer Méditerranée", "Mer Rouge", "Mer Caspienne"],
+      "Good": "Mer Méditerranée"
+    },
+    {
+      "id": 5,
+      "theme": "Géographie",
+      "question": "Quel est le plus grand désert chaud du monde ?",
+      "answers": ["Kalahari", "Sahara", "Gobi", "Arabie"],
+      "Good": "Sahara"
+    },
+    {
+      "id": 6,
+      "theme": "Géographie",
+      "question": "Dans quel pays se trouve le Mont Kilimandjaro ?",
+      "answers": ["Kenya", "Tanzanie", "Ouganda", "Éthiopie"],
+      "Good": "Tanzanie"
+    },
+    {
+      "id": 7,
+      "theme": "Géographie",
+      "question": "Quelle est la capitale du Kazakhstan ?",
+      "answers": ["Almaty", "Astana", "Tachkent", "Bichkek"],
+      "Good": "Astana"
+    },
+    {
+      "id": 8,
+      "theme": "Géographie",
+      "question": "Quel détroit sépare l'Espagne du Maroc ?",
+      "answers": ["Détroit de Gibraltar", "Détroit du Bosphore", "Détroit de Magellan", "Détroit de Béring"],
+      "Good": "Détroit de Gibraltar"
+    },
+    {
+      "id": 9,
+      "theme": "Géographie",
+      "question": "Quelle est la plus grande île de la Méditerranée ?",
+      "answers": ["Crète", "Sicile", "Sardaigne", "Chypre"],
+      "Good": "Sicile"
+    },
+    {
+      "id": 10,
+      "theme": "Géographie",
+      "question": "Quel fleuve traverse Paris ?",
+      "answers": ["La Loire", "La Seine", "Le Rhône", "La Garonne"],
+      "Good": "La Seine"
+    },
+    {
+      "id": 11,
+      "theme": "Histoire",
+      "question": "En quelle année a eu lieu la Révolution française ?",
+      "answers": ["1789", "1799", "1804", "1815"],
+      "Good": "1789"
+    },
+    {
+      "id": 12,
+      "theme": "Histoire",
+      "question": "Qui était le premier empereur romain ?",
+      "answers": ["Jules César", "Auguste", "Néron", "Tibère"],
+      "Good": "Auguste"
+    },
+    {
+      "id": 13,
+      "theme": "Histoire",
+      "question": "En quelle année la Seconde Guerre mondiale a-t-elle commencé ?",
+      "answers": ["1937", "1939", "1941", "1943"],
+      "Good": "1939"
+    },
+    {
+      "id": 14,
+      "theme": "Histoire",
+      "question": "Quel pharaon a fait construire la plus grande pyramide de Gizeh ?",
+      "answers": ["Khéops", "Khéphren", "Mykérinos", "Ramsès II"],
+      "Good": "Khéops"
+    },
+    {
+      "id": 15,
+      "theme": "Histoire",
+      "question": "Qui a découvert l'Amérique en 1492 ?",
+      "answers": ["Vasco de Gama", "Christophe Colomb", "Amerigo Vespucci", "Ferdinand Magellan"],
+      "Good": "Christophe Colomb"
+    },
+    {
+      "id": 16,
+      "theme": "Histoire",
+      "question": "En quelle année le mur de Berlin est-il tombé ?",
+      "answers": ["1987", "1989", "1991", "1993"],
+      "Good": "1989"
+    },
+    {
+      "id": 17,
+      "theme": "Histoire",
+      "question": "Quel roi de France était surnommé le Roi-Soleil ?",
+      "answers": ["Louis XIII", "Louis XIV", "Louis XV", "Louis XVI"],
+      "Good": "Louis XIV"
+    },
+    {
+      "id": 18,
+      "theme": "Histoire",
+      "question": "Qui était le leader de l'Union soviétique pendant la Seconde Guerre mondiale ?",
+      "answers": ["Lénine", "Staline", "Khrouchtchev", "Brejnev"],
+      "Good": "Staline"
+    },
+    {
+      "id": 19,
+      "theme": "Histoire",
+      "question": "En quelle année l'homme a-t-il marché sur la Lune ?",
+      "answers": ["1967", "1969", "1971", "1973"],
+      "Good": "1969"
+    },
+    {
+      "id": 20,
+      "theme": "Histoire",
+      "question": "Quelle bataille a marqué la fin de Napoléon ?",
+      "answers": ["Austerlitz", "Waterloo", "Iéna", "Wagram"],
+      "Good": "Waterloo"
+    },
+    {
+      "id": 21,
+      "theme": "Sciences",
+      "question": "Quel est le symbole chimique de l'or ?",
+      "answers": ["Au", "Ag", "Fe", "Cu"],
+      "Good": "Au"
+    },
+    {
+      "id": 22,
+      "theme": "Sciences",
+      "question": "Quelle est la vitesse de la lumière dans le vide ?",
+      "answers": ["300 000 km/s", "150 000 km/s", "450 000 km/s", "600 000 km/s"],
+      "Good": "300 000 km/s"
+    },
+    {
+      "id": 23,
+      "theme": "Sciences",
+      "question": "Combien de chromosomes possède un être humain ?",
+      "answers": ["23", "46", "48", "52"],
+      "Good": "46"
+    },
+    {
+      "id": 24,
+      "theme": "Sciences",
+      "question": "Quel gaz est le plus abondant dans l'atmosphère terrestre ?",
+      "answers": ["Oxygène", "Azote", "Dioxyde de carbone", "Argon"],
+      "Good": "Azote"
+    },
+    {
+      "id": 25,
+      "theme": "Sciences",
+      "question": "Qui a découvert la pénicilline ?",
+      "answers": ["Louis Pasteur", "Alexander Fleming", "Marie Curie", "Robert Koch"],
+      "Good": "Alexander Fleming"
+    },
+    {
+      "id": 26,
+      "theme": "Sciences",
+      "question": "Quelle planète est la plus proche du Soleil ?",
+      "answers": ["Vénus", "Mercure", "Mars", "Terre"],
+      "Good": "Mercure"
+    },
+    {
+      "id": 27,
+      "theme": "Sciences",
+      "question": "Combien d'os possède un adulte humain ?",
+      "answers": ["186", "206", "226", "246"],
+      "Good": "206"
+    },
+    {
+      "id": 28,
+      "theme": "Sciences",
+      "question": "Quel est l'élément chimique le plus abondant dans l'univers ?",
+      "answers": ["Hélium", "Hydrogène", "Oxygène", "Carbone"],
+      "Good": "Hydrogène"
+    },
+    {
+      "id": 29,
+      "theme": "Sciences",
+      "question": "À quelle température l'eau bout-elle au niveau de la mer ?",
+      "answers": ["90°C", "100°C", "110°C", "120°C"],
+      "Good": "100°C"
+    },
+    {
+      "id": 30,
+      "theme": "Sciences",
+      "question": "Quel scientifique a développé la théorie de la relativité ?",
+      "answers": ["Isaac Newton", "Albert Einstein", "Nikola Tesla", "Stephen Hawking"],
+      "Good": "Albert Einstein"
+    },
+    {
+      "id": 31,
+      "theme": "Sport",
+      "question": "Combien de joueurs y a-t-il dans une équipe de rugby à XV ?",
+      "answers": ["13", "15", "11", "17"],
+      "Good": "15"
+    },
+    {
+      "id": 32,
+      "theme": "Sport",
+      "question": "Dans quel pays se sont déroulés les JO d'été 2024 ?",
+      "answers": ["Japon", "France", "Brésil", "Chine"],
+      "Good": "France"
+    },
+    {
+      "id": 33,
+      "theme": "Sport",
+      "question": "Combien de sets faut-il gagner pour remporter un match de tennis masculin en Grand Chelem ?",
+      "answers": ["2", "3", "4", "5"],
+      "Good": "3"
+    },
+    {
+      "id": 34,
+      "theme": "Sport",
+      "question": "Quel pays a remporté le plus de Coupes du monde de football ?",
+      "answers": ["Allemagne", "Brésil", "Argentine", "Italie"],
+      "Good": "Brésil"
+    },
+    {
+      "id": 35,
+      "theme": "Sport",
+      "question": "Quelle est la distance d'un marathon ?",
+      "answers": ["40,195 km", "42,195 km", "44,195 km", "46,195 km"],
+      "Good": "42,195 km"
+    },
+    {
+      "id": 36,
+      "theme": "Sport",
+      "question": "Combien de joueurs composent une équipe de basket sur le terrain ?",
+      "answers": ["4", "5", "6", "7"],
+      "Good": "5"
+    },
+    {
+      "id": 37,
+      "theme": "Sport",
+      "question": "Quel sport pratique Rafael Nadal ?",
+      "answers": ["Football", "Tennis", "Boxe", "Golf"],
+      "Good": "Tennis"
+    },
+    {
+      "id": 38,
+      "theme": "Sport",
+      "question": "Quelle ville a accueilli les JO d'été 2012 ?",
+      "answers": ["Pékin", "Londres", "Rio", "Tokyo"],
+      "Good": "Londres"
+    },
+    {
+      "id": 39,
+      "theme": "Sport",
+      "question": "Combien de joueurs y a-t-il dans une équipe de volleyball ?",
+      "answers": ["5", "6", "7", "8"],
+      "Good": "6"
+    },
+    {
+      "id": 40,
+      "theme": "Sport",
+      "question": "Quel pays a inventé le judo ?",
+      "answers": ["Chine", "Japon", "Corée", "Thaïlande"],
+      "Good": "Japon"
+    },
+    {
+      "id": 41,
+      "theme": "Cinéma",
+      "question": "Qui a réalisé le film Titanic ?",
+      "answers": ["Steven Spielberg", "James Cameron", "Christopher Nolan", "Martin Scorsese"],
+      "Good": "James Cameron"
+    },
+    {
+      "id": 42,
+      "theme": "Cinéma",
+      "question": "Quel film a remporté l'Oscar du meilleur film en 2020 ?",
+      "answers": ["1917", "Parasite", "Joker", "Le Mans 66"],
+      "Good": "Parasite"
+    },
+    {
+      "id": 43,
+      "theme": "Cinéma",
+      "question": "Qui joue le rôle de Jack Sparrow dans Pirates des Caraïbes ?",
+      "answers": ["Orlando Bloom", "Johnny Depp", "Brad Pitt", "Leonardo DiCaprio"],
+      "Good": "Johnny Depp"
+    },
+    {
+      "id": 44,
+      "theme": "Cinéma",
+      "question": "Quel réalisateur a créé la saga Star Wars ?",
+      "answers": ["Steven Spielberg", "George Lucas", "James Cameron", "Ridley Scott"],
+      "Good": "George Lucas"
+    },
+    {
+      "id": 45,
+      "theme": "Cinéma",
+      "question": "Dans quel film trouve-t-on la phrase 'Que la Force soit avec toi' ?",
+      "answers": ["Star Trek", "Star Wars", "Battlestar Galactica", "Avatar"],
+      "Good": "Star Wars"
+    },
+    {
+      "id": 46,
+      "theme": "Cinéma",
+      "question": "Qui a réalisé Inception ?",
+      "answers": ["James Cameron", "Christopher Nolan", "Quentin Tarantino", "Denis Villeneuve"],
+      "Good": "Christopher Nolan"
+    },
+    {
+      "id": 47,
+      "theme": "Cinéma",
+      "question": "Quel acteur joue Iron Man dans l'univers Marvel ?",
+      "answers": ["Chris Evans", "Robert Downey Jr.", "Chris Hemsworth", "Mark Ruffalo"],
+      "Good": "Robert Downey Jr."
+    },
+    {
+      "id": 48,
+      "theme": "Cinéma",
+      "question": "Quel film d'animation Pixar met en scène des jouets ?",
+      "answers": ["Monstres et Cie", "Toy Story", "Vice-Versa", "Cars"],
+      "Good": "Toy Story"
+    },
+    {
+      "id": 49,
+      "theme": "Cinéma",
+      "question": "Qui a réalisé Le Parrain ?",
+      "answers": ["Martin Scorsese", "Francis Ford Coppola", "Brian De Palma", "Sergio Leone"],
+      "Good": "Francis Ford Coppola"
+    },
+    {
+      "id": 50,
+      "theme": "Cinéma",
+      "question": "Quel film Disney met en scène deux sœurs nommées Elsa et Anna ?",
+      "answers": ["Raiponce", "La Reine des neiges", "Vaiana", "Encanto"],
+      "Good": "La Reine des neiges"
+    },
+    {
+      "id": 51,
+      "theme": "Musique",
+      "question": "Quel groupe a chanté 'Bohemian Rhapsody' ?",
+      "answers": ["The Beatles", "Queen", "Led Zeppelin", "Pink Floyd"],
+      "Good": "Queen"
+    },
+    {
+      "id": 52,
+      "theme": "Musique",
+      "question": "Quel instrument Yo-Yo Ma joue-t-il ?",
+      "answers": ["Violon", "Violoncelle", "Contrebasse", "Alto"],
+      "Good": "Violoncelle"
+    },
+    {
+      "id": 53,
+      "theme": "Musique",
+      "question": "Qui a composé Les Quatre Saisons ?",
+      "answers": ["Bach", "Antonio Vivaldi", "Mozart", "Beethoven"],
+      "Good": "Antonio Vivaldi"
+    },
+    {
+      "id": 54,
+      "theme": "Musique",
+      "question": "Combien de cordes possède une guitare classique ?",
+      "answers": ["4", "6", "8", "12"],
+      "Good": "6"
+    },
+    {
+      "id": 55,
+      "theme": "Musique",
+      "question": "Quel chanteur est surnommé 'The King of Pop' ?",
+      "answers": ["Elvis Presley", "Michael Jackson", "Prince", "Freddie Mercury"],
+      "Good": "Michael Jackson"
+    },
+    {
+      "id": 56,
+      "theme": "Musique",
+      "question": "Qui a composé La Symphonie n°9 'Ode à la joie' ?",
+      "answers": ["Mozart", "Beethoven", "Bach", "Brahms"],
+      "Good": "Beethoven"
+    },
+    {
+      "id": 57,
+      "theme": "Musique",
+      "question": "Quel instrument joue Louis Armstrong ?",
+      "answers": ["Saxophone", "Trompette", "Piano", "Trombone"],
+      "Good": "Trompette"
+    },
+    {
+      "id": 58,
+      "theme": "Musique",
+      "question": "Combien de touches possède un piano standard ?",
+      "answers": ["76", "88", "92", "100"],
+      "Good": "88"
+    },
+    {
+      "id": 59,
+      "theme": "Musique",
+      "question": "Quel groupe britannique a chanté 'Hey Jude' ?",
+      "answers": ["The Rolling Stones", "The Beatles", "The Who", "Led Zeppelin"],
+      "Good": "The Beatles"
+    },
+    {
+      "id": 60,
+      "theme": "Musique",
+      "question": "Qui a composé Le Lac des cygnes ?",
+      "answers": ["Rachmaninov", "Tchaïkovski", "Stravinsky", "Prokofiev"],
+      "Good": "Tchaïkovski"
+    },
+    {
+      "id": 61,
+      "theme": "Littérature",
+      "question": "Qui a écrit Les Misérables ?",
+      "answers": ["Émile Zola", "Victor Hugo", "Alexandre Dumas", "Gustave Flaubert"],
+      "Good": "Victor Hugo"
+    },
+    {
+      "id": 62,
+      "theme": "Littérature",
+      "question": "Qui a écrit Harry Potter ?",
+      "answers": ["J.R.R. Tolkien", "J.K. Rowling", "C.S. Lewis", "Suzanne Collins"],
+      "Good": "J.K. Rowling"
+    },
+    {
+      "id": 63,
+      "theme": "Littérature",
+      "question": "Qui a écrit Roméo et Juliette ?",
+      "answers": ["Charles Dickens", "William Shakespeare", "Oscar Wilde", "Jane Austen"],
+      "Good": "William Shakespeare"
+    },
+    {
+      "id": 64,
+      "theme": "Littérature",
+      "question": "Qui a écrit Le Petit Prince ?",
+      "answers": ["Albert Camus", "Antoine de Saint-Exupéry", "Jean-Paul Sartre", "Marcel Proust"],
+      "Good": "Antoine de Saint-Exupéry"
+    },
+    {
+      "id": 65,
+      "theme": "Littérature",
+      "question": "Qui a écrit 1984 ?",
+      "answers": ["Aldous Huxley", "George Orwell", "Ray Bradbury", "Isaac Asimov"],
+      "Good": "George Orwell"
+    },
+    {
+      "id": 66,
+      "theme": "Littérature",
+      "question": "Qui a écrit L'Odyssée ?",
+      "answers": ["Virgile", "Homère", "Ovide", "Sophocle"],
+      "Good": "Homère"
+    },
+    {
+      "id": 67,
+      "theme": "Littérature",
+      "question": "Qui a écrit Cent ans de solitude ?",
+      "answers": ["Pablo Neruda", "Gabriel García Márquez", "Jorge Luis Borges", "Mario Vargas Llosa"],
+      "Good": "Gabriel García Márquez"
+    },
+    {
+      "id": 68,
+      "theme": "Littérature",
+      "question": "Qui a écrit Le Seigneur des Anneaux ?",
+      "answers": ["C.S. Lewis", "J.R.R. Tolkien", "George R.R. Martin", "J.K. Rowling"],
+      "Good": "J.R.R. Tolkien"
+    },
+    {
+      "id": 69,
+      "theme": "Littérature",
+      "question": "Qui a écrit Madame Bovary ?",
+      "answers": ["Victor Hugo", "Gustave Flaubert", "Émile Zola", "Honoré de Balzac"],
+      "Good": "Gustave Flaubert"
+    },
+    {
+      "id": 70,
+      "theme": "Littérature",
+      "question": "Qui a écrit Les Fleurs du mal ?",
+      "answers": ["Arthur Rimbaud", "Charles Baudelaire", "Paul Verlaine", "Victor Hugo"],
+      "Good": "Charles Baudelaire"
+    },
+    {
+      "id": 71,
+      "theme": "Art",
+      "question": "Qui a peint La Joconde ?",
+      "answers": ["Michel-Ange", "Léonard de Vinci", "Raphaël", "Donatello"],
+      "Good": "Léonard de Vinci"
+    },
+    {
+      "id": 72,
+      "theme": "Art",
+      "question": "Qui a peint La Nuit étoilée ?",
+      "answers": ["Claude Monet", "Vincent van Gogh", "Pablo Picasso", "Salvador Dalí"],
+      "Good": "Vincent van Gogh"
+    },
+    {
+      "id": 73,
+      "theme": "Art",
+      "question": "Qui a peint Le Cri ?",
+      "answers": ["Vincent van Gogh", "Edvard Munch", "Gustav Klimt", "Egon Schiele"],
+      "Good": "Edvard Munch"
+    },
+    {
+      "id": 74,
+      "theme": "Art",
+      "question": "Qui a peint Les Demoiselles d'Avignon ?",
+      "answers": ["Henri Matisse", "Pablo Picasso", "Georges Braque", "Juan Gris"],
+      "Good": "Pablo Picasso"
+    },
+    {
+      "id": 75,
+      "theme": "Art",
+      "question": "Qui a peint La Jeune Fille à la perle ?",
+      "answers": ["Rembrandt", "Johannes Vermeer", "Frans Hals", "Pieter de Hooch"],
+      "Good": "Johannes Vermeer"
+    },
+    {
+      "id": 76,
+      "theme": "Art",
+      "question": "Qui a sculpté Le Penseur ?",
+      "answers": ["Michel-Ange", "Auguste Rodin", "Camille Claudel", "Donatello"],
+      "Good": "Auguste Rodin"
+    },
+    {
+      "id": 77,
+      "theme": "Art",
+      "question": "Qui a peint Les Tournesols ?",
+      "answers": ["Claude Monet", "Vincent van Gogh", "Paul Gauguin", "Henri Matisse"],
+      "Good": "Vincent van Gogh"
+    },
+    {
+      "id": 78,
+      "theme": "Art",
+      "question": "Qui a peint Guernica ?",
+      "answers": ["Salvador Dalí", "Pablo Picasso", "Joan Miró", "Henri Matisse"],
+      "Good": "Pablo Picasso"
+    },
+    {
+      "id": 79,
+      "theme": "Art",
+      "question": "Qui a peint La Liberté guidant le peuple ?",
+      "answers": ["Jacques-Louis David", "Eugène Delacroix", "Théodore Géricault", "Jean-Auguste-Dominique Ingres"],
+      "Good": "Eugène Delacroix"
+    },
+    {
+      "id": 80,
+      "theme": "Art",
+      "question": "Qui a sculpté David ?",
+      "answers": ["Donatello", "Michel-Ange", "Bernini", "Rodin"],
+      "Good": "Michel-Ange"
+    },
+    {
+      "id": 81,
+      "theme": "Technologie",
+      "question": "Qui a fondé Apple avec Steve Jobs ?",
+      "answers": ["Bill Gates", "Steve Wozniak", "Larry Page", "Mark Zuckerberg"],
+      "Good": "Steve Wozniak"
+    },
+    {
+      "id": 82,
+      "theme": "Technologie",
+      "question": "En quelle année a été créé Google ?",
+      "answers": ["1996", "1998", "2000", "2002"],
+      "Good": "1998"
+    },
+    {
+      "id": 83,
+      "theme": "Technologie",
+      "question": "Qui a fondé Microsoft ?",
+      "answers": ["Steve Jobs", "Bill Gates", "Larry Ellison", "Jeff Bezos"],
+      "Good": "Bill Gates"
+    },
+    {
+      "id": 84,
+      "theme": "Technologie",
+      "question": "Quel réseau social a été créé par Mark Zuckerberg ?",
+      "answers": ["Twitter", "Facebook", "Instagram", "LinkedIn"],
+      "Good": "Facebook"
+    },
+    {
+      "id": 85,
+      "theme": "Technologie",
+      "question": "Qu'est-ce que l'acronyme WWW signifie ?",
+      "answers": ["World Wide Web", "World Web Wide", "Web World Wide", "Wide World Web"],
+      "Good": "World Wide Web"
+    },
+    {
+      "id": 86,
+      "theme": "Technologie",
+      "question": "Qui a fondé Tesla Motors ?",
+      "answers": ["Jeff Bezos", "Elon Musk", "Bill Gates", "Larry Page"],
+      "Good": "Elon Musk"
+    },
+    {
+      "id": 87,
+      "theme": "Technologie",
+      "question": "En quelle année le premier iPhone a-t-il été lancé ?",
+      "answers": ["2005", "2007", "2009", "2011"],
+      "Good": "2007"
+    },
+    {
+      "id": 88,
+      "theme": "Technologie",
+      "question": "Quel langage de programmation a été créé par Guido van Rossum ?",
+      "answers": ["Java", "Python", "C++", "Ruby"],
+      "Good": "Python"
+    },
+    {
+      "id": 89,
+      "theme": "Technologie",
+      "question": "Qui a fondé Amazon ?",
+      "answers": ["Bill Gates", "Jeff Bezos", "Elon Musk", "Larry Page"],
+      "Good": "Jeff Bezos"
+    },
+    {
+      "id": 90,
+      "theme": "Technologie",
+      "question": "Quel système d'exploitation utilise la majorité des smartphones ?",
+      "answers": ["iOS", "Android", "Windows Phone", "BlackBerry OS"],
+      "Good": "Android"
+    },
+    {
+      "id": 91,
+      "theme": "Gastronomie",
+      "question": "Quel pays est l'origine du sushi ?",
+      "answers": ["Chine", "Japon", "Corée", "Thaïlande"],
+      "Good": "Japon"
+    },
+    {
+      "id": 92,
+      "theme": "Gastronomie",
+      "question": "Quel fromage est utilisé traditionnellement sur une pizza Margherita ?",
+      "answers": ["Parmesan", "Mozzarella", "Gorgonzola", "Ricotta"],
+      "Good": "Mozzarella"
+    },
+    {
+      "id": 93,
+      "theme": "Gastronomie",
+      "question": "Quel pays est célèbre pour le kimchi ?",
+      "answers": ["Japon", "Corée", "Chine", "Vietnam"],
+      "Good": "Corée"
+    },
+    {
+      "id": 94,
+      "theme": "Gastronomie",
+      "question": "Quelle boisson est fabriquée à partir de feuilles de thé fermentées ?",
+      "answers": ["Thé vert", "Thé blanc", "Thé noir", "Thé oolong"],
+      "Good": "Thé noir"
+    },
+    {
+      "id": 95,
+      "theme": "Gastronomie",
+      "question": "Quel pays produit le champagne ?",
+      "answers": ["Italie", "France", "Espagne", "Portugal"],
+      "Good": "France"
+    },
+    {
+      "id": 96,
+      "theme": "Gastronomie",
+      "question": "Quel épice est la plus chère au monde ?",
+      "answers": ["Vanille", "Safran", "Cardamome", "Cannelle"],
+      "Good": "Safran"
+    },
+    {
+      "id": 97,
+      "theme": "Gastronomie",
+      "question": "Quel pays est l'origine de la paella ?",
+      "answers": ["Portugal", "Espagne", "Italie", "Grèce"],
+      "Good": "Espagne"
+    },
+    {
+      "id": 98,
+      "theme": "Gastronomie",
+      "question": "Quel est l'ingrédient principal de la ratatouille ?",
+      "answers": ["Pommes de terre", "Courgettes", "Carottes", "Poireaux"],
+      "Good": "Courgettes"
+    },
+    {
+      "id": 99,
+      "theme": "Gastronomie",
+      "question": "Quel pays est l'origine du curry ?",
+      "answers": ["Inde", "Thaïlande", "Chine", "Japon"],
+      "Good": "Inde"
+    },
+    {
+      "id": 100,
+      "theme": "Gastronomie",
+      "question": "Quelle sauce est la base de la cuisine mexicaine ?",
+      "answers": ["Sauce tomate", "Sauce soja", "Sauce chili", "Salsa"],
+      "Good": "Salsa"
+    }
+  ];
