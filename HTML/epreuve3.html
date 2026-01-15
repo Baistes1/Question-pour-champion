@@ -6,12 +6,25 @@
     <link rel="stylesheet" href="/CSS/epreuve3.css">
     <script src = "/JS/epreuve3.js" async> </script>
     <title>FACE A FACE</title>
+
 </head>
     <body>
-        <div class="stars" id="stars"></div>
-        <div class = "haut">
+    <div class="stars" id="stars"></div>
+         <!-- Écran de choix de main -->
+    <div class="choice-screen hidden">
+        <h2>QUI PREND LA MAIN ?</h2>
+        <p id="currentPlayerText">JOUEUR 1</p>
+        <div class="choice-buttons">
+            <button class="choice-btn" onclick="chooseHand('take')">JE PRENDS</button>
+            <button class="choice-btn" onclick="chooseHand('leave')">JE LAISSE</button>
+        </div>
+    </div>
+        
+        <div class="ecran hidden"> 
+         <div class = "haut">
             <div class = "moi">
                 <div class = "pp"> AVATAR </div>
+                <div class = "pseudo1">Nom</div>
                 <div class = "points">0</div>
             </div>
             <div>
@@ -26,6 +39,7 @@
             </div>
             <div class = "advers">
                 <div class = "ppA">AVATAR</div>
+                <div class = "pseudo2">Nom</div>
                 <div class = "pointsA">0</div>
             </div>
         </div>
@@ -42,6 +56,7 @@
         <div class = "R">R</div>
         <div class = "R">R</div>
         <div class = "R">R</div>
+        </div>
         </div>
         </div>
     </body>
