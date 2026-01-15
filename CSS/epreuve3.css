@@ -88,36 +88,38 @@ body::before {
   opacity: 0.3;
   pointer-events: none;
 }
+
 /* Étoiles animées */
 .stars {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .star {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: white;
-    border-radius: 50%;
-    animation: twinkle 3s infinite;
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: white;
+  border-radius: 50%;
+  animation: twinkle 3s infinite;
 }
 
 @keyframes twinkle {
-    0%, 100% { opacity: 0.3; }
-    50% { opacity: 1; }
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    position: relative;
+  width: 90%;
+  max-width: 1200px;
+  position: relative;
 }
+
 @keyframes stars {
-0%, 100% { opacity: 0.3; transform: scale(1); }
-50% { opacity: 0.6; transform: scale(1.05); }
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.05); }
 }
 
 /* ===================================
@@ -187,7 +189,7 @@ body::before {
   align-items: center;
   justify-content: center;
   font-family: 'Exo 2', sans-serif;
-  font-size: 1.2vmin;
+  font-size: 2vmin;
   font-weight: 900;
   color: var(--primary-blue);
   text-transform: uppercase;
@@ -199,19 +201,11 @@ body::before {
   overflow: hidden;
 }
 
-
-.pp:hover {
+.pp:hover, .ppA:hover {
   transform: scale(1.1) rotate(5deg);
   border-color: var(--bright-yellow);
   box-shadow: var(--shadow-xl), var(--glow-yellow);
 }
-.ppA:hover {
-  transform: scale(1.1) rotate(5deg);
-  border-color: var(--bright-yellow);
-  box-shadow: var(--shadow-xl), var(--glow-yellow);
-}
-
-
 
 @keyframes spin {
   from { transform: rotate(0deg); }
@@ -238,8 +232,28 @@ body::before {
   animation: pulse 2s ease-in-out infinite;
 }
 
-
-
+/* Pseudos des joueurs */
+.pseudo1, .pseudo2 {
+  background: linear-gradient(135deg, var(--accent-yellow) 0%, var(--orange) 100%);
+  padding: 0.8vh 2vw;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--white);
+  box-shadow: var(--shadow-md);
+  font-family: 'Exo 2', sans-serif;
+  font-size: 3vmin;
+  font-weight: 900;
+  color: var(--primary-blue);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  min-width: 10vw;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 25vw;
+}
 
 @keyframes shimmer {
   to { left: 100%; }
@@ -260,19 +274,18 @@ body::before {
    TIMER CENTRAL
    =================================== */
 .timer {
- 
   padding: 1.5vh 1vw;
   border-radius: var(--radius-md);
-  
-  
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
   gap: 0.5vh;
-  align-items: center;
   position: relative;
   animation: scaleIn 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   animation-delay: 0.3s;
   animation-fill-mode: both;
+  overflow: visible;
 }
 
 @keyframes scaleIn {
@@ -290,7 +303,6 @@ body::before {
 .t1, .t2, .t3, .t4 {
   background: linear-gradient(135deg, var(--accent-yellow) 0%, var(--bright-yellow) 100%);
   border-radius: var(--radius-sm);
- outline: 3px;    
   display: flex;
   align-items: center;
   justify-content: center;
@@ -299,40 +311,51 @@ body::before {
   font-weight: 900;
   color: var(--primary-blue);
   box-shadow: var(--shadow-md), inset 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: var(--transition-smooth);
-  
-
-  height: 240px;
- 
-  clip-path: polygon(
-    25% 5%, 75% 5%, 100% 50%,
-    75% 95%, 25% 95%, 0% 50%);
+  transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+  position: relative;
+  flex-shrink: 0;
 }
 
+.bleu { 
+  background: #1E90FF !important;
+}
 
-.t1{
-     width: 7vmin;
+/* ===================================
+   ANIMATIONS DES BOXES (GAUCHE/DROITE)
+   =================================== */
+.left {
+  transform: translateX(-8px) !important;
+}
+
+.droite {
+  transform: translateX(8px) !important;
+}
+
+/* Tailles individuelles */
+.t1 {
+  width: 7vmin;
   height: 7vmin;
-    padding: 20px;
+  padding: 20px;
 }
 
-.t2{
-     width: 8vmin;
+.t2 {
+  width: 8vmin;
   height: 7vmin;
-    padding: 25px;
+  padding: 25px;
 }
-.t3{
-     width: 12vmin;
+
+.t3 {
+  width: 12vmin;
   height: 9vmin;
-    padding: 35px;
+  padding: 35px;
 }
-.t4{
-     width: 14vmin;
+
+.t4 {
+  width: 14vmin;
   height: 10vmin;
-    padding: 40px;
+  padding: 40px;
 }
-
-
 
 /* Ordre d'animation pour chaque chiffre */
 .t4 { animation: popIn 0.3s ease-out 0.5s both; }
@@ -356,8 +379,7 @@ body::before {
 
 /* Buzzer */
 .buzzer {
-  margin-top: 4vh;
-  margin-left: 30px;
+  margin-top: 2vh;
   width: 10vmin;
   height: 10vmin;
   background: linear-gradient(135deg, var(--error-red) 0%, #CC0000 100%);
@@ -370,7 +392,7 @@ body::before {
   font-size: 4vmin;
   font-weight: 900;
   color: var(--white);
-  box-shadow: var(--shadow-lg), 0 0 30px rgba(48, 255, 58, 0.5);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(255, 48, 58, 0.5);
   cursor: pointer;
   transition: var(--transition-bounce);
   animation: popIn 0.4s ease-out 0.9s both;
@@ -378,8 +400,7 @@ body::before {
 
 .buzzer:hover {
   transform: scale(1.2);
-  box-shadow: var(--shadow-xl), 0 0 50px rgba(48, 255, 109, 0.8);
-  
+  box-shadow: var(--shadow-xl), 0 0 50px rgba(255, 48, 109, 0.8);
 }
 
 @keyframes buzz {
@@ -564,7 +585,7 @@ body::before {
 }
 
 /* États de réponse */
-.R.correct {
+.R.right {
   background: linear-gradient(135deg, var(--success-green) 0%, #00A040 100%);
   animation: correct 0.6s ease-out;
 }
@@ -574,7 +595,7 @@ body::before {
   50% { transform: scale(1.15); }
 }
 
-.R.incorrect {
+.R.wrong {
   background: linear-gradient(135deg, var(--error-red) 0%, #CC0000 100%);
   animation: shake 0.5s ease-out;
 }
@@ -586,169 +607,68 @@ body::before {
 }
 
 /* ===================================
-   RESPONSIVE DESIGN
+   ÉCRAN DE CHOIX DE MAIN
    =================================== */
-
-/* Tablettes */
-@media (max-width: 1024px) {
-  .haut {
-    grid-template-columns: 1fr;
-    gap: 1.5vh;
-    padding: 1vh 2vw;
-  }
-  
-  .pp, .ppA {
-    width: 10vmin;
-    height: 10vmin;
-    font-size: 1vmin;
-  }
-  
-  .points, .pointsA {
-    font-size: 1.8vmin;
-    padding: 0.6vh 1.5vw;  
-  }
-  
-  .milieu {
-    font-size: 2vmin;
-    padding: 1.2vh 2vw;
-    min-height: 6vh;
-  }
-  
-  .bas {
-    max-height: 30vh;
-  }
+.choice-screen {
+  background: linear-gradient(180deg, rgba(30, 144, 255, 0.95) 0%, rgba(0, 71, 171, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  border-radius: var(--radius-lg);
+  padding: 4vh 6vw;
+  text-align: center;
+  box-shadow: var(--shadow-xl);
+  border: 4px solid rgba(255, 215, 0, 0.4);
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 0.6s ease-out;
 }
 
-@media (max-width: 768px) {
-  body {
-    padding: 0.5vh;
-  }
-  
-  .haut {
-    padding: 1vh;
-    gap: 1vh;
-  }
-  
-  .pp, .ppA {
-    width: 9vmin;
-    height: 9vmin;
-    font-size: 1vmin;
-    border-width: 3px;
-  }
-  
-  .points, .pointsA {
-    font-size: 1.6vmin;
-    padding: 0.5vh 2vw;
-  }
-  
-  .t1, .t2, .t3, .t4 {
-    width: 5vmin;
-    height: 5vmin;
-    font-size: 3vmin;
-  }
-  
-  .buzzer {
-    width: 7vmin;
-    height: 7vmin;
-    font-size: 3.5vmin;
-  }
-  
-  .milieu {
-    font-size: 1.8vmin;
-    padding: 1vh 1.5vw;
-    min-height: 5vh;
-  }
-  
-  .bas {
-    flex-direction: column;
-    gap: 0.8vh;
-    max-height: 40vh;
-  }
-  
-  .RA,
-  .RB {
-    padding: 0.8vh;
-    gap: 0.6vh;
-  }
-  
-  .R {
-    font-size: 1.8vmin;
-    padding: 1vh 0.8vw;
-    min-height: 5vh;
-  }
+.choice-screen h2 {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 5vmin;
+  font-weight: 900;
+  color: var(--accent-yellow);
+  margin-bottom: 2vh;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+  letter-spacing: 3px;
 }
 
-/* Mobiles */
-@media (max-width: 480px) {
-  body {
-    padding: 0.5vh;
-  }
-  
-  .haut {
-    padding: 0.8vh;
-    gap: 0.8vh;
-    border-width: 2px;
-  }
-  
-  .pp, .ppA{
-    width: 8vmin;
-    height: 8vmin;
-    font-size: 1vmin;
-    border-width: 2px;
-  }
-  
-  .points, .pointsA {
-    font-size: 1.4vmin;
-    padding: 0.4vh 0.8vw;
-    letter-spacing: 1px;
-  }
-  
-  .timer {
-    padding: 1vh 0.8vw;
-    gap: 0.4vh;
-  }
-  
-  .t1, .t2, .t3, .t4 {
-    width: 4.5vmin;
-    height: 4.5vmin;
-    font-size: 2.5vmin;
-    border-width: 2px;
-  }
-  
-  .buzzer {
-    width: 6vmin;
-    height: 6vmin;
-    font-size: 3vmin;
-    border-width: 3px;
-    margin-top: 0.5vh;
-  }
-  
-  .milieu {
-    font-size: 1.6vmin;
-    padding: 1vh 1.5vw;
-    min-height: 4vh;
-    letter-spacing: 1px;
-    border-width: 3px;
-  }
-  
-  .bas {
-    gap: 0.6vh;
-    max-height: 38vh;
-  }
-  
-  .RA,
-  .RB {
-    padding: 0.6vh;
-    gap: 0.5vh;
-    grid-template-columns: 1fr;
-  }
-  
-  .R {
-    font-size: 1.6vmin;
-    padding: 1vh 0.8vw;
-    min-height: 4vh;
-    letter-spacing: 0.5px;
-  }
+.choice-screen p {
+  font-size: 3.5vmin;
+  color: var(--white);
+  margin-bottom: 4vh;
+  font-weight: 700;
+}
+
+.choice-buttons {
+  display: flex;
+  gap: 3vw;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.choice-btn {
+  background: linear-gradient(135deg, var(--accent-yellow) 0%, var(--orange) 100%);
+  border: none;
+  padding: 2vh 4vw;
+  font-size: 3vmin;
+  font-weight: 900;
+  color: var(--primary-blue);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  font-family: 'Exo 2', sans-serif;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition-bounce);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.choice-btn:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: var(--shadow-xl), var(--glow-yellow);
+}
+
+.choice-btn:active {
+  transform: translateY(-4px) scale(1);
 }
 
 /* ===================================
@@ -764,6 +684,361 @@ body::before {
   cursor: not-allowed !important;
 }
 
+/* ===================================
+   RESPONSIVE DESIGN
+   =================================== */
+
+/* Tablettes (Portrait et Paysage) */
+@media (max-width: 1024px) {
+  .haut {
+    grid-template-columns: 1fr auto 1fr;
+    gap: 1.5vw;
+    padding: 1vh 1.5vw;
+  }
+  
+  .pp, .ppA {
+    width: 15vmin;
+    height: 15vmin;
+    font-size: 1.8vmin;
+  }
+  
+  .points, .pointsA {
+    font-size: 3.2vmin;
+    padding: 0.6vh 1.8vw;
+  }
+  
+  .pseudo1, .pseudo2 {
+    font-size: 2.5vmin;
+    max-width: 22vw;
+  }
+  
+  .t1, .t2, .t3, .t4 {
+    font-size: 3vmin;
+  }
+  
+  .left {
+    transform: translateX(-8px) !important;
+  }
+  
+  .droite {
+    transform: translateX(8px) !important;
+  }
+  
+  .t1 {
+    width: 6vmin;
+    height: 6vmin;
+    padding: 15px;
+  }
+  
+  .t2 {
+    width: 7vmin;
+    height: 6vmin;
+    padding: 20px;
+  }
+  
+  .t3 {
+    width: 10vmin;
+    height: 8vmin;
+    padding: 28px;
+  }
+  
+  .t4 {
+    width: 12vmin;
+    height: 9vmin;
+    padding: 32px;
+  }
+  
+  .buzzer {
+    width: 9vmin;
+    height: 9vmin;
+    font-size: 3.5vmin;
+  }
+  
+  .milieu {
+    font-size: 2.2vmin;
+    padding: 1.2vh 2vw;
+    min-height: 6vh;
+  }
+  
+  .R {
+    font-size: 1.8vmin;
+    padding: 1.2vh 0.8vw;
+    min-height: 5.5vh;
+  }
+}
+
+/* Tablettes petites et grands mobiles */
+@media (max-width: 768px) {
+  body {
+    padding: 0.5vh;
+  }
+  
+  .haut {
+    grid-template-columns: 1fr;
+    gap: 2vh;
+    padding: 1.5vh 2vw;
+  }
+  
+  .timer {
+    order: -1;
+  }
+  
+  .pp, .ppA {
+    width: 18vmin;
+    height: 18vmin;
+    font-size: 2.2vmin;
+    border-width: 3px;
+  }
+  
+  .points, .pointsA {
+    font-size: 3.5vmin;
+    padding: 0.7vh 2vw;
+  }
+  
+  .pseudo1, .pseudo2 {
+    font-size: 3vmin;
+    max-width: 35vw;
+    padding: 0.7vh 2.5vw;
+  }
+  
+  .left {
+    transform: translateX(0) translateY(-8px) !important;
+  }
+  
+  .droite {
+    transform: translateX(0) translateY(8px) !important;
+  }
+  
+  .t1 {
+    width: 8vmin;
+    height: 8vmin;
+    padding: 18px;
+  }
+  
+  .t2 {
+    width: 9vmin;
+    height: 8vmin;
+    padding: 22px;
+  }
+  
+  .t3 {
+    width: 13vmin;
+    height: 10vmin;
+    padding: 30px;
+  }
+  
+  .t4 {
+    width: 15vmin;
+    height: 11vmin;
+    padding: 35px;
+  }
+  
+  .buzzer {
+    width: 10vmin;
+    height: 10vmin;
+    font-size: 4vmin;
+    margin-top: 1.5vh;
+  }
+  
+  .milieu {
+    font-size: 2.5vmin;
+    padding: 1.5vh 2vw;
+    min-height: 7vh;
+    letter-spacing: 1.5px;
+  }
+  
+  .bas {
+    flex-direction: column;
+    gap: 1vh;
+    max-height: 45vh;
+  }
+  
+  .RA,
+  .RB {
+    padding: 1vh;
+    gap: 0.8vh;
+  }
+  
+  .R {
+    font-size: 2.2vmin;
+    padding: 1.5vh 1vw;
+    min-height: 6vh;
+  }
+  
+  .choice-screen h2 {
+    font-size: 6vmin;
+  }
+  
+  .choice-screen p {
+    font-size: 4vmin;
+  }
+  
+  .choice-btn {
+    font-size: 3.5vmin;
+    padding: 2.5vh 5vw;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 480px) {
+  body {
+    padding: 0.5vh;
+  }
+  
+  .haut {
+    padding: 1vh 1.5vw;
+    gap: 1.5vh;
+    border-width: 2px;
+  }
+  
+  .pp, .ppA {
+    width: 22vmin;
+    height: 22vmin;
+    font-size: 2.8vmin;
+    border-width: 2px;
+  }
+  
+  .points, .pointsA {
+    font-size: 4.5vmin;
+    padding: 0.8vh 3vw;
+    letter-spacing: 1px;
+  }
+  
+  .pseudo1, .pseudo2 {
+    font-size: 3.8vmin;
+    max-width: 50vw;
+    padding: 0.8vh 3vw;
+    letter-spacing: 1px;
+  }
+  
+  .timer {
+    padding: 1vh 0.8vw;
+    gap: 0.3vh;
+  }
+  
+  .left {
+    transform: translateX(0) translateY(-8px) !important;
+  }
+  
+  .droite {
+    transform: translateX(0) translateY(8px) !important;
+  }
+  
+  .t1 {
+    width: 9vmin;
+    height: 9vmin;
+    padding: 20px;
+    font-size: 3.5vmin;
+  }
+  
+  .t2 {
+    width: 10vmin;
+    height: 9vmin;
+    padding: 24px;
+    font-size: 3.5vmin;
+  }
+  
+  .t3 {
+    width: 14vmin;
+    height: 11vmin;
+    padding: 32px;
+    font-size: 3.5vmin;
+  }
+  
+  .t4 {
+    width: 16vmin;
+    height: 12vmin;
+    padding: 36px;
+    font-size: 3.5vmin;
+  }
+  
+  .buzzer {
+    width: 12vmin;
+    height: 12vmin;
+    font-size: 5vmin;
+    border-width: 3px;
+    margin-top: 1vh;
+  }
+  
+  .milieu {
+    font-size: 3vmin;
+    padding: 1.5vh 2.5vw;
+    min-height: 8vh;
+    letter-spacing: 1px;
+    border-width: 3px;
+  }
+  
+  .bas {
+    gap: 0.8vh;
+    max-height: 42vh;
+  }
+  
+  .RA,
+  .RB {
+    padding: 0.8vh;
+    gap: 0.6vh;
+    grid-template-columns: 1fr;
+  }
+  
+  .R {
+    font-size: 2.8vmin;
+    padding: 2vh 2vw;
+    min-height: 7vh;
+    letter-spacing: 0.5px;
+  }
+  
+  .choice-screen {
+    padding: 3vh 4vw;
+  }
+  
+  .choice-screen h2 {
+    font-size: 7vmin;
+    margin-bottom: 1.5vh;
+  }
+  
+  .choice-screen p {
+    font-size: 4.5vmin;
+    margin-bottom: 3vh;
+  }
+  
+  .choice-buttons {
+    gap: 2vh;
+    flex-direction: column;
+  }
+  
+  .choice-btn {
+    font-size: 4vmin;
+    padding: 3vh 8vw;
+    width: 100%;
+  }
+}
+
+/* Très petits mobiles */
+@media (max-width: 360px) {
+  .pp, .ppA {
+    width: 20vmin;
+    height: 20vmin;
+    font-size: 2.5vmin;
+  }
+  
+  .pseudo1, .pseudo2 {
+    font-size: 3.5vmin;
+    padding: 0.7vh 2.5vw;
+  }
+  
+  .points, .pointsA {
+    font-size: 4vmin;
+  }
+  
+  .milieu {
+    font-size: 2.8vmin;
+  }
+  
+  .R {
+    font-size: 2.5vmin;
+    min-height: 6.5vh;
+  }
+}
 
 /* Réduction des animations pour accessibilité */
 @media (prefers-reduced-motion: reduce) {
@@ -775,5 +1050,3 @@ body::before {
     transition-duration: 0.01ms !important;
   }
 }
-.right { background: #27b61d; border: 2px solid #2ecc71; }
-.wrong { background: #b02a2a; border: 2px solid #e74c3c; }
