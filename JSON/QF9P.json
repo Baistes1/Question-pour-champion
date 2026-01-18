@@ -1,7 +1,4 @@
-{
-  "titre": "100 Questions pour un Champion",
-  "description": "Questions avec 4 propositions - La bonne réponse est à identifier",
-  "questions": [
+ [
     {
       "id": 1,
       "question": "Quelle est la capitale de la France ?",
@@ -703,4 +700,3 @@
       "categorie": "Sport"
     }
   ]
-}
