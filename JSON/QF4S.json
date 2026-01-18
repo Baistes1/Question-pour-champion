@@ -1,5 +1,4 @@
-// 100 Questions FACILES - Manche "4 à la Suite"
-// La bonne réponse est mélangée aléatoirement
+
 [
   { 
     "id": 1,
@@ -106,7 +105,7 @@
   {
     "id": 18,
     "question": "Quel animal grimpe aux arbres ?",
-    "Reponse": ["Le chien", "La vache", "Le cochon","Le singe"], "reponse": ,
+    "Reponse": ["Le chien", "La vache", "Le cochon","Le singe"], "reponse":"Le singe" ,
     "categorie": "Animaux"
   },
   {
@@ -121,8 +120,6 @@
     "Reponse": ["Le chat","Le lapin", "La souris", "Le chien"],"reponse": "Le lapin",
     "categorie": "Animaux"
   },
-
-  // Couleurs et Formes (20 questions)
   {
     "id": 21,
     "question": "Quelle est la couleur du ciel ?",
@@ -141,35 +138,165 @@
     "Reponse": ["Noir", "Gris", "Bleu","Blanc"],"reponse": "Blanc",
     "categorie": "Couleurs"
   },
-  { id: 24, question: "Quelle est la couleur de l'herbe ?", reponse: "Vert", Reponse: ["Bleu", "Jaune", "Rouge"], categorie: "Couleurs" },
-  { id: 25, question: "Combien de côtés a un carré ?", reponse: "4", Reponse: ["3", "5", "6"], categorie: "Formes" },
-  { id: 26, question: "Combien de côtés a un triangle ?", reponse: "3", Reponse: ["4", "5", "6"], categorie: "Formes" },
-  { id: 27, question: "Quelle forme a un ballon de foot ?", reponse: "Rond", Reponse: ["Carré", "Triangle", "Rectangle"], categorie: "Formes" },
-  { id: 28, question: "Quelle est la couleur du sang ?", reponse: "Rouge", Reponse: ["Bleu", "Vert", "Jaune"], categorie: "Couleurs" },
-  { id: 29, question: "Quelle est la couleur d'une orange ?", reponse: "Orange", Reponse: ["Bleu", "Vert", "Violet"], categorie: "Couleurs" },
-  { id: 30, question: "Combien de côtés a un cercle ?", reponse: "Aucun côté (arrondi)", Reponse: ["1", "2", "4"], categorie: "Formes" },
-  { id: 31, question: "Quelle est la couleur du drapeau marocain ?", reponse: "Rouge", Reponse: ["Vert", "Bleu", "Jaune"], categorie: "Couleurs" },
-  { id: 32, question: "Quelle est la couleur d'une banane ?", reponse: "Jaune", Reponse: ["Rouge", "Vert", "Bleu"], categorie: "Couleurs" },
-  { id: 33, question: "Quelle est la couleur de la nuit ?", reponse: "Noir", Reponse: ["Blanc", "Gris", "Bleu"], categorie: "Couleurs" },
-  { id: 34, question: "Combien de roues a une voiture ?", reponse: "4", Reponse: ["2", "3", "6"], categorie: "Nombres" },
-  { id: 35, question: "Combien de doigts a une main ?", reponse: "5", Reponse: ["4", "6", "10"], categorie: "Nombres" },
-  { id: 36, question: "Quelle est la couleur d'une fraise ?", reponse: "Rouge", Reponse: ["Bleu", "Vert", "Jaune"], categorie: "Couleurs" },
-  { id: 37, question: "Quelle est la couleur du café ?", reponse: "Marron", Reponse: ["Blanc", "Rouge", "Vert"], categorie: "Couleurs" },
-  { id: 38, question: "Combien de pattes a un chien ?", reponse: "4", Reponse: ["2", "3", "6"], categorie: "Nombres" },
-  { id: 39, question: "Quelle est la couleur d'un citron ?", reponse: "Jaune", Reponse: ["Rouge", "Vert", "Bleu"], categorie: "Couleurs" },
-  { id: 40, question: "Combien d'yeux a une personne ?", reponse: "2", Reponse: ["1", "3", "4"], categorie: "Nombres" },
-
-  // Fruits et Légumes (20 questions)
-  { id: 41, question: "Quel fruit est rouge et rond ?", reponse: "La pomme", Reponse: ["La banane", "L'orange", "Le raisin"], categorie: "Fruits" },
-  { id: 42, question: "Quel fruit est jaune et long ?", reponse: "La banane", Reponse: ["La pomme", "L'orange", "La fraise"], categorie: "Fruits" },
-  { id: 43, question: "Quel fruit est orange ?", reponse: "L'orange", Reponse: ["La pomme", "La banane", "La poire"], categorie: "Fruits" },
-  { id: 44, question: "Quel légume est orange ?", reponse: "La carotte", Reponse: ["La tomate", "Le concombre", "La salade"], categorie: "Légumes" },
-  { id: 45, question: "Quel fruit a des pépins ?", reponse: "La pastèque", Reponse: ["La banane", "L'avocat", "La mangue"], categorie: "Fruits" },
-  { id: 46, question: "Quel légume fait pleurer ?", reponse: "L'oignon", Reponse: ["La tomate", "La carotte", "Le poivron"], categorie: "Légumes" },
-  { id: 47, question: "Quel fruit pousse en grappes ?", reponse: "Le raisin", Reponse: ["La pomme", "La poire", "La pêche"], categorie: "Fruits" },
-  { id: 48, question: "Quel légume est vert et long ?", reponse: "Le concombre", Reponse: ["La tomate", "La carotte", "Le radis"], categorie: "Légumes" },
-  { id: 49, question: "Quel fruit est vert à l'extérieur et rouge à l'intérieur ?", reponse: "La pastèque", Reponse: ["La pomme", "La poire", "Le kiwi"], categorie: "Fruits" },
-  { id: 50, question: "Quel légume est rouge et rond ?", reponse: "La tomate", Reponse: ["La carotte", "Le concombre", "Le poivron"], categorie: "Légumes" },
+  {
+    "id": 24,
+    "question": "Quelle est la couleur de l'herbe ?",
+    "Reponse": ["Bleu","Vert", "Jaune", "Rouge"],"reponse": "Vert",
+    "categorie": "Couleurs"
+  },
+  {
+    "id": 25,
+    "question": "Combien de côtés a un carré ?",
+    "Reponse": ["3", "5", "6", "4"],"reponse": "4",
+    "categorie": "Formes"
+  },
+  {
+    "id": 26,
+    "question": "Combien de côtés a un triangle ?",
+    "Reponse": ["4","3", "5", "6"],"reponse": "3",
+    "categorie": "Formes"
+  },
+  {
+    "id": 27,
+    "question": "Quelle forme a un ballon de foot ?",
+    "Reponse": ["Carré", "Triangle", "Rectangle","Rond"],"reponse": "Rond",
+    "categorie": "Formes"
+  },
+  {
+    "id": 28,
+    "question": "Quelle est la couleur du sang ?",
+    "Reponse": ["Rouge","Bleu", "Vert", "Jaune"],"reponse": "Rouge",
+    "categorie": "Couleurs"
+  },
+  {
+    "id": 29,
+    "question": "Quelle est la couleur d'une orange ?",
+    "Reponse": ["Bleu", "Vert","Orange", "Violet"],"reponse": "Orange",
+    "categorie": "Couleurs"
+  },
+  {
+    "id": 30,
+    "question": "Combien de côtés a un cercle ?",
+    "Reponse": ["1", "2","Aucun côté", "4"], "reponse": "Aucun côté",
+    "categorie": "Formes"
+  },
+  {
+    "id": 31,
+    "question": "Quelle est la couleur du drapeau marocain ?",
+    " Reponse": ["Rouge","Vert", "Bleu", "Jaune"],"reponse": "Rouge",
+    "categorie": "Couleurs"
+  },
+  {
+    "id": 32,
+    "question": "Quelle est la couleur d'une banane ?",
+    "Reponse": ["Rouge","Jaune", "Vert", "Bleu"],"reponse": "Jaune",
+    "categorie": "Couleurs"
+  },
+  {
+    "id": 33,
+    "question": "Quelle est la couleur de la nuit ?",
+    "Reponse": ["Blanc", "Gris", "Bleu", "Noir"],"reponse": "Noir", 
+    "categorie": "Couleurs"
+  },
+  {
+    "id": 34,
+    "question": "Combien de roues a une voiture ?",
+    "Reponse": ["2", "3","4",  "6"],"reponse": "4", 
+    "categorie": "Nombres"
+  },
+  {
+    "id": 35,
+    "question": "Combien de doigts a une main ?",
+   "Reponse": ["5", "4", "6", "10"], "reponse": "5", 
+    "categorie": "Nombres"
+  },
+  {
+    "id": 36,
+    "question": "Quelle est la couleur d'une fraise ?",
+    "Reponse": ["Bleu", "Vert", "Jaune","Rouge"] ,"reponse": "Rouge", 
+    "categorie": "Couleurs"
+  },
+  {
+    "id": 37,
+    "question": "Quelle est la couleur du café ?",
+    "Reponse": ["Blanc","Marron",  "Rouge", "Vert"],"reponse": "Marron", 
+    "categorie": "Couleurs"
+  },
+  {
+    "id": 38,
+    "question": "Combien de pattes a un chien ?",
+    "Reponse": [4","2", "3", "6"], "reponse": "4",
+    "categorie": "Nombres"
+  },
+  {
+    "id": 39,
+    "question": "Quelle est la couleur d'un citron ?",
+    "Reponse": ["Rouge", "Vert","Jaune",  "Bleu"],"reponse": "Jaune", 
+    "categorie": "Couleurs"
+  },
+  {
+    "id": 40,
+    "question": "Combien d'yeux a une personne ?",
+     "Reponse": ["1","2", "3", "4"],"reponse": "2",
+    "categorie": "Nombres"
+  },
+  {
+    "id": 41,
+    "question": "Quel fruit est rouge et rond ?",
+    "Reponse": ["La pomme","La banane", "L'orange", "Le raisin"],"reponse": "La pomme",
+    "categorie": "Fruits"
+  },
+  {
+    "id": 42,
+    "question": "Quel agrume, fruit emblématique de la Provence, est jaune orangé à maturité et sert aussi à fabriquer une liqueur italienne connue ?",
+    "Reponse": [" Le cédrat","La pomme", "L'orange", "La fraise"],"reponse": " Le cédrat", 
+    "categorie": "Fruits"
+  },
+  {
+    "id": 43,
+    "question": "Quel fruit est orange ?",
+    "Reponse": ["La pomme", "La banane", "La poire","L'orange"], "reponse": "L'orange",
+    "categorie": "Fruits"
+  },
+  {
+    "id": 44,
+    "question": "Quel légume est orange ?",
+    "Reponse": [ "La carotte","La tomate", "Le concombre", "La salade"],"reponse": "La carotte",
+    "categorie": "Légumes"
+  },
+  {
+    "id": 45,
+    "question": "Quel fruit a des pépins ?",
+    "Reponse": ["La banane", "L'avocat","La pastèque", "La mangue"],"reponse": "La pastèque",
+    "categorie": "Fruits"
+  },
+  {
+    "id": 46,
+    "question": "Quel légume fait pleurer ?",
+    "Reponse": ["L'oignon","La tomate", "La carotte", "Le poivron"], "reponse": "L'oignon",
+    "categorie": "Légumes"
+  },
+  {
+    "id": 47,
+    "question": "Quel fruit pousse en grappes ?",
+    "Reponse": ["La pomme", "La poire", "La pêche","Le raisin"],"reponse": "Le raisin",
+    "categorie": "Fruits"
+  },
+  {
+    "id": 48,
+    "question": "Quel légume est vert et long ?",
+    "Reponse": ["Le concombre","La tomate","La carotte", "Le radis"],"reponse": "Le concombre",
+    "categorie": "Légumes"
+  },
+  {
+    "id": 49,
+    "question": "Quel fruit est vert à l'extérieur et rouge à l'intérieur ?",
+    "Reponse": ["La pomme", "La poire","La pastèque", "Le kiwi"], "reponse": "La pastèque", 
+    "categorie": "Fruits"
+  },
+  {
+    "id": 50,
+    "question": "Quel légume est rouge et rond ?", reponse: "La tomate", Reponse: ["La carotte", "Le concombre", "Le poivron"], categorie: "Légumes" },
   { id: 51, question: "Quel fruit a une couronne ?", reponse: "L'ananas", Reponse: ["La banane", "L'orange", "La pomme"], categorie: "Fruits" },
   { id: 52, question: "Quel légume pousse sous terre ?", reponse: "La pomme de terre", Reponse: ["La tomate", "Le concombre", "Le poivron"], categorie: "Légumes" },
   { id: 53, question: "Quel fruit est petit et rouge ?", reponse: "La fraise", Reponse: ["La pomme", "L'orange", "La banane"], categorie: "Fruits" },
