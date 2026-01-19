@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "question": "Quelle est la capitale du Kazakhstan ?",
+    "Reponse": ["Almaty", "Bichkek", "Tachkent", "Achgabat", "Douchanbé", "Bakou", "Astana ", "Tbilissi"],
+    "reponse": "Astana ",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 2,
+    "question": "Quel est le point le plus profond des océans ?",
+    "Reponse": ["La fosse des Tonga", "La fosse de Porto Rico", "La fosse du Japon", "La fosse des Kermadec", "La fosse des Philippines", "La fosse du Pérou-Chili", "La fosse des Mariannes", "La fosse de Java"],
+    "reponse": "La fosse des Mariannes",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 3,
+    "question": "Quelle est la capitale du Myanmar (Birmanie) ?",
+    "Reponse": ["Rangoun", "Mandalay", "Bangkok", "Vientiane", "Phnom Penh", "Naypyidaw","Hanoi",  "Kuala Lumpur"],
+    "reponse": "Naypyidaw",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 4,
+    "question": "Dans quel pays se trouve la ville de Ouagadougou ?",
+    "Reponse": ["Mali", "Niger", "Tchad","Burkina Faso", "Togo", "Bénin", "Mauritanie",  "Sénégal"],
+    "reponse": "Burkina Faso",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 5,
+    "question": "Quelle est la capitale de la Mongolie ?",
+    "Reponse": ["Oulan-Bator","Almaty", "Bichkek", "Achgabat", "Astana", "Irkoutsk", "Vladivostok",  "Séoul"],
+    "reponse": "Oulan-Bator",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 6,
+    "question": "Quel détroit sépare l'Europe de l'Asie en Turquie ?",
+    "Reponse": ["Les Dardanelles", "Le détroit de Gibraltar","Le Bosphore", "Le détroit de Béring", "Le détroit de Malacca", "Le détroit d'Ormuz", "Le Bab el-Mandeb",  "Le détroit de Cook"],
+    "reponse": "Le Bosphore",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 7,
+    "question": "Quelle est la capitale de l'Érythrée ?",
+    "Reponse": ["Djibouti", "Addis-Abeba", "Asmara","Mogadiscio", "Khartoum", "Nairobi", "Kampala",  "Juba"],
+    "reponse": "Asmara",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 8,
+    "question": "Dans quel pays se trouve le lac Titicaca ?",
+    "Reponse": ["Chili et Argentine", "Équateur et Colombie", "Brésil et Paraguay", "Venezuela et Colombie", "Pérou et Équateur", "Bolivie et Chili", "Pérou et Bolivie", "Uruguay"],
+    "reponse": "Pérou et Bolivie",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 9,
+    "question": "Quel est le plus haut volcan actif d'Europe ?",
+    "Reponse": ["Le Vésuve", "L'Etna","Le Stromboli", "L'Hekla", "Le Santorin", "Le Teide", "Le Pico",  "Le Piton de la Fournaise"],
+    "reponse": "L'Etna",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 10,
+    "question": "Quelle est la capitale du Bhoutan ?",
+    "Reponse": ["Katmandou", "Dhaka", "Colombo","Thimphou", "New Delhi", "Islamabad", "Kaboul",  "Lhassa"],
+    "reponse": "Thimphou",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 11,
+    "question": "Quel pays possède le plus de volcans actifs au monde ?",
+    "Reponse": ["Le Japon", "Les Philippines", "Les États-Unis", "Le Chili", "L'Islande", "Le Mexique", "L'Italie", "L'Indonésie"],
+    "reponse": "L'Indonésie",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 12,
+    "question": "Quelle est la capitale de l'Azerbaïdjan ?",
+    "Reponse": ["Tbilissi", "Erevan", "Achgabat", "Tachkent", "Douchanbé", "Astana", "Téhéran", "Bakou"],
+    "reponse": "Bakou",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 13,
+    "question": "Combien de pays ont une frontière terrestre avec la Chine ?",
+    "Reponse": ["14","12", "16", "10", "18", "8", "20",  "15"],
+    "reponse": "14",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 14,
+    "question": "Quel est le deuxième plus long fleuve d'Afrique ?",
+    "Reponse": ["Le Niger", "Le Zambèze", "Le Nil Blanc", "L'Orange", "Le Limpopo", "Le Sénégal", "Le Congo", "La Volta"],
+    "reponse": "Le Congo",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 15,
+    "question": "Dans quel pays se trouve le désert de Gobi ?",
+    "Reponse": ["Mongolie et Chine","Kazakhstan", "Afghanistan", "Iran", "Pakistan", "Ouzbékistan", "Turkménistan",  "Russie"],
+    "reponse": "Mongolie et Chine",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 16,
+    "question": "Quelle est la plus grande île de la Méditerranée ?",
+    "Reponse": ["La Sardaigne", "Chypre","La Sicile", "La Crète", "La Corse", "Malte", "Rhodes",  "Eubée"],
+    "reponse": "La Sicile",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 17,
+    "question": "Dans quel pays se trouve la région du Darfour ?",
+    "Reponse": ["Tchad", "Soudan", "République centrafricaine", "Éthiopie", "Soudan du Sud", "Érythrée", "Somalie", "Libye"],
+    "reponse": "Soudan",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 18,
+    "question": "Quelle ville est surnommée 'la Venise du Nord' ?",
+    "Reponse": ["Stockholm", "Bruges", "Copenhague", "Saint-Pétersbourg","Amsterdam",  "Hamburg", "Oslo", "Gdansk"],
+    "reponse": "Amsterdam",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 19,
+    "question": "Dans quel pays se trouve la Transylvanie ?",
+    "Reponse": ["Hongrie", "Bulgarie", "Serbie", "Roumanie","Moldavie", "Ukraine", "Slovaquie",  "Pologne"],
+    "reponse": "Roumanie",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 20,
+    "question": "Quelle est la capitale du Kirghizistan ?",
+    "Reponse": ["Tachkent", "Almaty", "Douchanbé", "Achgabat", "Astana", "Oulan-Bator", "Bichkek", "Samarcande"],
+    "reponse": "Bichkek",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 21,
+    "question": "En quelle année a eu lieu la bataille de Lépante ?",
+    "Reponse": ["1453", "1588", "1492","1571", "1526", "1683", "1529",  "1515"],
+    "reponse": "1571",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 22,
+    "question": "Qui était le dernier empereur de Chine ?",
+    "Reponse": ["Guangxu", "Qianlong", "Kangxi", "Cixi", "Yongzheng", "Jiaqing", "Hongwu", "Puyi"],
+    "reponse": "Puyi",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 23,
+    "question": "En quelle année Constantin a-t-il légalisé le christianisme ?",
+    "Reponse": [ "313","325", "380", "395", "312", "410", "476", "306"],
+    "reponse": "313",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 24,
+    "question": "Qui était le sultan ottoman lors de la prise de Constantinople ?",
+    "Reponse": ["Mehmed II","Soliman le Magnifique", "Selim Ier", "Bayezid II", "Mourad II", "Mehmed Ier", "Orkhan",  "Osman Ier"],
+    "reponse": "Mehmed II",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 25,
+    "question": "Quelle dynastie a construit la Grande Muraille de Chine ?",
+    "Reponse": ["La dynastie Ming", "La dynastie Qin","La dynastie Han", "La dynastie Tang", "La dynastie Song", "La dynastie Yuan", "La dynastie Zhou",  "La dynastie Qing"],
+    "reponse": "La dynastie Qin",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 26,
+    "question": "En quelle année a eu lieu la bataille de Poitiers (Charles Martel) ?",
+    "Reponse": ["800", "622", "1066", "732",  "711", "756", "814","721"],
+    "reponse": "732",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 27,
+    "question": "Qui a fondé l'Empire moghol en Inde ?",
+    "Reponse": ["Akbar", "Shah Jahan", "Aurangzeb","Babur", "Humayun", "Jahangir", "Timur",  "Sher Shah"],
+    "reponse": "Babur",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 28,
+    "question": "En quelle année le traité de Westphalie a-t-il été signé ?",
+    "Reponse": ["1618", "1659","1648", "1678", "1598", "1688", "1713",  "1660"],
+    "reponse": "1648",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 29,
+    "question": "Quelle civilisation a construit Teotihuacan au Mexique ?",
+    "Reponse": ["Les Mayas", "Les Aztèques", "Les Toltèques", "Les Olmèques", "Les Zapotèques", "Les Mixtèques", "Une civilisation pré-aztèque", "Les Incas"],
+    "reponse": "Une civilisation pré-aztèque",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 30,
+    "question": "Qui était le roi de Prusse pendant la guerre de Sept Ans ?",
+    "Reponse": ["Frédéric-Guillaume Ier", "Frédéric III", "Guillaume Ier", "Frédéric-Guillaume II", "Guillaume II", "Frédéric Ier", "Frédéric II le Grand", "Bismarck"],
+    "reponse": "Frédéric II le Grand",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 31,
+    "question": "En quelle année Saladin a-t-il repris Jérusalem aux croisés ?",
+    "Reponse": ["1099", "1204", "1291", "1169", "1191", "1244", "1147", "1187"],
+    "reponse": "1187",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 32,
+    "question": "Quelle était la capitale de l'Empire perse achéménide ?",
+    "Reponse": ["Persépolis","Babylone", "Suse", "Ecbatane", "Pasargades", "Ctésiphon", "Ispahan",  "Sardes"],
+    "reponse": "Persépolis",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 33,
+    "question": "En quelle année la dynastie des Omeyyades a-t-elle été renversée ?",
+    "Reponse": ["750","711", "800", "632", "661", "786", "809",  "762"],
+    "reponse": "750",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 34,
+    "question": "Qui était l'empereur romain lors de l'éruption du Vésuve ?",
+    "Reponse": ["Néron", "Vespasien", "Domitien", "Trajan","Titus", "Hadrien", "Claude",  "Auguste"],
+    "reponse": "Titus",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 35,
+    "question": "Quelle bataille a marqué la fin de la République romaine ?",
+    "Reponse": ["La bataille de Pharsale", "La bataille d'Alésia","La bataille d'Actium", "La bataille de Philippes", "La bataille de Zama", "La bataille de Cannes", "La bataille de Trasimène",  "La bataille de Teutobourg"],
+    "reponse": "La bataille d'Actium",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 36,
+    "question": "En quelle année la dynastie alaouite a-t-elle unifié le Maroc ?",
+    "Reponse": ["1578", "1700", "1554",  "1666","1610", "1720", "1591", "1631"],
+    "reponse": "1666",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 37,
+    "question": "Qui était le chef des Huns lors de l'invasion de l'Europe ?",
+    "Reponse": ["Genséric", "Alaric", "Théodoric",  "Attila","Odoacre", "Clovis", "Stilicon", "Bleda"],
+    "reponse": "Attila",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 38,
+    "question": "En quelle année a eu lieu la révolte des Boxers en Chine ?",
+    "Reponse": ["1850-1864", "1911", "1927", "1884-1885", "1937-1945", "1894-1895", "1899-1901", "1905"],
+    "reponse": "1899-1901",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 39,
+    "question": "Quelle bataille a arrêté l'expansion mongole en Europe centrale ?",
+    "Reponse": ["La bataille de Vienne", "La bataille de Kosovo", "La bataille de Mohács", "La bataille de Nicopolis", "La bataille de Varna", "La bataille de Manzikert", "La bataille de la Kalka", "La bataille de Legnica"],
+    "reponse": "La bataille de Legnica",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 40,
+    "question": "Quel pharaon est traditionnellement associé à l'Exode biblique ?",
+    "Reponse": ["Toutânkhamon", "Akhénaton", "Khéops", "Thoutmôsis III", "Séthi Ier", "Aménophis III", "Ramsès II", "Khéphren"],
+    "reponse": "Ramsès II",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 41,
+    "question": "Quel est le nombre d'Avogadro ?",
+    "Reponse": ["6.022 × 10²³","3.14 × 10⁸", "9.81 m/s²", "6.626 × 10⁻³⁴", "1.38 × 10⁻²³", "6.67 × 10⁻¹¹", "2.99 × 10⁸",  "1.602 × 10⁻¹⁹"],
+    "reponse": "6.022 × 10²³",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 42,
+    "question": "Quelle particule a été découverte au CERN en 2012 ?",
+    "Reponse": ["Le quark top", "Le graviton", "Le neutrino", "Le quark bottom", "Le boson W", "Le photon", "Le boson de Higgs", "Le gluon"],
+    "reponse": "Le boson de Higgs",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 43,
+    "question": "Combien d'acides aminés essentiels existe-t-il pour l'être humain ?",
+    "Reponse": ["8","9", "10", "12", "11", "7", "13",  "20"],
+    "reponse": "9",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 44,
+    "question": "Quelle est la constante de Planck (h) ?",
+    "Reponse": ["3 × 10⁸ m/s", "9.81 m/s²", "6.67 × 10⁻¹¹", "1.38 × 10⁻²³","6.626 × 10⁻³⁴ J·s",  "6.022 × 10²³", "2.99 × 10⁸", "8.314"],
+    "reponse": "6.626 × 10⁻³⁴ J·s",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 45,
+    "question": "Qui a proposé le principe d'incertitude en mécanique quantique ?",
+    "Reponse": ["Niels Bohr", "Erwin Schrödinger", "Max Planck", "Wolfgang Pauli","Louis de Broglie", "Paul Dirac",  "Werner Heisenberg", "Albert Einstein"],
+    "reponse": "Werner Heisenberg",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 46,
+    "question": "Combien de paires de nerfs crâniens possède l'être humain ?",
+    "Reponse": ["10","12", "14", "16", "8", "18", "20",  "31"],
+    "reponse": "12",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 47,
+    "question": "Quelle est la demi-vie du carbone-14 ?",
+    "Reponse": ["2 865 ans", "11 460 ans", "1 200 ans", "8 000 ans", "3 500 ans", "10 000 ans",  "4 500 ans","5 730 ans"],
+    "reponse": "5 730 ans",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 48,
+    "question": "Quel est le nom du cycle de l'acide citrique en biochimie ?",
+    "Reponse": ["Le cycle de Calvin", "Le cycle de l'urée", "Le cycle de Cori", "La glycolyse", "La néoglucogenèse", "La β-oxydation", "Le cycle de Krebs", "Le cycle de l'azote"],
+    "reponse": "Le cycle de Krebs",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 49,
+    "question": "Combien d'isotopes stables possède l'étain (Sn) ?",
+    "Reponse": ["6", "8", "12", "14", "4", "16",  "2","10"],
+    "reponse": "10",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 50,
+    "question": "Quelle est la température du zéro absolu en Celsius ?",
+    "Reponse": ["-273°C", "-300°C", "-250°C", "-273.15°C", "-270°C", "-280°C", "-260°C", "-459°C"],
+    "reponse": "-273.15°C",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 51,
+    "question": "Qui a découvert la structure en double hélice de l'ADN avec Watson ?",
+    "Reponse": ["Rosalind Franklin", "Linus Pauling", "Maurice Wilkins", "Erwin Chargaff", "Oswald Avery", "Frederick Griffith", "Francis Crick", "Meselson"],
+    "reponse": "Francis Crick",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 52,
+    "question": "Quelle est la distance moyenne Terre-Lune ?",
+    "Reponse": ["450 000 km", "384 400 km","350 000 km", "420 000 km", "300 000 km", "400 000 km", "360 000 km",  "150 000 000 km"],
+    "reponse": "384 400 km",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 53,
+    "question": "Combien de quarks composent un proton ?",
+    "Reponse": ["2", "4", "6", "5","3", "1", "8",  "12"],
+    "reponse": "3",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 54,
+    "question": "Quel est le nom du processus de mort cellulaire programmée ?",
+    "Reponse": ["La nécrose","L'apoptose", "La mitose", "La méiose", "La cytokinèse", "L'autophagie", "La phagocytose",  "L'hémolyse"],
+    "reponse": "L'apoptose",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 55,
+    "question": "Quelle est la masse approximative du boson de Higgs en GeV/c² ?",
+    "Reponse": ["Environ 91", "Environ 173", "Environ 80", "Environ 200", "Environ 60", "Environ 150", "Environ 10", "Environ 125"],
+    "reponse": "Environ 125",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 56,
+    "question": "Combien d'éléments chimiques sont naturellement présents sur Terre ?",
+    "Reponse": ["92", "98", "118", "90", "100", "88", "94", "104"],
+    "reponse": "94",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 57,
+    "question": "Qui a établi les lois de l'hérédité génétique ?",
+    "Reponse": ["Charles Darwin", "Thomas Morgan", "Hugo de Vries", "Oswald Avery", "Barbara McClintock", "Rosalind Franklin", "Lamarck", "Gregor Mendel"],
+    "reponse": "Gregor Mendel",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 58,
+    "question": "Combien de dimensions possède l'espace-temps selon Einstein ?",
+    "Reponse": ["3", "5", "11", "10", "6", "2", "4", "1"],
+    "reponse": "4",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 59,
+    "question": "Quel est le nom de la théorie unifiant les forces électromagnétique et faible ?",
+    "Reponse": ["La théorie des cordes", "La théorie électrofaible", "La chromodynamique quantique", "La supersymétrie", "La gravitation quantique", "La théorie M", "La théorie GUT", "Le modèle standard"],
+    "reponse": "La théorie électrofaible",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 60,
+    "question": "Quelle enzyme catalyse la réplication de l'ADN ?",
+    "Reponse": [ "L'ADN polymérase","L'ARN polymérase", "La ligase", "L'hélicase", "La topoisomérase", "La primase", "La télomérase", "L'amylase"],
+    "reponse": "L'ADN polymérase",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 61,
+    "question": "Qui a écrit 'À la recherche du temps perdu' ?",
+    "Reponse": ["André Gide", "Paul Valéry", "Louis-Ferdinand Céline", "François Mauriac", "Julien Gracq", "Claude Simon", "Marcel Proust", "Balzac"],
+    "reponse": "Marcel Proust",
+    "categorie": "Culture"
+  },
+  {
+    "id": 62,
+    "question": "Combien d'opéras Mozart a-t-il composés ?",
+    "Reponse": ["18", "26", "22","30", "20", "24", "28",  "41"],
+    "reponse": "22",
+    "categorie": "Culture"
+  },
+  {
+    "id": 63,
+    "question": "Qui a écrit 'Critique de la raison pure' ?",
+    "Reponse": ["Georg Hegel", "Arthur Schopenhauer", "Emmanuel Kant",  "Friedrich Nietzsche", "Baruch Spinoza", "Gottfried Leibniz", "René Descartes","Heidegger"],
+    "reponse": "Emmanuel Kant",
+    "categorie": "Culture"
+  },
+  {
+    "id": 64,
+    "question": "Qui a peint 'Les Ménines' ?",
+    "Reponse": ["Francisco Goya", "Le Greco", "Murillo","Diego Vélasquez", "Zurbarán", "Ribera", "El Greco",  "Picasso"],
+    "reponse": "Diego Vélasquez",
+    "categorie": "Culture"
+  },
+  {
+    "id": 65,
+    "question": "Qui a composé 'Le Sacre du printemps' ?",
+    "Reponse": ["Sergueï Prokofiev", "Dmitri Chostakovitch", "Maurice Ravel", "Claude Debussy", "Béla Bartók", "Arnold Schoenberg", "Igor Stravinsky", "Mahler"],
+    "reponse": "Igor Stravinsky",
+    "categorie": "Culture"
+  },
+  {
+    "id": 66,
+    "question": "Quel est le vrai nom de Voltaire ?",
+    "Reponse": ["Jean-Jacques Rousseau", "Denis Diderot", "Charles de Montesquieu", "Jean le Rond d'Alembert", "Pierre Bayle", "Condorcet", "François-Marie Arouet", "Molière"],
+    "reponse": "François-Marie Arouet",
+    "categorie": "Culture"
+  },
+  {
+    "id": 67,
+    "question": "Combien de symphonies complètes Mahler a-t-il composées ?",
+    "Reponse": ["8", "10", "11", "7", "12", "6", "5", "9"],
+    "reponse": "9",
+    "categorie": "Culture"
+  },
+  {
+    "id": 68,
+    "question": "Qui a écrit 'Ulysse' en 1922 ?",
+    "Reponse": ["Virginia Woolf", "T.S. Eliot", "Franz Kafka", "Thomas Mann", "William Faulkner", "D.H. Lawrence", "Homer", "James Joyce"],
+    "reponse": "James Joyce",
+    "categorie": "Culture"
+  },
+  {
+    "id": 69,
+    "question": "Dans quelle ville est né le mouvement Bauhaus ?",
+    "Reponse": ["Berlin", "Dessau","Weimar",  "Munich", "Francfort", "Hamburg", "Cologne", "Vienne"],
+    "reponse": "Weimar",
+    "categorie": "Culture"
+  },
+  {
+    "id": 70,
+    "question": "Qui a réalisé le film 'Le Septième Sceau' ?",
+    "Reponse": ["Ingmar Bergman","Federico Fellini", "Akira Kurosawa", "Luis Buñuel", "Andrei Tarkovski", "Michelangelo Antonioni", "Jean-Luc Godard",  "Hitchcock"],
+    "reponse": "Ingmar Bergman",
+    "categorie": "Culture"
+  },
+  {
+    "id": 71,
+    "question": "Combien de quatuors à cordes Beethoven a-t-il composés ?",
+    "Reponse": ["14", "18", "20", "12", "22", "16", "10", "32"],
+    "reponse": "16",
+    "categorie": "Culture"
+  },
+  {
+    "id": 72,
+    "question": "Qui a écrit 'La Divine Comédie' ?",
+    "Reponse": ["Pétrarque", "Boccace", "Le Tasse", "Machiavel","Dante Alighieri", "Arioste", "Castiglione",  "Virgile"],
+    "reponse": "Dante Alighieri",
+    "categorie": "Culture"
+  },
+  {
+    "id": 73,
+    "question": "Dans quelle ville se trouve le musée de l'Ermitage ?",
+    "Reponse": ["Moscou","Saint-Pétersbourg", "Kiev", "Stockholm", "Helsinki", "Tallinn", "Varsovie",  "Prague"],
+    "reponse": "Saint-Pétersbourg",
+    "categorie": "Culture"
+  },
+  {
+    "id": 74,
+    "question": "Qui a peint 'Le Cri' ?",
+    "Reponse": ["Vincent van Gogh", "Egon Schiele", "James Ensor", "Emil Nolde", "Ernst Ludwig Kirchner", "Oskar Kokoschka", "Klimt", "Edvard Munch"],
+    "reponse": "Edvard Munch",
+    "categorie": "Culture"
+  },
+  {
+    "id": 75,
+    "question": "Qui a obtenu le prix Nobel de littérature en 1957 ?",
+    "Reponse": ["Jean-Paul Sartre", "André Malraux", "Samuel Beckett", "Boris Pasternak", "Salvatore Quasimodo", "Saint-John Perse", "Hemingway", "Albert Camus"],
+    "reponse": "Albert Camus",
+    "categorie": "Culture"
+  },
+  {
+    "id": 76,
+    "question": "Combien de mouvements comporte une symphonie classique ?",
+    "Reponse": ["3", "5", "6", "4","2", "7", "8",  "1"],
+    "reponse": "4",
+    "categorie": "Culture"
+  },
+  {
+    "id": 77,
+    "question": "Qui a écrit 'Les Frères Karamazov' ?",
+    "Reponse": [ "Fiodor Dostoïevski","Léon Tolstoï", "Anton Tchekhov", "Ivan Tourgueniev", "Nikolaï Gogol", "Maxime Gorki", "Alexandre Pouchkine", "Soljenitsyne"],
+    "reponse": "Fiodor Dostoïevski",
+    "categorie": "Culture"
+  },
+  {
+    "id": 78,
+    "question": "Qui a conçu la cathédrale de Brasilia ?",
+    "Reponse": ["Le Corbusier", "Frank Lloyd Wright", "Mies van der Rohe", "Walter Gropius", "Alvar Aalto", "Louis Kahn", "Oscar Niemeyer", "Gaudi"],
+    "reponse": "Oscar Niemeyer",
+    "categorie": "Culture"
+  },
+  {
+    "id": 79,
+    "question": "Qui a écrit 'En attendant Godot' ?",
+    "Reponse": ["Eugène Ionesco", "Jean-Paul Sartre", "Albert Camus", "Samuel Beckett","Jean Genet", "Arthur Adamov", "Fernando Arrabal",  "Harold Pinter"],
+    "reponse": "Samuel Beckett",
+    "categorie": "Culture"
+  },
+  {
+    "id": 80,
+    "question": "Qui a peint 'La Persistance de la mémoire' ?",
+    "Reponse": ["René Magritte", "Joan Miró", "Max Ernst", "Giorgio de Chirico", "Yves Tanguy", "André Breton", "Frida Kahlo", "Salvador Dalí"],
+    "reponse": "Salvador Dalí",
+    "categorie": "Culture"
+  },
+  {
+    "id": 81,
+    "question": "En quelle année Jesse Owens a-t-il remporté 4 médailles d'or ?",
+    "Reponse": ["1932", "1948", "1952", "1928", "1956", "1940", "1936", "1924"],
+    "reponse": "1936",
+    "categorie": "Sport"
+  },
+  {
+    "id": 82,
+    "question": "Quel joueur de tennis a réalisé le Grand Chelem calendaire en 1969 ?",
+    "Reponse": ["Ken Rosewall", "Roy Emerson","Rod Laver", "John Newcombe", "Lew Hoad", "Fred Stolle", "Tony Roche",  "Björn Borg"],
+    "reponse": "Rod Laver",
+    "categorie": "Sport"
+  },
+  {
+    "id": 83,
+    "question": "Combien de médailles d'or olympiques Paavo Nurmi a-t-il remportées ?",
+    "Reponse": ["7", "9", "11", "8", "10", "6", "12", "5"],
+    "reponse": "9",
+    "categorie": "Sport"
+  },
+  {
+    "id": 84,
+    "question": "Quel pays a remporté la première Coupe du monde de rugby ?",
+    "Reponse": [ "Nouvelle-Zélande","Australie", "Afrique du Sud", "Angleterre", "France", "Galles", "Irlande", "Écosse"],
+    "reponse": "Nouvelle-Zélande",
+    "categorie": "Sport"
+  },
+  {
+    "id": 85,
+    "question": "En quelle année Ayrton Senna a-t-il remporté son premier titre de F1 ?",
+    "Reponse": ["1987", "1989", "1990", "1991", "1986", "1992", "1988", "1985"],
+    "reponse": "1988",
+    "categorie": "Sport"
+  },
+  {
+    "id": 86,
+    "question": "Combien de Ballons d'Or Lionel Messi a-t-il remportés ?",
+    "Reponse": ["7", "6", "9", "5", "10", "4", "3", "8"],
+    "reponse": "8",
+    "categorie": "Sport"
+  },
+  {
+    "id": 87,
+    "question": "Combien de points Wilt Chamberlain a-t-il marqués en un match NBA ?",
+    "Reponse": ["81", "100",  "78", "92", "88", "95", "73","60"],
+    "reponse": "100",
+    "categorie": "Sport"
+  },
+  {
+    "id": 88,
+    "question": "En quelle année le Tour de France a-t-il été créé ?",
+    "Reponse": ["1898", "1910", "1905", "1903","1900", "1907", "1912",  "1895"],
+    "reponse": "1903",
+    "categorie": "Sport"
+  },
+  {
+    "id": 89,
+    "question": "Quel boxeur était surnommé 'Hands of Stone' ?",
+    "Reponse": ["Sugar Ray Leonard", "Roberto Durán" "Marvin Hagler", "Thomas Hearns", "Carlos Monzón", "Wilfredo Gómez", "Alexis Argüello", "Mike Tyson"],
+    "reponse": "Roberto Durán",
+    "categorie": "Sport"
+  },
+  {
+    "id": 90,
+    "question": "Combien de titres mondiaux Valentino Rossi a-t-il remportés ?",
+    "Reponse": ["7", "8", "10", "6", "11", "5", "9", "12"],
+    "reponse": "9",
+    "categorie": "Sport"
+  },
+  {
+    "id": 91,
+    "question": "Quel pays a organisé les premiers Jeux Olympiques d'hiver en 1924 ?",
+    "Reponse": ["Suisse", "Norvège", "Autriche", "Suède", "Allemagne", "Italie", "France ", "Canada"],
+    "reponse": "France",
+    "categorie": "Sport"
+  },
+  {
+    "id": 92,
+    "question": "Quel joueur a marqué le plus de buts en Coupe du monde de football ?",
+    "Reponse": ["Ronaldo ", "Gerd Müller ", "Pelé ", "Just Fontaine ", "Sándor Kocsis ", "Thomas Müller", "Mbappé", "Miroslav Klose"],
+    "reponse": "Miroslav Klose",
+    "categorie": "Sport"
+  },
+  {
+    "id": 93,
+    "question": "En quelle année l'URSS a-t-elle boycotté les JO de Los Angeles ?",
+    "Reponse": ["1980", "1988", "1976","1984", "1972", "1992", "1968",  "1979"],
+    "reponse": "1984",
+    "categorie": "Sport"
+  },
+  {
+    "id": 94,
+    "question": "Combien de victoires en Grand Chelem Serena Williams a-t-elle remportées ?",
+    "Reponse": ["21", "23","24", "22", "20", "25", "19",  "18"],
+    "reponse": "23",
+    "categorie": "Sport"
+  },
+  {
+    "id": 95,
+    "question": "Qui a été le premier nageur à passer sous 50 secondes au 100m ?",
+    "Reponse": ["Alexander Popov", "Pieter van den Hoogenband", "Ian Thorpe", "Matt Biondi", "Gary Hall Jr.", "Eamon Sullivan", "César Cielo", "Michael Phelps"],
+    "reponse": "César Cielo",
+    "categorie": "Sport"
+  },
+  {
+    "id": 96,
+    "question": "Combien de médailles olympiques Larisa Latynina a-t-elle remportées ?",
+    "Reponse": ["15", "16", "20",  "18","14", "22", "17", "28"],
+    "reponse": "18",
+    "categorie": "Sport"
+  },
+  {
+    "id": 97,
+    "question": "En quelle année Diego Maradona a-t-il marqué le 'But du siècle' ?",
+    "Reponse": ["1982", "1990", "1994", "1984", "1978", "1988", "1987", "1986"],
+    "reponse": "1986",
+    "categorie": "Sport"
+  },
+  {
+    "id": 98,
+    "question": "Quel joueur de snooker a remporté 7 championnats du monde ?",
+    "Reponse": ["Stephen Hendry","Steve Davis", "Ray Reardon", "John Higgins", "Ronnie O'Sullivan", "Mark Selby", "Mark Williams",  "Jimmy White"],
+    "reponse": "Stephen Hendry",
+    "categorie": "Sport"
+  },
+  {
+    "id": 99,
+    "question": "Combien de titres en Grand Chelem Rafael Nadal a-t-il remportés à Roland-Garros ?",
+    "Reponse": ["12", "13", "15", "11", "16", "10", "14", "9"],
+    "reponse": "14",
+    "categorie": "Sport"
+  },
+  {
+    "id": 100,
+    "question": "Quel pays a remporté la première Coupe du monde de football féminin ?",
+    "Reponse": ["Norvège", "Allemagne","États-Unis", "Suède", "Chine", "Brésil", "Japon",  "Canada"],
+    "reponse": "États-Unis",
+    "categorie": "Sport"
+  }
+]
