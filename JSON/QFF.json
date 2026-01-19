@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "question": "Quel est le seul mammifère capable de vol actif et prolongé ?",
+    "Reponse": ["L'écureuil volant", "L'autruche", "La chauve-souris", "Le colibri", "Le ptérodactyle", "Le lémurien", "Le faucon", "Le planeur sucré"],
+    "reponse": "La chauve-souris",
+    "categorie": "Animaux"
+  },
+  {
+    "id": 2,
+    "question": "Quelle est la capitale du Canada ?",
+    "Reponse": ["Toronto", "Montréal", "Vancouver", "Québec", "Calgary", "Ottawa", "Winnipeg", "Halifax"],
+    "reponse": "Ottawa",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 3,
+    "question": "Quelle est la substance la plus dure trouvée à l'état naturel sur Terre ?",
+    "Reponse": ["L'acier", "Le quartz", "Le diamant", "Le corindon", "Le titane", "Le graphite", "Le fer", "L'obsidienne"],
+    "reponse": "Le diamant",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 4,
+    "question": "En quelle année a débuté la Révolution française ?",
+    "Reponse": ["1776", "1789", "1792", "1804", "1750", "1815", "1763", "1799"],
+    "reponse": "1789",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 5,
+    "question": "Quel organe du corps humain produit la bile ?",
+    "Reponse": ["L'estomac", "Le pancréas", "Le foie", "La rate", "La vésicule biliaire", "Le rein", "L'intestin", "Le duodénum"],
+    "reponse": "Le foie",
+    "categorie": "Biologie"
+  },
+  {
+    "id": 6,
+    "question": "Quel est le plus grand État du monde par sa superficie ?",
+    "Reponse": ["Canada", "États-Unis", "Chine", "Brésil", "Australie", "Inde", "Russie", "Kazakhstan"],
+    "reponse": "Russie",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 7,
+    "question": "Combien de planètes composent le système solaire (sans compter Pluton) ?",
+    "Reponse": ["7", "9", "10", "6", "12", "8", "5", "11"],
+    "reponse": "8",
+    "categorie": "Astronomie"
+  },
+  {
+    "id": 8,
+    "question": "Quel gaz constitue environ 78 % de l'atmosphère terrestre ?",
+    "Reponse": ["Oxygène", "Dioxyde de carbone", "Azote", "Argon", "Hydrogène", "Hélium", "Néon", "Méthane"],
+    "reponse": "Azote",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 9,
+    "question": "Qui a peint le plafond de la chapelle Sixtine à Rome ?",
+    "Reponse": ["Léonard de Vinci", "Raphaël", "Donatello", "Michel-Ange", "Botticelli", "Titien", "Caravage", "Bernini"],
+    "reponse": "Michel-Ange",
+    "categorie": "Arts"
+  },
+  {
+    "id": 10,
+    "question": "Quelle est la monnaie officielle du Royaume-Uni ?",
+    "Reponse": ["Euro", "Livre Sterling", "Dollar", "Franc", "Couronne", "Yen", "Franc Suisse", "Peseta"],
+    "reponse": "Livre Sterling",
+    "categorie": "Économie"
+  },
+  {
+    "id": 11,
+    "question": "Dans quel pays se trouve le mont Kilimandjaro ?",
+    "Reponse": ["Kenya", "Afrique du Sud", "Éthiopie", "Tanzanie", "Ouganda", "Nigeria", "Maroc", "Sénégal"],
+    "reponse": "Tanzanie",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 12,
+    "question": "Quelle est la vitesse de la lumière ?",
+    "Reponse": ["150 000 km/s", "299 792 km/s", "340 m/s", "1 000 000 km/h", "500 000 km/s", "200 000 km/s", "100 000 km/s", "450 000 km/s"],
+    "reponse": "299 792 km/s",
+    "categorie": "Physique"
+  },
+  {
+    "id": 13,
+    "question": "Quel écrivain a créé le personnage de Sherlock Holmes ?",
+    "Reponse": ["Agatha Christie", "Arthur Conan Doyle", "Edgar Allan Poe", "Maurice Leblanc", "Charles Dickens", "Oscar Wilde", "J.K. Rowling", "Stephen King"],
+    "reponse": "Arthur Conan Doyle",
+    "categorie": "Littérature"
+  },
+  {
+    "id": 14,
+    "question": "Quel est le plus grand désert du monde (incluant les déserts froids) ?",
+    "Reponse": ["Sahara", "Désert de Gobi", "Antarctique", "Arctique", "Kalahari", "Atacama", "Désert d'Arabie", "Grand désert de sable"],
+    "reponse": "Antarctique",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 15,
+    "question": "Quel métal a pour symbole chimique 'Fe' ?",
+    "Reponse": ["Fluor", "Francium", "Or", "Fer", "Argent", "Cuivre", "Étain", "Plomb"],
+    "reponse": "Fer",
+    "categorie": "Chimie"
+  },
+  {
+    "id": 16,
+    "question": "Quelle est la capitale du Japon ?",
+    "Reponse": ["Kyoto", "Osaka", "Hiroshima", "Tokyo", "Nara", "Sapporo", "Fukuoka", "Nagoya"],
+    "reponse": "Tokyo",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 17,
+    "question": "Quel pays a remporté la première Coupe du monde de football en 1930 ?",
+    "Reponse": ["Brésil", "Italie", "Allemagne", "Argentine", "France", "Uruguay", "Angleterre", "Espagne"],
+    "reponse": "Uruguay",
+    "categorie": "Sport"
+  },
+  {
+    "id": 18,
+    "question": "Qui a formulé la loi de la gravitation universelle ?",
+    "Reponse": ["Albert Einstein", "Isaac Newton", "Galilée", "Nicolas Copernic", "Johannes Kepler", "Blaise Pascal", "René Descartes", "Charles Darwin"],
+    "reponse": "Isaac Newton",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 19,
+    "question": "Quel est le plus long fleuve d'Europe ?",
+    "Reponse": ["Le Rhin", "Le Danube", "La Volga", "La Seine", "La Tamise", "L'Elbe", "Le Rhône", "La Loire"],
+    "reponse": "La Volga",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 20,
+    "question": "Quel est le nom de l'inventeur du téléphone ?",
+    "Reponse": ["Thomas Edison", "Alexander Graham Bell", "Nikola Tesla", "Guglielmo Marconi", "James Watt", "Benjamin Franklin", "Samuel Morse", "Albert Einstein"],
+    "reponse": "Alexander Graham Bell",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 21,
+    "question": "Quelle est la formule chimique de l'ozone ?",
+    "Reponse": ["O2", "CO2", "H2O", "O3", "N2", "CH4", "NaCl", "CO"],
+    "reponse": "O3",
+    "categorie": "Chimie"
+  },
+  {
+    "id": 22,
+    "question": "Quelle est la capitale de l'Australie ?",
+    "Reponse": ["Sydney", "Melbourne", "Canberra", "Perth", "Brisbane", "Adélaïde", "Hobart", "Darwin"],
+    "reponse": "Canberra",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 23,
+    "question": "Quel est le plus grand continent du monde ?",
+    "Reponse": ["Afrique", "Amérique du Nord", "Europe", "Antarctique", "Asie", "Océanie", "Amérique du Sud", "Arctique"],
+    "reponse": "Asie",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 24,
+    "question": "Combien d'os compose le corps humain adulte ?",
+    "Reponse": ["186", "206", "226", "250", "300", "150", "210", "195"],
+    "reponse": "206",
+    "categorie": "Biologie"
+  },
+  {
+    "id": 25,
+    "question": "Quel pays a inventé la pizza ?",
+    "Reponse": ["Grèce", "États-Unis", "France", "Italie", "Espagne", "Turquie", "Chine", "Mexique"],
+    "reponse": "Italie",
+    "categorie": "Culture"
+  },
+  {
+    "id": 26,
+    "question": "Quelle planète est la plus proche du Soleil ?",
+    "Reponse": ["Vénus", "Terre", "Mars", "Mercure", "Jupiter", "Saturne", "Uranus", "Neptune"],
+    "reponse": "Mercure",
+    "categorie": "Astronomie"
+  },
+  {
+    "id": 27,
+    "question": "Quel est le nom du plus haut sommet d'Europe ?",
+    "Reponse": ["Mont Blanc", "Mont Elbrouz", "Mont Cervin", "Mont Rose", "Mont Olympe", "Jungfrau", "Mont Ventoux", "Pic d'Aneto"],
+    "reponse": "Mont Elbrouz",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 28,
+    "question": "Quel est l'élément chimique le plus léger ?",
+    "Reponse": ["Hélium", "Oxygène", "Carbone", "Azote", "Hydrogène", "Lithium", "Néon", "Béryllium"],
+    "reponse": "Hydrogène",
+    "categorie": "Chimie"
+  },
+  {
+    "id": 29,
+    "question": "Qui a écrit la pièce 'Roméo et Juliette' ?",
+    "Reponse": ["Molière", "William Shakespeare", "Victor Hugo", "Dante Alighieri", "Goethe", "Miguel de Cervantes", "Homeric", "Sophocle"],
+    "reponse": "William Shakespeare",
+    "categorie": "Littérature"
+  },
+  {
+    "id": 30,
+    "question": "Quel organe permet aux poissons de respirer sous l'eau ?",
+    "Reponse": ["Poumons", "Écailles", "Branchies", "Nageoires", "Vessie natatoire", "Event", "Peau", "Narines"],
+    "reponse": "Branchies",
+    "categorie": "Animaux"
+  },
+  {
+    "id": 31,
+    "question": "Quel est le pays le plus peuplé du monde en 2024 ?",
+    "Reponse": ["Chine", "États-Unis", "Indonésie", "Brésil", "Pakistan", "Inde", "Nigeria", "Russie"],
+    "reponse": "Inde",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 32,
+    "question": "Quel navire a coulé en 1912 après avoir heurté un iceberg ?",
+    "Reponse": ["Britannic", "Lusitania", "Olympic", "Titanic", "Queen Mary", "Bismarck", "Santa Maria", "Endeavour"],
+    "reponse": "Titanic",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 33,
+    "question": "Quel est l'oiseau qui pond les plus gros œufs ?",
+    "Reponse": ["Aigle", "Albatros", "Autruche", "Émeu", "Cygne", "Condor", "Pélican", "Manchot Empereur"],
+    "reponse": "Autruche",
+    "categorie": "Animaux"
+  },
+  {
+    "id": 34,
+    "question": "Quel est le résultat de 7 multiplié par 8 ?",
+    "Reponse": ["48", "54", "56", "64", "49", "63", "52", "58"],
+    "reponse": "56",
+    "categorie": "Mathématiques"
+  },
+  {
+    "id": 35,
+    "question": "Quel est le nom du scientifique qui a découvert la pénicilline ?",
+    "Reponse": ["Louis Pasteur", "Marie Curie", "Alexander Fleming", "Robert Koch", "Albert Einstein", "Charles Darwin", "Gregor Mendel", "James Watson"],
+    "reponse": "Alexander Fleming",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 36,
+    "question": "Quel pays a offert la Statue de la Liberté aux États-Unis ?",
+    "Reponse": ["Royaume-Uni", "Allemagne", "Italie", "Espagne", "France", "Canada", "Russie", "Grèce"],
+    "reponse": "France",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 37,
+    "question": "Quelle est la capitale de l'Allemagne ?",
+    "Reponse": ["Munich", "Hambourg", "Francfort", "Cologne", "Berlin", "Leipzig", "Bonn", "Stuttgart"],
+    "reponse": "Berlin",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 38,
+    "question": "Quelle est la couleur obtenue en mélangeant du bleu et du jaune ?",
+    "Reponse": ["Violet", "Orange", "Vert", "Marron", "Gris", "Rouge", "Rose", "Noir"],
+    "reponse": "Vert",
+    "categorie": "Art"
+  },
+  {
+    "id": 39,
+    "question": "Quel est l'animal le plus rapide au monde (en plongée) ?",
+    "Reponse": ["Guépard", "Aigle royal", "Faucon pèlerin", "Espadon", "Autruche", "Lévrier", "Martin-pêcheur", "Requin mako"],
+    "reponse": "Faucon pèlerin",
+    "categorie": "Animaux"
+  },
+  {
+    "id": 40,
+    "question": "Combien de temps la Terre met-elle pour faire le tour du Soleil ?",
+    "Reponse": ["24 heures", "30 jours", "365 jours", "366 jours", "28 jours", "12 heures", "365,25 jours", "100 jours"],
+    "reponse": "365,25 jours",
+    "categorie": "Astronomie"
+  }
+  {
+    "id": 41,
+    "question": "Quel est l'élément le plus lourd présent naturellement sur Terre en quantités significatives ?",
+    "Reponse": ["Plomb", "Or", "Platine", "Uranium", "Mercure", "Osmium", "Iridium", "Plutonium"],
+    "reponse": "Uranium",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 42,
+    "question": "Lequel de ces pays n'est traversé par aucun fuseau horaire en commun avec la France ?",
+    "Reponse": ["Algérie", "Thaïlande", "Maroc", "Tunisie", "Belgique", "Espagne", "Luxembourg", "Pays-Bas"],
+    "reponse": "Thaïlande",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 43,
+    "question": "Dans la mythologie grecque, qui est le dieu du sommeil ?",
+    "Reponse": ["Thanatos", "Morphée", "Hélios", "Hypnos", "Hermès", "Arès", "Éros", "Hadès"],
+    "reponse": "Hypnos",
+    "categorie": "Mythologie"
+  },
+  {
+    "id": 44,
+    "question": "Quelle est la capitale du Kazakhstan depuis 2019 (anciennement Astana) ?",
+    "Reponse": ["Almaty", "Bakou", "Tachkent", "Noursoultan", "Erevan", "Achgabat", "Bichkek", "Douchanbé"],
+    "reponse": "Noursoultan",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 45,
+    "question": "Quel physicien a découvert la radioactivité naturelle en 1896 ?",
+    "Reponse": ["Pierre Curie", "Henri Becquerel", "Ernest Rutherford", "Max Planck", "Marie Curie", "Niels Bohr", "Enrico Fermi", "James Chadwick"],
+    "reponse": "Henri Becquerel",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 46,
+    "question": "Quel est le nom du plus grand satellite naturel de Saturne ?",
+    "Reponse": ["Europe", "Ganymède", "Titan", "Io", "Callisto", "Phobos", "Encelade", "Triton"],
+    "reponse": "Titan",
+    "categorie": "Astronomie"
+  },
+  {
+    "id": 47,
+    "question": "Quel écrivain est l'auteur du concept de 'Big Brother' dans son roman 1984 ?",
+    "Reponse": ["Aldous Huxley", "George Orwell", "Ray Bradbury", "Isaac Asimov", "H.G. Wells", "Albert Camus", "Franz Kafka", "Ernest Hemingway"],
+    "reponse": "George Orwell",
+    "categorie": "Littérature"
+  },
+  {
+    "id": 48,
+    "question": "Lequel de ces nombres est considéré comme un nombre irrationnel célèbre ?",
+    "Reponse": ["1/2", "0.75", "Racine carrée de 2", "10", "4/3", "25", "-5", "100"],
+    "reponse": "Racine carrée de 2",
+    "categorie": "Mathématiques"
+  },
+  {
+    "id": 49,
+    "question": "Quel est le plus grand organe interne du corps humain ?",
+    "Reponse": ["Le cerveau", "Les poumons", "Le cœur", "L'estomac", "La peau", "Le foie", "L'intestin grêle", "Le pancréas"],
+    "reponse": "Le foie",
+    "categorie": "Biologie"
+  },
+  {
+    "id": 50,
+    "question": "Dans quel pays se trouve le désert d'Atacama, le plus aride du monde ?",
+    "Reponse": ["Argentine", "Mexique", "Pérou", "Chili", "Australie", "Égypte", "Mongolie", "Namibie"],
+    "reponse": "Chili",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 51,
+    "question": "En quelle année a eu lieu la chute du mur de Berlin ?",
+    "Reponse": ["1985", "1991", "1987", "1989", "1993", "1980", "1975", "1995"],
+    "reponse": "1989",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 52,
+    "question": "Quel est le nom de la particule élémentaire de charge électrique négative ?",
+    "Reponse": ["Proton", "Neutron", "Positron", "Quark", "Électron", "Photon", "Gluon", "Neutrino"],
+    "reponse": "Électron",
+    "categorie": "Physique"
+  },
+  {
+    "id": 53,
+    "question": "Quel est l'opéra le plus célèbre composé par Georges Bizet ?",
+    "Reponse": ["La Traviata", "Don Giovanni", "Carmen", "Aïda", "La Flûte Enchantée", "Fidelio", "Tosca", "Turandot"],
+    "reponse": "Carmen",
+    "categorie": "Arts"
+  },
+  {
+    "id": 54,
+    "question": "Quel est l'animal qui possède la plus longue période de gestation (environ 22 mois) ?",
+    "Reponse": ["La baleine bleue", "Le rhinocéros", "L'éléphant d'Afrique", "La girafe", "L'hippopotame", "Le morse", "Le lamantin", "Le gorille"],
+    "reponse": "L'éléphant d'Afrique",
+    "categorie": "Animaux"
+  },
+  {
+    "id": 55,
+    "question": "Qui a déchiffré les hiéroglyphes égyptiens grâce à la Pierre de Rosette ?",
+    "Reponse": ["Napoléon Bonaparte", "Jean-François Champollion", "Howard Carter", "Auguste Mariette", "Charles Darwin", "Louis Pasteur", "Victor Hugo", "Voltaire"],
+    "reponse": "Jean-François Champollion",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 56,
+    "question": "Quel pays européen est surnommé le 'Pays des mille lacs' ?",
+    "Reponse": ["La Norvège", "La Suède", "L'Islande", "Le Danemark", "La Finlande", "L'Ecosse", "La Suisse", "La Pologne"],
+    "reponse": "La Finlande",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 57,
+    "question": "Quel est le symbole chimique de l'Argent ?",
+    "Reponse": ["Au", "Ar", "Fe", "Cu", "Ag", "Pb", "Sn", "Hg"],
+    "reponse": "Ag",
+    "categorie": "Chimie"
+  },
+  {
+    "id": 58,
+    "question": "Quel navigateur a réalisé le premier tour du monde (même s'il est mort en route) ?",
+    "Reponse": ["Christophe Colomb", "Vasco de Gama", "Fernand de Magellan", "Jacques Cartier", "Marco Polo", "James Cook", "Amerigo Vespucci", "Hernán Cortés"],
+    "reponse": "Fernand de Magellan",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 59,
+    "question": "Quelle est la principale source d'énergie du Soleil ?",
+    "Reponse": ["Combustion de carbone", "Fission nucléaire", "Réaction chimique", "Fusion nucléaire", "Électricité statique", "Gravité", "Magnétisme", "Rayonnement thermique"],
+    "reponse": "Fusion nucléaire",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 60,
+    "question": "Qui a peint 'Le Cri', œuvre célèbre de l'expressionnisme ?",
+    "Reponse": ["Vincent van Gogh", "Edvard Munch", "Claude Monet", "Gustav Klimt", "Henri Matisse", "Paul Cézanne", "Edgar Degas", "Marc Chagall"],
+    "reponse": "Edvard Munch",
+    "categorie": "Arts"
+  }
+  {
+    "id": 61,
+    "question": "Quel est le nom de l'algorithme de chiffrement asymétrique le plus utilisé, nommé d'après ses trois inventeurs ?",
+    "Reponse": ["AES", "DES", "RSA", "SHA-256", "Blowfish", "Diffie-Hellman", "ECC", "MD5"],
+    "reponse": "RSA",
+    "categorie": "Informatique"
+  },
+  {
+    "id": 62,
+    "question": "Quelle particule subatomique a été découverte en 2012 au CERN, confirmant l'existence du champ qui donne une masse aux particules ?",
+    "Reponse": ["Le Neutrino", "Le Quarks Top", "Le Boson de Higgs", "Le Graviton", "Le Photon", "Le Gluon", "Le Muon", "Le Positron"],
+    "reponse": "Le Boson de Higgs",
+    "categorie": "Physique"
+  },
+  {
+    "id": 63,
+    "question": "Quel pays possède la plus grande réserve de pétrole prouvée au monde ?",
+    "Reponse": ["Arabie Saoudite", "Russie", "États-Unis", "Venezuela", "Iran", "Irak", "Koweït", "Émirats arabes unis"],
+    "reponse": "Venezuela",
+    "categorie": "Économie"
+  },
+  {
+    "id": 64,
+    "question": "Dans quel pays se trouve le temple d'Angkor Wat, le plus grand monument religieux du monde ?",
+    "Reponse": ["Thaïlande", "Viêt Nam", "Laos", "Indonésie", "Cambodge", "Birmanie", "Inde", "Népal"],
+    "reponse": "Cambodge",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 65,
+    "question": "Quel est le nom de la faille géologique majeure située en Californie, marquant la limite entre les plaques pacifique et nord-américaine ?",
+    "Reponse": ["Faille de San Andreas", "Fosse des Mariannes", "Faille d'Anatolie", "Faille de la mer Morte", "Faille de Cascadia", "Faille du Rift", "Faille d'Altyn Tagh", "Faille de Denali"],
+    "reponse": "Faille de San Andreas",
+    "categorie": "Géologie"
+  },
+  {
+    "id": 66,
+    "question": "Quelle est la langue la plus parlée au monde en nombre total de locuteurs (natifs et non-natifs) ?",
+    "Reponse": ["Mandarin", "Espagnol", "Hindi", "Arabe", "Français", "Anglais", "Bengali", "Portugais"],
+    "reponse": "Anglais",
+    "categorie": "Culture"
+  },
+  {
+    "id": 67,
+    "question": "Quel est l'élément chimique le plus dense de la table périodique ?",
+    "Reponse": ["Plomb", "Uranium", "Or", "Tungstène", "Osmium", "Iridium", "Platine", "Mercure"],
+    "reponse": "Osmium",
+    "categorie": "Chimie"
+  },
+  {
+    "id": 68,
+    "question": "Quel empereur romain a légalisé le christianisme par l'édit de Milan en 313 ?",
+    "Reponse": ["Auguste", "Néron", "Caligula", "Jules César", "Constantin Ier", "Marc Aurèle", "Trajan", "Hadrien"],
+    "reponse": "Constantin Ier",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 69,
+    "question": "Quel est le nom du détroit qui sépare la Russie de l'Alaska ?",
+    "Reponse": ["Détroit de Gibraltar", "Détroit de Malacca", "Détroit de Béring", "Détroit de Magellan", "Détroit d'Ormuz", "Détroit du Bosphore", "Détroit de Cook", "Détroit de Bass"],
+    "reponse": "Détroit de Béring",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 70,
+    "question": "Combien de paires de chromosomes comporte normalement une cellule humaine ?",
+    "Reponse": ["20 paires", "21 paires", "22 paires", "23 paires", "24 paires", "25 paires", "46 paires", "48 paires"],
+    "reponse": "23 paires",
+    "categorie": "Biologie"
+  },
+  {
+    "id": 71,
+    "question": "Quel philosophe grec était le précepteur d'Alexandre le Grand ?",
+    "Reponse": ["Socrate", "Platon", "Aristote", "Épicure", "Héraclite", "Zénon", "Pythagore", "Thalès"],
+    "reponse": "Aristote",
+    "categorie": "Philosophie"
+  },
+  {
+    "id": 72,
+    "question": "Quelle est l'unité de mesure de la résistance électrique ?",
+    "Reponse": ["Volt", "Ampère", "Watt", "Ohm", "Joule", "Farad", "Hertz", "Tesla"],
+    "reponse": "Ohm",
+    "categorie": "Physique"
+  },
+  {
+    "id": 73,
+    "question": "Qui a écrit l'œuvre 'L'Origine des espèces', base de la théorie de l'évolution ?",
+    "Reponse": ["Gregor Mendel", "Charles Darwin", "Jean-Baptiste Lamarck", "Louis Pasteur", "Isaac Newton", "Alfred Russel Wallace", "Thomas Huxley", "Francis Crick"],
+    "reponse": "Charles Darwin",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 74,
+    "question": "Quel pays a pour capitale Addis-Abeba ?",
+    "Reponse": ["Kenya", "Soudan", "Éthiopie", "Somalie", "Ouganda", "Nigeria", "Tanzanie", "Ghana"],
+    "reponse": "Éthiopie",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 75,
+    "question": "Quel est le nom du processus par lequel les étoiles produisent de l'énergie ?",
+    "Reponse": ["Combustion chimique", "Fission nucléaire", "Oxydation", "Fusion nucléaire", "Rayonnement gamma", "Effet Doppler", "Photosynthèse stellaire", "Convection"],
+    "reponse": "Fusion nucléaire",
+    "categorie": "Astronomie"
+  },
+  {
+    "id": 76,
+    "question": "Quel écrivain russe est l'auteur de 'Guerre et Paix' ?",
+    "Reponse": ["Dostoïevski", "Tchekhov", "Léon Tolstoï", "Pouchkine", "Gogol", "Nabokov", "Soljenitsyne", "Gorki"],
+    "reponse": "Léon Tolstoï",
+    "categorie": "Littérature"
+  },
+  {
+    "id": 77,
+    "question": "Quel est le plus haut sommet du monde par rapport au centre de la Terre (et non par rapport au niveau de la mer) ?",
+    "Reponse": ["Mont Everest", "K2", "Mont Blanc", "Kilimandjaro", "Mont Chimborazo", "Aconcagua", "Mont McKinley", "Anapurna"],
+    "reponse": "Mont Chimborazo",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 78,
+    "question": "Qui a inventé le premier vaccin contre la rage ?",
+    "Reponse": ["Alexander Fleming", "Robert Koch", "Edward Jenner", "Louis Pasteur", "Marie Curie", "Jonas Salk", "Albert Sabin", "Joseph Lister"],
+    "reponse": "Louis Pasteur",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 79,
+    "question": "Quel est le nom de la monnaie de l'Afrique du Sud ?",
+    "Reponse": ["Dollar", "Shilling", "Rand", "Pula", "Kwacha", "Lira", "Riyal", "Naira"],
+    "reponse": "Rand",
+    "categorie": "Économie"
+  },
+  {
+    "id": 80,
+    "question": "Dans quel film de 1994 suit-on la vie d'un homme simple d'esprit traversant l'histoire des États-Unis ?",
+    "Reponse": ["Pulp Fiction", "Forrest Gump", "Le Roi Lion", "Speed", "The Mask", "Léon", "Seven", "Apollo 13"],
+    "reponse": "Forrest Gump",
+    "categorie": "Cinéma"
+  },
+  {
+    "id": 81,
+    "question": "Quelle substance est l'ingrédient principal du verre ?",
+    "Reponse": ["Calcaire", "Argile", "Silice (Sable)", "Charbon", "Soufre", "Plomb", "Aluminium", "Quartz"],
+    "reponse": "Silice (Sable)",
+    "categorie": "Industrie"
+  },
+  {
+    "id": 82,
+    "question": "Quel peintre espagnol est le chef de file du mouvement cubiste ?",
+    "Reponse": ["Salvador Dalí", "Joan Miró", "Francisco Goya", "Diego Vélasquez", "Pablo Picasso", "Joaquín Sorolla", "El Greco", "Antoni Gaudí"],
+    "reponse": "Pablo Picasso",
+    "categorie": "Arts"
+  },
+  {
+    "id": 83,
+    "question": "Quelle est la vitesse approximative du son dans l'air à 20°C ?",
+    "Reponse": ["300 m/s", "340 m/s", "400 m/s", "1000 m/s", "1230 km/h", "300 000 km/s", "1500 m/s", "250 m/s"],
+    "reponse": "340 m/s",
+    "categorie": "Physique"
+  },
+  {
+    "id": 84,
+    "question": "Quel événement a déclenché la Première Guerre mondiale en 1914 ?",
+    "Reponse": ["L'invasion de la Pologne", "L'assassinat de l'archiduc François-Ferdinand", "Le naufrage du Lusitania", "La révolution russe", "Le traité de Versailles", "La bataille de la Marne", "Le krach de 1929", "L'attaque de Pearl Harbor"],
+    "reponse": "L'assassinat de l'archiduc François-Ferdinand",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 85,
+    "question": "Quel est le plus grand lac d'Afrique ?",
+    "Reponse": ["Lac Tanganyika", "Lac Malawi", "Lac Tchad", "Lac Turkana", "Lac Victoria", "Lac Nasser", "Lac Kivu", "Lac Volta"],
+    "reponse": "Lac Victoria",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 86,
+    "question": "Quel est le composant principal du gaz naturel ?",
+    "Reponse": ["Propane", "Butane", "Méthane", "Éthane", "Hydrogène", "Hélium", "Dioxyde de carbone", "Azote"],
+    "reponse": "Méthane",
+    "categorie": "Chimie"
+  },
+  {
+    "id": 87,
+    "question": "Dans quel pays le mouvement de la Renaissance a-t-il débuté ?",
+    "Reponse": ["France", "Angleterre", "Grèce", "Italie", "Espagne", "Allemagne", "Pays-Bas", "Portugal"],
+    "reponse": "Italie",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 88,
+    "question": "Quel est le nom de la zone de l'atmosphère la plus proche de la Terre ?",
+    "Reponse": ["Stratosphère", "Mésosphère", "Thermosphère", "Troposphère", "Exosphère", "Ionosphère", "Ozonosphère", "Manteau"],
+    "reponse": "Troposphère",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 89,
+    "question": "Qui est le dieu de la mer dans la mythologie romaine ?",
+    "Reponse": ["Jupiter", "Mars", "Pluton", "Vulcain", "Mercure", "Neptune", "Apollon", "Bacchus"],
+    "reponse": "Neptune",
+    "categorie": "Mythologie"
+  },
+  {
+    "id": 90,
+    "question": "Quel pays a inventé le papier ?",
+    "Reponse": ["Égypte", "Grèce", "Chine", "Inde", "Japon", "Perse", "Rome", "Mésopotamie"],
+    "reponse": "Chine",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 91,
+    "question": "Quel est le nom de la galaxie dans laquelle se trouve le Système Solaire ?",
+    "Reponse": ["Andromède", "Nébuleuse d'Orion", "La Voie Lactée", "Sombrero", "Tourbillon", "Centaurus A", "Messier 87", "Nuage de Magellan"],
+    "reponse": "La Voie Lactée",
+    "categorie": "Astronomie"
+  },
+  {
+    "id": 92,
+    "question": "Quel organe humain produit l'insuline ?",
+    "Reponse": ["Le foie", "Le pancréas", "La rate", "Les reins", "L'estomac", "La vésicule biliaire", "Le cœur", "Le cerveau"],
+    "reponse": "Le pancréas",
+    "categorie": "Biologie"
+  },
+  {
+    "id": 93,
+    "question": "Quelle ville est surnommée 'La Grosse Pomme' (The Big Apple) ?",
+    "Reponse": ["Los Angeles", "Chicago", "Miami", "San Francisco", "New York", "Boston", "Washington D.C.", "Las Vegas"],
+    "reponse": "New York",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 94,
+    "question": "Combien y a-t-il de touches sur un piano standard ?",
+    "Reponse": ["64", "76", "82", "85", "88", "92", "100", "104"],
+    "reponse": "88",
+    "categorie": "Musique"
+  },
+  {
+    "id": 95,
+    "question": "Quel est le métal le plus utilisé au monde ?",
+    "Reponse": ["Aluminium", "Cuivre", "Or", "Fer", "Argent", "Plomb", "Zinc", "Magnésium"],
+    "reponse": "Fer",
+    "categorie": "Industrie"
+  },
+  {
+    "id": 96,
+    "question": "Quel explorateur a découvert la voie maritime vers les Indes en contournant l'Afrique ?",
+    "Reponse": ["Christophe Colomb", "Vasco de Gama", "Fernand de Magellan", "Marco Polo", "James Cook", "Jacques Cartier", "Hernán Cortés", "Amerigo Vespucci"],
+    "reponse": "Vasco de Gama",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 97,
+    "question": "Quel est le pays le plus peuplé d'Afrique ?",
+    "Reponse": ["Égypte", "Éthiopie", "Nigeria", "Afrique du Sud", "Algérie", "Kenya", "Maroc", "Congo"],
+    "reponse": "Nigeria",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 98,
+    "question": "Quelle est la formule chimique du sel de table ?",
+    "Reponse": ["H2O", "CO2", "NaOH", "NaCl", "HCl", "KCl", "CaCO3", "MgSO4"],
+    "reponse": "NaCl",
+    "categorie": "Chimie"
+  },
+  {
+    "id": 99,
+    "question": "Qui a peint 'Le Déjeuner sur l'herbe', œuvre majeure du passage au modernisme ?",
+    "Reponse": ["Claude Monet", "Édouard Manet", "Auguste Renoir", "Edgar Degas", "Paul Gauguin", "Henri de Toulouse-Lautrec", "Gustave Courbet", "Camille Pissarro"],
+    "reponse": "Édouard Manet",
+    "categorie": "Arts"
+  },
+  {
+    "id": 100,
+    "question": "Quelle est la capitale de l'Australie ?",
+    "Reponse": ["Sydney", "Melbourne", "Brisbane", "Perth", "Canberra", "Adélaïde", "Hobart", "Darwin"],
+    "reponse": "Canberra",
+    "categorie": "Géographie"
+  }
+]
