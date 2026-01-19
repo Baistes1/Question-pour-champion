@@ -225,7 +225,7 @@
   {
     "id": 38,
     "question": "Combien de pattes a un chien ?",
-    "Reponse": [4","2", "3", "6"], "reponse": "4",
+    "Reponse": ["4","2", "3", "6"], "reponse": "4",
     "categorie": "Nombres"
   },
   {
@@ -296,59 +296,279 @@
   },
   {
     "id": 50,
-    "question": "Quel légume est rouge et rond ?", reponse: "La tomate", Reponse: ["La carotte", "Le concombre", "Le poivron"], categorie: "Légumes" },
-  { id: 51, question: "Quel fruit a une couronne ?", reponse: "L'ananas", Reponse: ["La banane", "L'orange", "La pomme"], categorie: "Fruits" },
-  { id: 52, question: "Quel légume pousse sous terre ?", reponse: "La pomme de terre", Reponse: ["La tomate", "Le concombre", "Le poivron"], categorie: "Légumes" },
-  { id: 53, question: "Quel fruit est petit et rouge ?", reponse: "La fraise", Reponse: ["La pomme", "L'orange", "La banane"], categorie: "Fruits" },
-  { id: 54, question: "Quel légume est utilisé pour faire des frites ?", reponse: "La pomme de terre", Reponse: ["La carotte", "Le concombre", "La tomate"], categorie: "Légumes" },
-  { id: 55, question: "Quel fruit a un noyau ?", reponse: "La pêche", Reponse: ["La pomme", "L'orange", "Le raisin"], categorie: "Fruits" },
-  { id: 56, question: "Quel légume est vert et se mange en salade ?", reponse: "La laitue", Reponse: ["La carotte", "Le radis", "Le chou"], categorie: "Légumes" },
-  { id: 57, question: "Quel fruit est jaune et acide ?", reponse: "Le citron", Reponse: ["L'orange", "La pomme", "La banane"], categorie: "Fruits" },
-  { id: 58, question: "Quel légume ressemble à un petit arbre ?", reponse: "Le brocoli", Reponse: ["La carotte", "La tomate", "Le concombre"], categorie: "Légumes" },
-  { id: 59, question: "Quel fruit est brun et poilu ?", reponse: "Le kiwi", Reponse: ["La pomme", "L'orange", "La poire"], categorie: "Fruits" },
-  { id: 60, question: "Quel légume est violet ?", reponse: "L'aubergine", Reponse: ["La carotte", "Le concombre", "La tomate"], categorie: "Légumes" },
-
-  // Vie quotidienne (20 questions)
-  { id: 61, question: "Avec quoi mange-t-on ?", reponse: "Une fourchette", Reponse: ["Un marteau", "Une brosse", "Un crayon"], categorie: "Quotidien" },
-  { id: 62, question: "Dans quoi dort-on ?", reponse: "Un lit", Reponse: ["Une chaise", "Une table", "Un placard"], categorie: "Quotidien" },
-  { id: 63, question: "Où se lave-t-on ?", reponse: "Dans la salle de bain", Reponse: ["Dans la cuisine", "Dans le salon", "Dans la chambre"], categorie: "Quotidien" },
-  { id: 64, question: "Qu'utilise-t-on pour se brosser les dents ?", reponse: "Une brosse à dents", Reponse: ["Un peigne", "Une cuillère", "Un crayon"], categorie: "Quotidien" },
-  { id: 65, question: "Où cuisine-t-on ?", reponse: "Dans la cuisine", Reponse: ["Dans la chambre", "Dans le salon", "Dans le garage"], categorie: "Quotidien" },
-  { id: 66, question: "Avec quoi coupe-t-on du papier ?", reponse: "Des ciseaux", Reponse: ["Un marteau", "Une cuillère", "Un crayon"], categorie: "Quotidien" },
-  { id: 67, question: "Dans quoi boit-on de l'eau ?", reponse: "Un verre", Reponse: ["Une assiette", "Une fourchette", "Un couteau"], categorie: "Quotidien" },
-  { id: 68, question: "Où range-t-on les vêtements ?", reponse: "Dans l'armoire", Reponse: ["Dans le frigo", "Dans le four", "Sur la table"], categorie: "Quotidien" },
-  { id: 69, question: "Qu'utilise-t-on pour écrire ?", reponse: "Un stylo", Reponse: ["Une fourchette", "Un marteau", "Une cuillère"], categorie: "Quotidien" },
-  { id: 70, question: "Où met-on les aliments frais ?", reponse: "Dans le frigo", Reponse: ["Dans l'armoire", "Sur le lit", "Dans la douche"], categorie: "Quotidien" },
-  { id: 71, question: "Qu'utilise-t-on pour se sécher après la douche ?", reponse: "Une serviette", Reponse: ["Un oreiller", "Un drap", "Une nappe"], categorie: "Quotidien" },
-  { id: 72, question: "Sur quoi s'assoit-on pour manger ?", reponse: "Une chaise", Reponse: ["Un lit", "Un tapis", "Un mur"], categorie: "Quotidien" },
-  { id: 73, question: "Qu'utilise-t-on pour voir l'heure ?", reponse: "Une montre", Reponse: ["Un thermomètre", "Un miroir", "Une lampe"], categorie: "Quotidien" },
-  { id: 74, question: "Où regarde-t-on la télévision ?", reponse: "Dans le salon", Reponse: ["Dans la cuisine", "Dans la salle de bain", "Dans le garage"], categorie: "Quotidien" },
-  { id: 75, question: "Qu'utilise-t-on pour balayer ?", reponse: "Un balai", Reponse: ["Une cuillère", "Un marteau", "Un crayon"], categorie: "Quotidien" },
-  { id: 76, question: "Dans quoi lave-t-on les vêtements ?", reponse: "La machine à laver", Reponse: ["Le four", "Le frigo", "Le micro-ondes"], categorie: "Quotidien" },
-  { id: 77, question: "Qu'utilise-t-on pour se peigner ?", reponse: "Un peigne", Reponse: ["Une fourchette", "Un couteau", "Une cuillère"], categorie: "Quotidien" },
-  { id: 78, question: "Où gare-t-on la voiture ?", reponse: "Dans le garage", Reponse: ["Dans la cuisine", "Dans la chambre", "Dans le salon"], categorie: "Quotidien" },
-  { id: 79, question: "Qu'utilise-t-on pour ouvrir une porte ?", reponse: "Une clé", Reponse: ["Un marteau", "Un crayon", "Une cuillère"], categorie: "Quotidien" },
-  { id: 80, question: "Où fait-on du sport ?", reponse: "Au stade", Reponse: ["À l'église", "À la boulangerie", "À la banque"], categorie: "Quotidien" },
-
-  // Nature et Météo (20 questions)
-  { id: 81, question: "Que fait-il quand il pleut ?", reponse: "Il tombe de l'eau", Reponse: ["Il fait chaud", "Il neige", "Il fait du vent"], categorie: "Météo" },
-  { id: 82, question: "Quelle saison vient après l'été ?", reponse: "L'automne", Reponse: ["Le printemps", "L'hiver", "L'été"], categorie: "Saisons" },
-  { id: 83, question: "Quelle saison vient après l'hiver ?", reponse: "Le printemps", Reponse: ["L'été", "L'automne", "L'hiver"], categorie: "Saisons" },
-  { id: 84, question: "Quand fait-il le plus chaud ?", reponse: "En été", Reponse: ["En hiver", "En automne", "Au printemps"], categorie: "Saisons" },
-  { id: 85, question: "Quand neige-t-il ?", reponse: "En hiver", Reponse: ["En été", "Au printemps", "En automne"], categorie: "Saisons" },
-  { id: 86, question: "Qu'est-ce qui brille dans le ciel la nuit ?", reponse: "La lune", Reponse: ["Le soleil", "Un nuage", "Un avion"], categorie: "Nature" },
-  { id: 87, question: "Qu'est-ce qui brille dans le ciel le jour ?", reponse: "Le soleil", Reponse: ["La lune", "Les étoiles", "Un nuage"], categorie: "Nature" },
-  { id: 88, question: "Que voit-on après la pluie ?", reponse: "Un arc-en-ciel", Reponse: ["La neige", "Le vent", "Le brouillard"], categorie: "Météo" },
-  { id: 89, question: "Où pousse un arbre ?", reponse: "Dans la terre", Reponse: ["Dans l'eau", "Dans l'air", "Sur le toit"], categorie: "Nature" },
-  { id: 90, question: "Que font les feuilles en automne ?", reponse: "Elles tombent", Reponse: ["Elles poussent", "Elles volent", "Elles chantent"], categorie: "Nature" },
-  { id: 91, question: "Quel est le bruit du tonnerre ?", reponse: "Un grand bruit", Reponse: ["Un sifflement", "Un miaulement", "Un aboiement"], categorie: "Météo" },
-  { id: 92, question: "Que fait le vent ?", reponse: "Il souffle", Reponse: ["Il pleut", "Il neige", "Il brille"], categorie: "Météo" },
-  { id: 93, question: "Où vit un poisson ?", reponse: "Dans l'eau", Reponse: ["Dans l'air", "Dans la terre", "Sur un arbre"], categorie: "Nature" },
-  { id: 94, question: "Quelle fleur est jaune avec un cœur marron ?", reponse: "Le tournesol", Reponse: ["La rose", "La tulipe", "Le lys"], categorie: "Nature" },
-  { id: 95, question: "Que fait un oiseau ?", reponse: "Il vole", Reponse: ["Il nage", "Il rampe", "Il court"], categorie: "Nature" },
-  { id: 96, question: "Où pousse l'herbe ?", reponse: "Dans le jardin", Reponse: ["Dans la mer", "Dans le ciel", "Dans la maison"], categorie: "Nature" },
-  { id: 97, question: "Quel insecte fait du miel ?", reponse: "L'abeille", Reponse: ["La mouche", "Le moustique", "La fourmi"], categorie: "Nature" },
-  { id: 98, question: "Que fait le soleil ?", reponse: "Il brille", Reponse: ["Il pleut", "Il neige", "Il souffle"], categorie: "Météo" },
-  { id: 99, question: "Où vit un oiseau ?", reponse: "Dans un nid", Reponse: ["Dans une grotte", "Dans l'eau", "Sous terre"], categorie: "Nature" },
-  { id: 100, question: "Quelle est la couleur des nuages quand il pleut ?", reponse: "Gris", Reponse: ["Blanc", "Bleu", "Rose"], categorie: "Météo" }
+    "question": "Quel légume est rouge et rond ?",
+    "Reponse": ["La tomate", "La carotte", "Le concombre", "Le poivron"], "reponse": "La tomate", 
+    "categorie": "Légumes"
+  },
+  {
+    "id": 51,
+    "question": "Quel fruit a une couronne ?",
+    "Reponse": ["La banane", "L'orange","L'ananas", "La pomme"], "reponse": "L'ananas",
+    "categorie": "Fruits"
+  },
+  {
+    "id": 52,
+    "question": "Quel légume pousse sous terre ?",
+    "Reponse": ["La tomate","La pomme de terre", "Le concombre", "Le poivron"], "reponse": "La pomme de terre",
+    "categorie": "Légumes"
+  },
+  {
+    "id": 53,
+    "question": "Quel fruit est petit et rouge ?",
+    "Reponse": ["La pomme", "L'orange", "La banane","La fraise"], "reponse": "La fraise",
+    "categorie": "Fruits"
+  },
+  {
+    "id": 54,
+    "question": "Quel légume est utilisé pour faire des frites ?",  
+    "Reponse": ["La carotte", "La pomme de terre","Le concombre", "La tomate"], "reponse": "La pomme de terre",
+    "categorie": "Légumes"
+  },
+  {
+    "id": 55,
+    "question": "Quel fruit a un noyau ?",
+    "Reponse": ["La pomme", "L'orange","La pêche", "Le raisin"], "reponse": "La pêche",
+    "categorie": "Fruits"
+  },
+  {
+    "id": 56,
+    "question": "Quel légume est vert et se mange en salade ?",
+    "Reponse": ["La carotte", "Le radis", "Le chou","La laitue"], "reponse": "La laitue",
+    "categorie": "Légumes"
+  },
+  {
+    "id": 57,
+    "question": "Quel fruit est jaune et acide ?",
+    "Reponse": ["L'orange", "La pomme", "La banane","Le citron"], "reponse": "Le citron",
+    "categorie": "Fruits"
+  },
+  {
+    "id": 58,
+    "question": "Quel légume ressemble à un petit arbre ?",
+    "Reponse": ["La carotte","Le brocoli", "La tomate", "Le concombre"], "reponse": "Le brocoli",
+    "categorie": "Légumes"
+  },
+  {
+    "id": 59,
+    "question": "Quel fruit est brun et poilu ?",
+    "Reponse": ["La pomme", "L'orange","Le kiwi", "La poire"],"reponse": "Le kiwi",
+    "categorie": "Fruits"
+  },
+  {
+    "id": 60,
+    "question": "Quel légume est violet ?",
+    "Reponse": [ "L'aubergine","La carotte", "Le concombre", "La tomate"],  "reponse": "L'aubergine",
+    "categorie": "Légumes"
+  },
+  {
+    "id": 61,
+    "question": "Avec quoi mange-t-on ?",  
+    "Reponse": ["Un marteau", "Une brosse","Une fourchette", "Un crayon"], "reponse": "Une fourchette",
+    "categorie": "Quotidien"
+  },
+  {
+    "id": 62,
+    "question": "Dans quoi dort-on ?",
+    "Reponse": ["Un lit","Une chaise", "Une table", "Un placard"],  "reponse": "Un lit",
+    "categorie": "Quotidien"
+  },
+  {
+    "id": 63,
+    "question": "Où se lave-t-on ?",
+    "Reponse": ["Dans la cuisine", "Dans le salon","Dans la salle de bain", "Dans la chambre"], "reponse": "Dans la salle de bain",
+    "categorie": "Quotidien"
+  },
+  {
+    "id": 64,
+    "question": "Qu'utilise-t-on pour se brosser les dents ?",
+    "Reponse": ["Un peigne", "Une cuillère","Une brosse à dents", "Un crayon"], "reponse": "Une brosse à dents",
+    "categorie": "Quotidien"
+  },
+  {
+    "id": 65,
+    "question": "Où cuisine-t-on ?",
+    "Reponse": ["Dans la cuisine","Dans la chambre", "Dans le salon", "Dans le garage"],"reponse": "Dans la cuisine",
+    "categorie": "Quotidien"
+  },
+  {
+    "id": 66,
+    "question": "Avec quoi coupe-t-on du papier ?",
+    "Reponse": ["Un marteau","Des ciseaux", "Une cuillère", "Un crayon"], "reponse": "Des ciseaux",
+    "categorie": "Quotidien"
+  },
+  {
+    "id": 67,
+    "question": "Dans quoi boit-on de l'eau ?",
+    "Reponse": ["Une assiette", "Une fourchette", "Un couteau","Un verre"] , "reponse": "Un verre",
+    "categorie": "Quotidien"
+  },
+  {
+    "id": 68,
+    "question": "Où range-t-on les vêtements ?",
+    "Reponse": ["Dans le frigo","Dans l'armoire", "Dans le four", "Sur la table"] ,"reponse": "Dans l'armoire", 
+    "categorie": "Quotidien"
+  },
+  {
+    "id": 69,
+    "question": "Qu'utilise-t-on pour écrire ?",
+    "Reponse": ["Une fourchette", "Un marteau","Un stylo", "Une cuillère"], "reponse": "Un stylo",
+    "categorie": "Quotidien"
+  },
+  {
+    "id": 70,
+    "question": "Où met-on les aliments frais ?",
+    "Reponse": ["Dans l'armoire", "Sur le lit","Dans le frigo", "Dans la douche"], "reponse": "Dans le frigo",
+    "categorie": "Quotidien"
+  },
+  {
+    "id": 71,
+    "question": "Qu'utilise-t-on pour se sécher après la douche ?",
+    "Reponse": ["Une serviette","Un oreiller", "Un drap", "Une nappe"], "reponse": "Une serviette",
+    "categorie": "Quotidien"
+  },
+  {
+    "id": 72,
+    "question": "Sur quoi s'assoit-on pour manger ?",
+    "Reponse": ["Un lit","Une chaise", "Un tapis", "Un mur"],  "reponse": "Une chaise",
+    "categorie": "Quotidien"
+  },
+  {
+    "id": 73,
+    "question": "Qu'utilise-t-on pour voir l'heure ?",
+    "Reponse": ["Un thermomètre", "Un miroir", "Une lampe","Une montre"],"reponse": "Une montre", 
+    "categorie": "Quotidien"
+  },
+  {
+    "id": 74,
+    "question": "Où regarde-t-on la télévision ?",
+    "Reponse": ["Dans la cuisine", "Dans le salon","Dans la salle de bain", "Dans le garage"],  "reponse": "Dans le salon",
+    "categorie": "Quotidien"
+ },
+ {
+    "id": 75, 
+    "question": "Qu'utilise-t-on pour balayer ?", 
+    "Reponse": ["Un balai", "Une cuillère", "Un marteau", "Un crayon"], "reponse": "Un balai", 
+    "categorie": "Quotidien"
+ },
+ {
+     "id": 76, 
+     "question": "Dans quoi lave-t-on les vêtements ?", 
+     "Reponse": ["Le four","La machine à laver", "Le frigo", "Le micro-ondes"], "reponse": "La machine à laver", 
+     "categorie": "Quotidien"
+ },
+ {
+     "id": 77, 
+     "question": "Qu'utilise-t-on pour se peigner ?", 
+     "Reponse": ["Une fourchette", "Un couteau", "Une cuillère","Un peigne"], "reponse": "Un peigne", 
+     "categorie": "Quotidien" 
+ },
+ { 
+    "id": 78, 
+    "question": "Où gare-t-on la voiture ?", 
+    "Reponse": ["Dans le garage", "Dans la cuisine", "Dans la chambre", "Dans le salon"], "reponse": "Dans le garage",  
+    "categorie": "Quotidien"
+ },
+ {
+     "id": 79, 
+     "question": "Qu'utilise-t-on pour ouvrir une porte ?", 
+     "Reponse": ["Un marteau", "Un crayon","Une clé",  "Une cuillère"], "reponse": "Une clé", 
+     "categorie": "Quotidien"
+ },
+ { 
+    "id": 80, 
+    "question": "Où fait-on du sport ?", 
+    "Reponse": ["À l'église", "À la boulangerie","Au stade",  "À la banque"], "reponse": "Au stade", 
+    "categorie": "Quotidien"
+ },
+ { 
+    "id": 81, 
+    "question": "Quel temps fait-il quand on voit un arc-en-ciel ?", 
+    "Reponse": ["Il pleut et il y a du soleil", "Il neige", "Il fait nuit", "Il vente fort"],
+    "reponse": "Il pleut et il y a du soleil", 
+    "categorie": "Météo"
+ },
+  {
+    "id": 82, 
+    "question": "Quelle saison vient après l'été ?", 
+    "Reponse": ["Le printemps", "L'hiver","L'automne",   "L'été"], "reponse": "L'automne",  
+    "categorie": "Saisons"
+ },
+ { 
+    "id": 83, 
+    "question": "Quelle saison vient après l'hiver ?", 
+    "Reponse": ["L'été", "L'automne","Le printemps",  "L'hiver"],"reponse": "Le printemps", 
+    "categorie": "Saisons" 
+ },
+ { 
+    "id": 84, 
+    "question": "Quand fait-il le plus chaud ?", 
+    "Reponse": ["En hiver","En été",  "En automne", "Au printemps"],"reponse": "En été",  
+    "categorie": "Saisons" 
+ },
+ { 
+    "id": 85, 
+    "question": "Quand neige-t-il ?", 
+    "Reponse": ["En été", "Au printemps", "En automne", "En hiver"],"reponse": "En hiver", 
+    "categorie": "Saisons" 
+ },
+ { 
+    "id": 86, 
+    "question": "Qu'est-ce qui brille dans le ciel la nuit ?", 
+    "Reponse": ["Le soleil", "Un nuage", "Un avion","La lune"], "reponse": "La lune", 
+    "categorie": "Nature" 
+ },
+ {
+    "id": 87, 
+    "question": "Qu'est-ce qui brille dans le ciel le jour ?", 
+    "Reponse": ["La lune","Le soleil", "Les étoiles", "Un nuage"], "reponse": "Le soleil", 
+    "categorie": "Nature" 
+ },
+ { 
+    "id": 88, 
+    "question": "Que voit-on après la pluie ?", 
+    "Reponse": ["La neige","Un arc-en-ciel",  "Le vent", "Le brouillard"], "reponse": "Un arc-en-ciel", 
+    "categorie": "Météo" 
+ },
+ {  
+    "id": 89, 
+    "question": "Où pousse un arbre ?",    
+    "Reponse": ["Dans la terre","Dans l'eau", "Dans l'air", "Sur le toit"], "reponse": "Dans la terre",  
+    "categorie": "Nature" 
+ },
+ {  
+    "id": 90, 
+    "question": "Que font les feuilles en automne ?", 
+    "Reponse": ["Elles tombent","Elles poussent", "Elles volent", "Elles chantent"], "reponse": "Elles tombent", 
+    "categorie": "Nature" 
+ },
+ {  
+    "id": 91, 
+    "question": "Quelle planète est la plus proche du Soleil ?", 
+    "Reponse": ["Vénus", "Mars", "Mercure", "Jupiter"], "reponse": "Mercure", 
+    "categorie": "Sciences" 
+ },
+ {  
+    "id": 92, 
+    "question": "Quel organe pompe le sang dans le corps ?",
+    "Reponse": ["Le cerveau", "Le cœur", "Le poumon", "Le foie"], "reponse": "Le cœur", 
+    "categorie": "Sciences"
+ },
+ {  
+    "id": 93, 
+    "question": "Combien de pattes a une araignée ?", 
+    "Reponse": ["4", "6", "8", "10"], "reponse": "8",
+    "categorie": "Sciences"
+ },
+ {  
+    "id": 94, 
+    "question": "Quelle fleur est jaune avec un cœur marron ?", 
+    "Reponse": ["La rose", "La tulipe", "Le lys","Le tournesol"], "reponse": "Le tournesol", 
+    "categorie": "Nature" 
+ },
+ {  
+    "id": 95, 
+    "question":  "Combien de jours faut-il à la Terre pour tourner autour du Soleil ?", 
+    "Reponse": ["30 jours", "100 jours", "365 jours", "500 jours"], "reponse": "365 jours", 
+    "categorie": "Sciences"
+ }
 ]
