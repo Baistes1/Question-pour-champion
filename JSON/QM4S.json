@@ -1,0 +1,697 @@
+[
+  {
+    "id": 1,
+    "question": "Quelle est la capitale de l'Australie ?",
+    "Reponse": ["Canberra","Sydney",  "Melbourne", "Brisbane"],
+    "reponse": "Canberra",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 2,
+    "question": "Quel est le plus long fleuve du monde ?",
+    "Reponse": ["L'Amazone",  "Le Yangtsé", "Le Nil","Le Mississippi"],
+    "reponse": "Le Nil",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 3,
+    "question": "Dans quel pays se trouve le Mont Fuji ?",
+    "Reponse": ["Chine", "Japon", "Corée du Sud", "Thaïlande"],
+    "reponse": "Japon",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 4,
+    "question": "Quelle est la capitale du Canada ?",
+    "Reponse": ["Toronto", "Montréal", "Vancouver", "Ottawa"],
+    "reponse": "Ottawa",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 5,
+    "question": "Quel océan sépare l'Amérique de l'Asie ?",
+    "Reponse": ["L'océan Pacifique","L'océan Atlantique",  "L'océan Indien", "L'océan Arctique"],
+    "reponse": "L'océan Pacifique",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 6,
+    "question": "Dans quel pays se trouve la ville de Prague ?",
+    "Reponse": ["Pologne",  "Hongrie","République tchèque", "Slovaquie"],
+    "reponse": "République tchèque",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 7,
+    "question": "Quelle est la monnaie du Royaume-Uni ?",
+    "Reponse": ["L'euro", "La livre sterling", "Le dollar", "Le franc"],
+    "reponse": "La livre sterling",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 8,
+    "question": "Quel pays a pour capitale Buenos Aires ?",
+    "Reponse": ["Argentine", "Brésil", "Chili", "Uruguay"],
+    "reponse": "Argentine",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 9,
+    "question": "Quelle mer borde Israël ?",
+    "Reponse": ["La mer Rouge", "La mer Méditerranée", "La mer Noire", "La mer Caspienne"],
+    "reponse": "La mer Méditerranée",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 10,
+    "question": "Dans quel pays se trouve la Transylvanie ?",
+    "Reponse": ["Bulgarie", "Hongrie", "Serbie", "Roumanie"],
+    "reponse": "Roumanie",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 11,
+    "question": "Quelle est la capitale de la Norvège ?",
+    "Reponse": ["Stockholm",  "Helsinki","Oslo", "Copenhague"],
+    "reponse": "Oslo",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 12,
+    "question": "Quel pays partage la plus longue frontière avec la France ?",
+    "Reponse": ["L'Espagne","L'Allemagne",  "L'Italie", "La Belgique"],
+    "reponse": "L'Espagne",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 13,
+    "question": "Dans quelle ville se trouve la Statue de la Liberté ?",
+    "Reponse": ["Washington", "New York", "Boston", "Philadelphie"],
+    "reponse": "New York",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 14,
+    "question": "Quel est le plus petit pays du monde ?",
+    "Reponse": ["Monaco", "Le Vatican", "Saint-Marin", "Liechtenstein"],
+    "reponse": "Le Vatican",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 15,
+    "question": "Quelle ville marocaine est connue pour ses tanneries ?",
+    "Reponse": ["Marrakech", "Casablanca","Fès",  "Tanger"],
+    "reponse": "Fès",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 16,
+    "question": "Quel pays a pour capitale Lisbonne ?",
+    "Reponse": ["Portugal","Espagne",  "Grèce", "Italie"],
+    "reponse": "Portugal",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 17,
+    "question": "Dans quel pays se trouve le Machu Picchu ?",
+    "Reponse": ["Bolivie", "Équateur", "Colombie", "Pérou"],
+    "reponse": "Pérou",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 18,
+    "question": "Quelle est la capitale de la Turquie ?",
+    "Reponse": ["Istanbul", "Ankara", "Izmir", "Antalya"],
+    "reponse": "Ankara",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 19,
+    "question": "Quel fleuve traverse Paris ?",
+    "Reponse": [ "La Seine","La Loire", "Le Rhône", "La Garonne"],
+    "reponse": "La Seine",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 20,
+    "question": "Dans quel pays se trouve la Grande Barrière de Corail ?",
+    "Reponse": ["Philippines", "Australie", "Indonésie", "Thaïlande"],
+    "reponse": "Australie",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 21,
+    "question": "En quelle année a débuté la Seconde Guerre mondiale ?",
+    "Reponse": ["1938", "1939", "1940", "1941"],
+    "reponse": "1939",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 22,
+    "question": "Qui a peint la Chapelle Sixtine ?",
+    "Reponse": ["Michel-Ange","Léonard de Vinci",  "Raphaël", "Botticelli"],
+    "reponse": "Michel-Ange",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 23,
+    "question": "En quelle année l'homme a-t-il marché sur la Lune ?",
+    "Reponse": ["1968", "1970", "1971", "1969"],
+    "reponse": "1969",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 24,
+    "question": "Qui était le premier président des États-Unis ?",
+    "Reponse": ["Thomas Jefferson", "Abraham Lincoln", "Benjamin Franklin", "George Washington"],
+    "reponse": "George Washington",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 25,
+    "question": "Quelle guerre a opposé le Nord et le Sud des États-Unis ?",
+    "Reponse": ["La Guerre d'Indépendance", "La Guerre de 1812", "La Guerre hispano-américaine", "La Guerre de Sécession"],
+    "reponse": "La Guerre de Sécession",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 26,
+    "question": "En quelle année le mur de Berlin est-il tombé ?",
+    "Reponse": ["1987", "1989", "1990", "1991"],
+    "reponse": "1989",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 27,
+    "question": "Qui a découvert l'Amérique en 1492 ?",
+    "Reponse": ["Christophe Colomb","Amerigo Vespucci",  "Fernand de Magellan", "Vasco de Gama"],
+    "reponse": "Christophe Colomb",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 28,
+    "question": "Quelle civilisation a construit les pyramides de Gizeh ?",
+    "Reponse": ["Les Mayas",  "Les Aztèques","Les Égyptiens", "Les Incas"],
+    "reponse": "Les Égyptiens",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 29,
+    "question": "Qui était Jules César ?",
+    "Reponse": ["Un roi égyptien", "Un empereur romain", "Un philosophe grec", "Un général carthaginois"],
+    "reponse": "Un empereur romain",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 30,
+    "question": "En quelle année a eu lieu la Révolution française ?",
+    "Reponse": ["1776", "1789", "1799", "1804"],
+    "reponse": "1789",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 31,
+    "question": "Qui a inventé l'imprimerie ?",
+    "Reponse": ["Gutenberg","Léonard de Vinci",  "Isaac Newton", "Galilée"],
+    "reponse": "Gutenberg",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 32,
+    "question": "Quel empereur a unifié la Chine ?",
+    "Reponse": ["Mao Zedong",  "Confucius","Qin ShiHuang",  "Sun Tzu"],
+    "reponse": "Qin Shi Huang",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 33,
+    "question": "En quelle année le Titanic a-t-il coulé ?",
+    "Reponse": ["1910", "1912", "1914", "1918"],
+    "reponse": "1912",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 34,
+    "question": "Qui a peint la Joconde ?",
+    "Reponse": ["Michel-Ange",  "Raphaël", "Donatello","Léonard de Vinci"],
+    "reponse": "Léonard de Vinci",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 35,
+    "question": "Quelle était la capitale de l'Empire byzantin ?",
+    "Reponse": ["Constantinople", "Rome", "Athènes", "Alexandrie"],
+    "reponse": "Constantinople",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 36,
+    "question": "Qui était Cléopâtre ?",
+    "Reponse": ["Une impératrice romaine", "Une déesse grecque", "Une princesse perse", "Une reine d'Égypte"],
+    "reponse": "Une reine d'Égypte",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 37,
+    "question": "En quelle année l'Inde a-t-elle obtenu son indépendance ?",
+    "Reponse": ["1945", "1947", "1950", "1952"],
+    "reponse": "1947",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 38,
+    "question": "Qui a écrit 'L'Odyssée' ?",
+    "Reponse": ["Homère","Sophocle",  "Aristote", "Platon"],
+    "reponse": "Homère",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 39,
+    "question": "Quelle bataille a marqué la défaite de Napoléon ?",
+    "Reponse": ["Austerlitz", "Waterloo", "Iéna", "Wagram"],
+    "reponse": "Waterloo",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 40,
+    "question": "En quelle année le Maroc a-t-il obtenu son indépendance ?",
+    "Reponse": ["1952",  "1960", "1956","1962"],
+    "reponse": "1956",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 41,
+    "question": "Quelle est la formule chimique de l'eau ?",
+    "Reponse": ["CO2", "H2O", "O2", "H2SO4"],
+    "reponse": "H2O",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 42,
+    "question": "Combien de planètes y a-t-il dans le système solaire ?",
+    "Reponse": ["7", "8", "9", "10"],
+    "reponse": "8",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 43,
+    "question": "Quelle planète est la plus proche du Soleil ?",
+    "Reponse": [ "Mercure","Vénus", "Mars", "Terre"],
+    "reponse": "Mercure",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 44,
+    "question": "Quel organe pompe le sang dans le corps ?",
+    "Reponse": ["Le cœur","Le cerveau",  "Le foie", "Les poumons"],
+    "reponse": "Le cœur",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 45,
+    "question": "Quelle est la vitesse de la lumière ?",
+    "Reponse": ["150 000 km/s",  "500 000 km/s","300 000 km/s", "100 000 km/s"],
+    "reponse": "300 000 km/s",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 46,
+    "question": "Combien d'os a le corps humain adulte ?",
+    "Reponse": ["198", "214", "220", "206"],
+    "reponse": "206",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 47,
+    "question": "Quel gaz les plantes absorbent-elles ?",
+    "Reponse": ["L'oxygène", "Le dioxyde de carbone (CO2)", "L'azote", "L'hydrogène"],
+    "reponse": "Le dioxyde de carbone (CO2)",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 48,
+    "question": "Qui a découvert la pénicilline ?",
+    "Reponse": ["Louis Pasteur", "Alexander Fleming", "Marie Curie", "Albert Einstein"],
+    "reponse": "Alexander Fleming",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 49,
+    "question": "Quelle est la plus grande planète du système solaire ?",
+    "Reponse": ["Saturne", "Neptune", "Uranus", "Jupiter"],
+    "reponse": "Jupiter",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 50,
+    "question": "Combien de chromosomes a l'être humain ?",
+    "Reponse": ["44",  "48","46", "50"],
+    "reponse": "46",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 51,
+    "question": "Quel scientifique a développé la théorie de l'évolution ?",
+    "Reponse": ["Charles Darwin","Isaac Newton",  "Albert Einstein", "Galilée"],
+    "reponse": "Charles Darwin",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 52,
+    "question": "À quelle température l'eau bout-elle ?",
+    "Reponse": ["100°C","90°C",  "110°C", "80°C"],
+    "reponse": "100°C",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 53,
+    "question": "Quel est le symbole chimique de l'or ?",
+    "Reponse": ["Ag",  "Fe","Au", "Cu"],
+    "reponse": "Au",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 54,
+    "question": "Combien de dents a un adulte ?",
+    "Reponse": ["28",  "30","32", "36"],
+    "reponse": "32",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 55,
+    "question": "Quel est l'animal le plus rapide sur terre ?",
+    "Reponse": ["Le lion", "Le guépard", "L'antilope", "Le cheval"],
+    "reponse": "Le guépard",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 56,
+    "question": "Quelle planète est surnommée la planète rouge ?",
+    "Reponse": ["Mars","Vénus",  "Jupiter", "Saturne"],
+    "reponse": "Mars",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 57,
+    "question": "Qui a inventé l'ampoule électrique ?",
+    "Reponse": ["Nikola Tesla", "Thomas Edison", "Benjamin Franklin", "Alexander Bell"],
+    "reponse": "Thomas Edison",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 58,
+    "question": "Combien de pattes a une araignée ?",
+    "Reponse": ["6", "8", "10", "12"],
+    "reponse": "8",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 59,
+    "question": "Quel est le plus grand mammifère du monde ?",
+    "Reponse": ["L'éléphant", "La baleine bleue", "La girafe", "L'hippopotame"],
+    "reponse": "La baleine bleue",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 60,
+    "question": "Quelle est la température du corps humain normal ?",
+    "Reponse": ["36°C", "38°C","37°C",  "35°C"],
+    "reponse": "37°C",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 61,
+    "question": "Qui a écrit 'Les Misérables' ?",
+    "Reponse": ["Victor Hugo","Émile Zola",  "Gustave Flaubert", "Honoré de Balzac"],
+    "reponse": "Victor Hugo",
+    "categorie": "Culture"
+  },
+  {
+    "id": 62,
+    "question": "Combien de joueurs y a-t-il dans une équipe de football ?",
+    "Reponse": ["11","10",  "12", "9"],
+    "reponse": "11",
+    "categorie": "Culture"
+  },
+  {
+    "id": 63,
+    "question": "Quel est l'instrument de musique de Chopin ?",
+    "Reponse": ["Le piano","Le violon",  "La flûte", "La guitare"],
+    "reponse": "Le piano",
+    "categorie": "Culture"
+  },
+  {
+    "id": 64,
+    "question": "Qui a composé 'Les Quatre Saisons' ?",
+    "Reponse": ["Mozart",  "Bach","Vivaldi", "Beethoven"],
+    "reponse": "Vivaldi",
+    "categorie": "Culture"
+  },
+  {
+    "id": 65,
+    "question": "Dans quel pays se trouve le Taj Mahal ?",
+    "Reponse": ["Pakistan", "Bangladesh", "Sri Lanka", "Inde"],
+    "reponse": "Inde",
+    "categorie": "Culture"
+  },
+  {
+    "id": 66,
+    "question": "Combien de cordes a une guitare classique ?",
+    "Reponse": ["5", "7", "8", "6"],
+    "reponse": "6",
+    "categorie": "Culture"
+  },
+  {
+    "id": 67,
+    "question": "Qui a écrit 'Roméo et Juliette' ?",
+    "Reponse": ["Molière", "Shakespeare", "Racine", "Corneille"],
+    "reponse": "Shakespeare",
+    "categorie": "Culture"
+  },
+  {
+    "id": 68,
+    "question": "Quel est le sport pratiqué à Roland-Garros ?",
+    "Reponse": ["Le football",  "Le rugby","Le tennis", "Le golf"],
+    "reponse": "Le tennis",
+    "categorie": "Culture"
+  },
+  {
+    "id": 69,
+    "question": "Combien de touches a un piano ?",
+    "Reponse": ["76",  "92","88", "100"],
+    "reponse": "88",
+    "categorie": "Culture"
+  },
+  {
+    "id": 70,
+    "question": "Qui a peint 'La Nuit étoilée' ?",
+    "Reponse": ["Vincent van Gogh","Claude Monet",  "Pablo Picasso", "Paul Cézanne"],
+    "reponse": "Vincent van Gogh",
+    "categorie": "Culture"
+  },
+  {
+    "id": 71,
+    "question": "Quelle est la langue officielle du Brésil ?",
+    "Reponse": ["Le portugais","L'espagnol",  "Le français", "L'anglais"],
+    "reponse": "Le portugais",
+    "categorie": "Culture"
+  },
+  {
+    "id": 72,
+    "question": "Combien de symphonies Beethoven a-t-il composées ?",
+    "Reponse": ["7", "9", "10", "12"],
+    "reponse": "9",
+    "categorie": "Culture"
+  },
+  {
+    "id": 73,
+    "question": "Qui a écrit 'Le Petit Prince' ?",
+    "Reponse": ["Jules Verne",  "Alexandre Dumas","Antoine de Saint-Exupéry", "Victor Hugo"],
+    "reponse": "Antoine de Saint-Exupéry",
+    "categorie": "Culture"
+  },
+  {
+    "id": 74,
+    "question": "Dans quelle ville se trouve le musée du Louvre ?",
+    "Reponse": ["Londres", "Paris", "Rome", "Madrid"],
+    "reponse": "Paris",
+    "categorie": "Culture"
+  },
+  {
+    "id": 75,
+    "question": "Quel pays a remporté le plus de Coupes du monde de football ?",
+    "Reponse": ["Le Brésil","L'Allemagne", "L'Italie", "L'Argentine"],
+    "reponse": "Le Brésil",
+    "categorie": "Culture"
+  },
+  {
+    "id": 76,
+    "question": "Qui a composé 'La Flûte enchantée' ?",
+    "Reponse": ["Beethoven", "Bach", "Haydn", "Mozart"],
+    "reponse": "Mozart",
+    "categorie": "Culture"
+  },
+  {
+    "id": 77,
+    "question": "Combien de joueurs y a-t-il dans une équipe de basket ?",
+    "Reponse": ["6", "5", "7", "4"],
+    "reponse": "5",
+    "categorie": "Culture"
+  },
+  {
+    "id": 78,
+    "question": "Qui a écrit 'L'Étranger' ?",
+    "Reponse": ["Jean-Paul Sartre", "André Gide", "Albert Memmi", "Albert Camus"],
+    "reponse": "Albert Camus",
+    "categorie": "Culture"
+  },
+  {
+    "id": 79,
+    "question": "Dans quelle ville se trouve la Sagrada Familia ?",
+    "Reponse": ["Madrid", "Barcelone", "Séville", "Valence"],
+    "reponse": "Barcelone",
+    "categorie": "Culture"
+  },
+  {
+    "id": 80,
+    "question": "Combien de secondes y a-t-il dans une heure ?",
+    "Reponse": ["3000", "3500", "4000", "3600"],
+    "reponse": "3600",
+    "categorie": "Culture"
+  },
+  {
+    "id": 81,
+    "question": "Comment dit-on 'bonjour' en anglais ?",
+    "Reponse": ["Hello","Goodbye",  "Thank you", "Please"],
+    "reponse": "Hello",
+    "categorie": "Langues"
+  },
+  {
+    "id": 82,
+    "question": "Comment dit-on 'merci' en espagnol ?",
+    "Reponse": ["Por favor", "Gracias", "Buenos días", "Adiós"],
+    "reponse": "Gracias",
+    "categorie": "Langues"
+  },
+  {
+    "id": 83,
+    "question": "Quelle est la capitale de la langue arabe ?",
+    "Reponse": ["Damas", "Le Caire (dialecte égyptien)", "Bagdad", "Riad"],
+    "reponse": "Le Caire (dialecte égyptien)",
+    "categorie": "Langues"
+  },
+  {
+    "id": 84,
+    "question": "Comment dit-on 'au revoir' en italien ?",
+    "Reponse": ["Arrivederci","Buongiorno",  "Grazie", "Prego"],
+    "reponse": "Arrivederci",
+    "categorie": "Langues"
+  },
+  {
+    "id": 85,
+    "question": "Quelle langue parle-t-on au Brésil ?",
+    "Reponse": ["L'espagnol", "Le français", "Le portugais", "L'anglais"],
+    "reponse": "Le portugais",
+    "categorie": "Langues"
+  },
+  {
+    "id": 86,
+    "question": "Comment dit-on 'chat' en anglais ?",
+    "Reponse": [ "Cat","Dog", "Bird", "Fish"],
+    "reponse": "Cat",
+    "categorie": "Langues"
+  },
+  {
+    "id": 87,
+    "question": "Quelle est la langue la plus parlée au monde ?",
+    "Reponse": ["L'anglais", "Le chinois mandarin", "L'espagnol", "L'hindi"],
+    "reponse": "Le chinois mandarin",
+    "categorie": "Langues"
+  },
+  {
+    "id": 88,
+    "question": "Comment dit-on 'un' en espagnol ?",
+    "Reponse": ["Dos", "Tres", "Cuatro", "Uno"],
+    "reponse": "Uno",
+    "categorie": "Langues"
+  },
+  {
+    "id": 89,
+    "question": "Quelle langue parle-t-on en Autriche ?",
+    "Reponse": ["L'autrichien", "Le français", "L'italien", "L'allemand"],
+    "reponse": "L'allemand",
+    "categorie": "Langues"
+  },
+  {
+    "id": 90,
+    "question": "Comment dit-on 'eau' en anglais ?",
+    "Reponse": ["Wine", "Water", "Milk", "Juice"],
+    "reponse": "Water",
+    "categorie": "Langues"
+  },
+  {
+    "id": 91,
+    "question": "Quelle langue utilise l'alphabet cyrillique ?",
+    "Reponse": ["Le russe","Le polonais",  "Le roumain", "Le hongrois"],
+    "reponse": "Le russe",
+    "categorie": "Langues"
+  },
+  {
+    "id": 92,
+    "question": "Comment dit-on 'oui' en allemand ?",
+    "Reponse": ["Nein", "Ja", "Danke", "Bitte"],
+    "reponse": "Ja",
+    "categorie": "Langues"
+  },
+  {
+    "id": 93,
+    "question": "Combien de lettres a l'alphabet français ?",
+    "Reponse": ["24", "28","26", "30"],
+    "reponse": "26",
+    "categorie": "Langues"
+  },
+  {
+    "id": 94,
+    "question": "Comment dit-on 'maison' en anglais ?",
+    "Reponse": ["Home", "House", "Building", "Room"],
+    "reponse": "House",
+    "categorie": "Langues"
+  },
+  {
+    "id": 95,
+    "question": "Quelle langue parle-t-on en Belgique (3 langues officielles) ?",
+    "Reponse": ["Français, anglais, allemand", "Français, néerlandais, allemand", "Néerlandais, anglais, italien", "Français, espagnol, italien"],
+    "reponse": "Français, néerlandais, allemand",
+    "categorie": "Langues"
+  },
+  { 
+    "id": 96, 
+    "question": "Comment dit-on 'livre' en anglais ?",  
+    "Reponse": ["Paper", "Page", "Read", "Book"],"reponse": "Book",  
+    "categorie": "Langues" 
+  },
+  { 
+    "id": 97, 
+    "question": "Quelle est la langue officielle du Maroc avec l'arabe ?", 
+    "Reponse": ["Le français", "L'espagnol", "L'anglais", "berbère"], "reponse":"berbère", 
+    "categorie": "Langues" 
+  },
+  { 
+    "id": 98, 
+    "question": "Comment dit-on 'rouge' en anglais ?",     
+    "Reponse": ["Blue", "Green","Red",  "Yellow"], "reponse": "Red",  
+    "categorie": "Langues" 
+  },
+  { 
+    "id": 99, 
+    "question": "Combien de voyelles y a-t-il en français ?", 
+    "Reponse": ["5","6 ", "7", "8"],"reponse": "6 ", 
+    "categorie": "Langues" 
+  },
+  {
+    "id": 100, 
+    "question": "Comment dit-on 'chien' en espagnol ?", 
+    "Reponse": ["Perro", "Gato", "Pájaro", "Pez"],"reponse": "Perro", 
+    "categorie": "Langues" 
+  }
+]
