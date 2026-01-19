@@ -1,0 +1,702 @@
+[
+  {
+    "id": 1,
+    "question": "Quelle est la capitale de l'Australie ?",
+    "Reponse": ["Sydney", "Melbourne", "Canberra", "Perth"],
+    "reponse": "Canberra",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 2,
+    "question": "Quel est le plus long fleuve du monde ?",
+    "Reponse": ["L'Amazone", "Le Nil", "Le Congo", "Le Yangtsé"],
+    "reponse": "Le Nil",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 3,
+    "question": "Dans quel pays se trouve le Mont Fuji ?",
+    "Reponse": ["Chine", "Thaïlande", "Japon", "Vietnam"],
+    "reponse": "Japon",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 4,
+    "question": "Quelle est la capitale du Canada ?",
+    "Reponse": ["Ottawa", "Toronto", "Montréal", "Vancouver"],
+    "reponse": "Ottawa",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 5,
+    "question": "Quel océan sépare l'Amérique de l'Asie ?",
+    "Reponse": ["L'océan Atlantique", "L'océan Pacifique", "L'océan Indien", "L'océan Arctique"],
+    "reponse": "L'océan Pacifique",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 6,
+    "question": "Dans quel pays se trouve Prague ?",
+    "Reponse": ["Pologne", "République tchèque", "Hongrie", "Slovaquie"],
+    "reponse": "République tchèque",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 7,
+    "question": "Quelle est la monnaie du Royaume-Uni ?",
+    "Reponse": ["La livre sterling", "L'euro", "Le dollar", "Le franc"],
+    "reponse": "La livre sterling",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 8,
+    "question": "Quel pays a pour capitale Buenos Aires ?",
+    "Reponse": ["Brésil", "Chili", "Argentine", "Uruguay"],
+    "reponse": "Argentine",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 9,
+    "question": "Quelle mer borde Israël ?",
+    "Reponse": ["La mer Rouge", "La mer Méditerranée", "La mer Noire", "La mer Morte"],
+    "reponse": "La mer Méditerranée",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 10,
+    "question": "Dans quel pays se trouve la Transylvanie ?",
+    "Reponse": ["Bulgarie", "Hongrie", "Roumanie", "Serbie"],
+    "reponse": "Roumanie",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 11,
+    "question": "Quelle est la capitale de la Norvège ?",
+    "Reponse": ["Oslo", "Stockholm", "Helsinki", "Copenhague"],
+    "reponse": "Oslo",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 12,
+    "question": "Quel pays partage la plus longue frontière avec la France ?",
+    "Reponse": ["L'Allemagne", "L'Italie", "L'Espagne", "La Belgique"],
+    "reponse": "L'Espagne",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 13,
+    "question": "Dans quelle ville se trouve la Statue de la Liberté ?",
+    "Reponse": ["Washington", "New York", "Boston", "Chicago"],
+    "reponse": "New York",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 14,
+    "question": "Quel est le plus petit pays du monde ?",
+    "Reponse": ["Monaco", "Le Vatican", "Saint-Marin", "Malte"],
+    "reponse": "Le Vatican",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 15,
+    "question": "Quelle ville marocaine est connue pour ses tanneries ?",
+    "Reponse": ["Marrakech", "Casablanca", "Fès", "Tanger"],
+    "reponse": "Fès",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 16,
+    "question": "Quel pays a pour capitale Lisbonne ?",
+    "Reponse": ["Espagne", "Portugal", "Italie", "Grèce"],
+    "reponse": "Portugal",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 17,
+    "question": "Dans quel pays se trouve le Machu Picchu ?",
+    "Reponse": ["Pérou", "Bolivie", "Équateur", "Chili"],
+    "reponse": "Pérou",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 18,
+    "question": "Quelle est la capitale de la Turquie ?",
+    "Reponse": ["Ankara", "Istanbul", "Izmir", "Antalya"],
+    "reponse": "Ankara",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 19,
+    "question": "Quel fleuve traverse Paris ?",
+    "Reponse": ["La Loire", "Le Rhône", "La Seine", "La Garonne"],
+    "reponse": "La Seine",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 20,
+    "question": "Dans quel pays se trouve la Grande Barrière de Corail ?",
+    "Reponse": ["Indonésie", "Australie", "Philippines", "Fidji"],
+    "reponse": "Australie",
+    "categorie": "Géographie"
+  },
+  {
+    "id": 21,
+    "question": "En quelle année a débuté la Seconde Guerre mondiale ?",
+    "Reponse": ["1938", "1939", "1940", "1941"],
+    "reponse": "1939",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 22,
+    "question": "Qui a peint la Chapelle Sixtine ?",
+    "Reponse": ["Michel-Ange", "Léonard de Vinci", "Raphaël", "Botticelli"],
+    "reponse": "Michel-Ange",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 23,
+    "question": "En quelle année l'homme a-t-il marché sur la Lune ?",
+    "Reponse": ["1968", "1969", "1970", "1971"],
+    "reponse": "1969",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 24,
+    "question": "Qui était le premier président des États-Unis ?",
+    "Reponse": ["George Washington", "Thomas Jefferson", "Abraham Lincoln", "John Adams"],
+    "reponse": "George Washington",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 25,
+    "question": "Quelle guerre a opposé le Nord et le Sud des États-Unis ?",
+    "Reponse": ["La Guerre d'Indépendance", "La Guerre de Sécession", "La Guerre du Vietnam", "La Guerre de Corée"],
+    "reponse": "La Guerre de Sécession",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 26,
+    "question": "En quelle année le mur de Berlin est-il tombé ?",
+    "Reponse": ["1987", "1988", "1989", "1990"],
+    "reponse": "1989",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 27,
+    "question": "Qui a découvert l'Amérique en 1492 ?",
+    "Reponse": ["Vasco de Gama", "Christophe Colomb", "Amerigo Vespucci", "Marco Polo"],
+    "reponse": "Christophe Colomb",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 28,
+    "question": "Quelle civilisation a construit les pyramides de Gizeh ?",
+    "Reponse": ["Les Mayas", "Les Aztèques", "Les Égyptiens", "Les Incas"],
+    "reponse": "Les Égyptiens",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 29,
+    "question": "Qui était Jules César ?",
+    "Reponse": ["Un roi égyptien", "Un empereur romain", "Un philosophe grec", "Un pharaon"],
+    "reponse": "Un empereur romain",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 30,
+    "question": "En quelle année a eu lieu la Révolution française ?",
+    "Reponse": ["1789", "1776", "1799", "1804"],
+    "reponse": "1789",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 31,
+    "question": "Qui a inventé l'imprimerie ?",
+    "Reponse": ["Léonard de Vinci", "Gutenberg", "Newton", "Galilée"],
+    "reponse": "Gutenberg",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 32,
+    "question": "Quel empereur a unifié la Chine ?",
+    "Reponse": ["Mao Zedong", "Confucius", "Qin Shi Huang", "Sun Tzu"],
+    "reponse": "Qin Shi Huang",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 33,
+    "question": "En quelle année le Titanic a-t-il coulé ?",
+    "Reponse": ["1910", "1911", "1912", "1914"],
+    "reponse": "1912",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 34,
+    "question": "Qui a peint la Joconde ?",
+    "Reponse": ["Michel-Ange", "Raphaël", "Léonard de Vinci", "Donatello"],
+    "reponse": "Léonard de Vinci",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 35,
+    "question": "Quelle était la capitale de l'Empire byzantin ?",
+    "Reponse": ["Constantinople", "Rome", "Athènes", "Alexandrie"],
+    "reponse": "Constantinople",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 36,
+    "question": "Qui était Cléopâtre ?",
+    "Reponse": ["Une reine d'Égypte", "Une impératrice romaine", "Une déesse grecque", "Une princesse perse"],
+    "reponse": "Une reine d'Égypte",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 37,
+    "question": "En quelle année l'Inde a-t-elle obtenu son indépendance ?",
+    "Reponse": ["1945", "1947", "1950", "1952"],
+    "reponse": "1947",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 38,
+    "question": "Qui a écrit 'L'Odyssée' ?",
+    "Reponse": ["Aristote", "Platon", "Homère", "Hérodote"],
+    "reponse": "Homère",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 39,
+    "question": "Quelle bataille a marqué la défaite de Napoléon ?",
+    "Reponse": ["Austerlitz", "Waterloo", "Iéna", "Wagram"],
+    "reponse": "Waterloo",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 40,
+    "question": "En quelle année le Maroc a-t-il obtenu son indépendance ?",
+    "Reponse": ["1952", "1954", "1956", "1960"],
+    "reponse": "1956",
+    "categorie": "Histoire"
+  },
+  {
+    "id": 41,
+    "question": "Quelle est la formule chimique de l'eau ?",
+    "Reponse": ["H2O", "CO2", "O2", "NaCl"],
+    "reponse": "H2O",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 42,
+    "question": "Combien de planètes y a-t-il dans le système solaire ?",
+    "Reponse": ["7", "8", "9", "6"],
+    "reponse": "8",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 43,
+    "question": "Quelle planète est la plus proche du Soleil ?",
+    "Reponse": ["Vénus", "Mercure", "Mars", "Terre"],
+    "reponse": "Mercure",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 44,
+    "question": "Quel organe pompe le sang dans le corps ?",
+    "Reponse": ["Le cerveau", "Le cœur", "Le foie", "Les poumons"],
+    "reponse": "Le cœur",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 45,
+    "question": "Quelle est la vitesse de la lumière ?",
+    "Reponse": ["150 000 km/s", "300 000 km/s", "500 000 km/s", "200 000 km/s"],
+    "reponse": "300 000 km/s",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 46,
+    "question": "Combien d'os a le corps humain adulte ?",
+    "Reponse": ["198", "206", "214", "220"],
+    "reponse": "206",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 47,
+    "question": "Quel gaz les plantes absorbent-elles ?",
+    "Reponse": ["L'oxygène", "L'azote", "Le dioxyde de carbone (CO2)", "L'hydrogène"],
+    "reponse": "Le dioxyde de carbone (CO2)",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 48,
+    "question": "Qui a découvert la pénicilline ?",
+    "Reponse": ["Louis Pasteur", "Alexander Fleming", "Marie Curie", "Albert Einstein"],
+    "reponse": "Alexander Fleming",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 49,
+    "question": "Quelle est la plus grande planète du système solaire ?",
+    "Reponse": ["Saturne", "Jupiter", "Neptune", "Uranus"],
+    "reponse": "Jupiter",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 50,
+    "question": "Combien de chromosomes a l'être humain ?",
+    "Reponse": ["44", "46", "48", "50"],
+    "reponse": "46",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 51,
+    "question": "Quel scientifique a développé la théorie de l'évolution ?",
+    "Reponse": ["Charles Darwin", "Isaac Newton", "Albert Einstein", "Galilée"],
+    "reponse": "Charles Darwin",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 52,
+    "question": "À quelle température l'eau bout-elle ?",
+    "Reponse": ["90°C", "100°C", "110°C", "80°C"],
+    "reponse": "100°C",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 53,
+    "question": "Quel est le symbole chimique de l'or ?",
+    "Reponse": ["Ag", "Au", "Fe", "Cu"],
+    "reponse": "Au",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 54,
+    "question": "Combien de dents a un adulte ?",
+    "Reponse": ["28", "30", "32", "34"],
+    "reponse": "32",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 55,
+    "question": "Quel est l'animal le plus rapide sur terre ?",
+    "Reponse": ["Le lion", "Le guépard", "L'antilope", "Le cheval"],
+    "reponse": "Le guépard",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 56,
+    "question": "Quelle planète est surnommée la planète rouge ?",
+    "Reponse": ["Vénus", "Mars", "Jupiter", "Saturne"],
+    "reponse": "Mars",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 57,
+    "question": "Qui a inventé l'ampoule électrique ?",
+    "Reponse": ["Nikola Tesla", "Thomas Edison", "Benjamin Franklin", "Alexander Bell"],
+    "reponse": "Thomas Edison",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 58,
+    "question": "Combien de pattes a une araignée ?",
+    "Reponse": ["6", "8", "10", "4"],
+    "reponse": "8",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 59,
+    "question": "Quel est le plus grand mammifère du monde ?",
+    "Reponse": ["L'éléphant", "La baleine bleue", "La girafe", "L'hippopotame"],
+    "reponse": "La baleine bleue",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 60,
+    "question": "Quelle est la température normale du corps humain ?",
+    "Reponse": ["36°C", "37°C", "38°C", "35°C"],
+    "reponse": "37°C",
+    "categorie": "Sciences"
+  },
+  {
+    "id": 61,
+    "question": "Qui a écrit 'Les Misérables' ?",
+    "Reponse": ["Émile Zola", "Gustave Flaubert", "Victor Hugo", "Honoré de Balzac"],
+    "reponse": "Victor Hugo",
+    "categorie": "Culture"
+  },
+  {
+    "id": 62,
+    "question": "Combien de joueurs y a-t-il dans une équipe de football ?",
+    "Reponse": ["10", "11", "12", "9"],
+    "reponse": "11",
+    "categorie": "Culture"
+  },
+  {
+    "id": 63,
+    "question": "Quel est l'instrument de musique de Chopin ?",
+    "Reponse": ["Le violon", "Le piano", "La flûte", "La guitare"],
+    "reponse": "Le piano",
+    "categorie": "Culture"
+  },
+  {
+    "id": 64,
+    "question": "Qui a composé 'Les Quatre Saisons' ?",
+    "Reponse": ["Mozart", "Bach", "Vivaldi", "Beethoven"],
+    "reponse": "Vivaldi",
+    "categorie": "Culture"
+  },
+  {
+    "id": 65,
+    "question": "Dans quel pays se trouve le Taj Mahal ?",
+    "Reponse": ["Pakistan", "Inde", "Bangladesh", "Sri Lanka"],
+    "reponse": "Inde",
+    "categorie": "Culture"
+  },
+  {
+    "id": 66,
+    "question": "Combien de cordes a une guitare classique ?",
+    "Reponse": ["5", "6", "7", "4"],
+    "reponse": "6",
+    "categorie": "Culture"
+  },
+  {
+    "id": 67,
+    "question": "Qui a écrit 'Roméo et Juliette' ?",
+    "Reponse": ["Shakespeare", "Molière", "Racine", "Corneille"],
+    "reponse": "Shakespeare",
+    "categorie": "Culture"
+  },
+  {
+    "id": 68,
+    "question": "Quel est le sport pratiqué à Roland-Garros ?",
+    "Reponse": ["Le football", "Le tennis", "Le rugby", "Le golf"],
+    "reponse": "Le tennis",
+    "categorie": "Culture"
+  },
+  {
+    "id": 69,
+    "question": "Combien de touches a un piano ?",
+    "Reponse": ["76", "88", "92", "100"],
+    "reponse": "88",
+    "categorie": "Culture"
+  },
+  {
+    "id": 70,
+    "question": "Qui a peint 'La Nuit étoilée' ?",
+    "Reponse": ["Claude Monet", "Vincent van Gogh", "Pablo Picasso", "Paul Cézanne"],
+    "reponse": "Vincent van Gogh",
+    "categorie": "Culture"
+  },
+  {
+    "id": 71,
+    "question": "Quelle est la langue officielle du Brésil ?",
+    "Reponse": ["L'espagnol", "Le portugais", "Le français", "L'italien"],
+    "reponse": "Le portugais",
+    "categorie": "Culture"
+  },
+  {
+    "id": 72,
+    "question": "Combien de symphonies Beethoven a-t-il composées ?",
+    "Reponse": ["7", "9", "10", "12"],
+    "reponse": "9",
+    "categorie": "Culture"
+  },
+  {
+    "id": 73,
+    "question": "Qui a écrit 'Le Petit Prince' ?",
+    "Reponse": ["Antoine de Saint-Exupéry", "Jules Verne", "Alexandre Dumas", "Victor Hugo"],
+    "reponse": "Antoine de Saint-Exupéry",
+    "categorie": "Culture"
+  },
+  {
+    "id": 74,
+    "question": "Dans quelle ville se trouve le musée du Louvre ?",
+    "Reponse": ["Londres", "Paris", "Rome", "Madrid"],
+    "reponse": "Paris",
+    "categorie": "Culture"
+  },
+  {
+    "id": 75,
+    "question": "Quel pays a remporté le plus de Coupes du monde de football ?",
+    "Reponse": ["L'Allemagne", "L'Italie", "Le Brésil", "L'Argentine"],
+    "reponse": "Le Brésil",
+    "categorie": "Culture"
+  },
+  {
+    "id": 76,
+    "question": "Qui a composé 'La Flûte enchantée' ?",
+    "Reponse": ["Beethoven", "Mozart", "Bach", "Haydn"],
+    "reponse": "Mozart",
+    "categorie": "Culture"
+  },
+  {
+    "id": 77,
+    "question": "Combien de joueurs y a-t-il dans une équipe de basket ?",
+    "Reponse": ["6", "7", "5", "4"],
+    "reponse": "5",
+    "categorie": "Culture"
+  },
+  {
+    "id": 78,
+    "question": "Qui a écrit 'L'Étranger' ?",
+    "Reponse": ["Albert Camus", "Jean-Paul Sartre", "André Gide", "André Malraux"],
+    "reponse": "Albert Camus",
+    "categorie": "Culture"
+  },
+  {
+    "id": 79,
+    "question": "Dans quelle ville se trouve la Sagrada Familia ?",
+    "Reponse": ["Madrid", "Barcelone", "Séville", "Valence"],
+    "reponse": "Barcelone",
+    "categorie": "Culture"
+  },
+  {
+    "id": 80,
+    "question": "Combien de minutes y a-t-il dans deux heures ?",
+    "Reponse": ["100", "120", "110", "130"],
+    "reponse": "120",
+    "categorie": "Culture"
+  },
+  {
+    "id": 81,
+    "question": "Combien de sets faut-il gagner pour remporter un match de tennis masculin en Grand Chelem ?",
+    "Reponse": ["2", "3", "4", "5"],
+    "reponse": "3",
+    "categorie": "Sport"
+  },
+  {
+    "id": 82,
+    "question": "Quel pays a organisé les Jeux Olympiques de 2016 ?",
+    "Reponse": ["La Chine", "Le Royaume-Uni", "Le Brésil", "Le Japon"],
+    "reponse": "Le Brésil",
+    "categorie": "Sport"
+  },
+  {
+    "id": 83,
+    "question": "Combien de joueurs y a-t-il dans une équipe de volleyball ?",
+    "Reponse": ["5", "6", "7", "8"],
+    "reponse": "6",
+    "categorie": "Sport"
+  },
+  {
+    "id": 84,
+    "question": "Quelle est la distance d'un marathon ?",
+    "Reponse": ["40 km", "42,195 km", "45 km", "50 km"],
+    "reponse": "42,195 km",
+    "categorie": "Sport"
+  },
+  {
+    "id": 85,
+    "question": "Quel joueur de football est surnommé 'CR7' ?",
+    "Reponse": ["Lionel Messi", "Cristiano Ronaldo", "Neymar", "Mbappé"],
+    "reponse": "Cristiano Ronaldo",
+    "categorie": "Sport"
+  },
+  {
+    "id": 86,
+    "question": "Combien de joueurs y a-t-il dans une équipe de handball ?",
+    "Reponse": ["6", "7", "8", "9"],
+    "reponse": "7",
+    "categorie": "Sport"
+  },
+  {
+    "id": 87,
+    "question": "Dans quel sport utilise-t-on une raquette et un volant ?",
+    "Reponse": ["Le tennis", "Le squash", "Le badminton", "Le ping-pong"],
+    "reponse": "Le badminton",
+    "categorie": "Sport"
+  },
+  {
+    "id": 88,
+    "question": "Combien de trous y a-t-il sur un parcours de golf standard ?",
+    "Reponse": ["12", "18", "16", "20"],
+    "reponse": "18",
+    "categorie": "Sport"
+  },
+  {
+    "id": 89,
+    "question": "Quel pays a remporté la Coupe du monde de football en 2018 ?",
+    "Reponse": ["La Croatie", "La France", "Le Brésil", "L'Allemagne"],
+    "reponse": "La France",
+    "categorie": "Sport"
+  },
+  {
+    "id": 90,
+    "question": "Dans quel sport dit-on 'strike' et 'spare' ?",
+    "Reponse": ["Le baseball", "Le bowling", "Le tennis", "Le golf"],
+    "reponse": "Le bowling",
+    "categorie": "Sport"
+  },
+  {
+    "id": 91,
+    "question": "Combien de périodes y a-t-il dans un match de hockey sur glace ?",
+    "Reponse": ["2", "3", "4", "5"],
+    "reponse": "3",
+    "categorie": "Sport"
+  },
+  {
+    "id": 92,
+    "question": "Quelle couleur de ceinture est la plus haute au judo ?",
+    "Reponse": ["Rouge", "Noire", "Blanche", "Marron"],
+    "reponse": "Noire",
+    "categorie": "Sport"
+  },
+  {
+    "id": 93,
+    "question": "Combien de points vaut un panier à 3 points au basket ?",
+    "Reponse": ["2", "3", "4", "5"],
+    "reponse": "3",
+    "categorie": "Sport"
+  },
+  {
+    "id": 94,
+    "question": "Quel sport se pratique sur un tatami ?",
+    "Reponse": ["La boxe", "Le judo", "Le karaté", "Le taekwondo"],
+    "reponse": "Le judo",
+    "categorie": "Sport"
+  },
+  {
+    "id": 95,
+    "question": "Dans quel sport utilise-t-on un ballon ovale ?",
+    "Reponse": ["Le football", "Le rugby", "Le handball", "Le volleyball"],
+    "reponse": "Le rugby",
+    "categorie": "Sport"
+  },
+  {
+    "id": 96,
+    "question": "Combien de rounds y a-t-il dans un combat de boxe professionnel ?",
+    "Reponse": ["10", "12", "15", "8"],
+    "reponse": "12",
+    "categorie": "Sport"
+  },
+  {
+    "id": 97,
+    "question": "Quel Grand Chelem de tennis se joue sur terre battue ?",
+    "Reponse": ["Wimbledon", "US Open", "Roland-Garros", "Open d'Australie"],
+    "reponse": "Roland-Garros",
+    "categorie": "Sport"
+  },
+  {
+    "id": 98,
+    "question": "Combien de points vaut un essai au rugby à XV ?",
+    "Reponse": ["3", "5", "7", "4"],
+    "reponse": "5",
+    "categorie": "Sport"
+  },
+  {
+    "id": 99,
+    "question": "Dans quel sport pratique-t-on le 'slam dunk' ?",
+    "Reponse": ["Le volleyball", "Le basketball", "Le handball", "Le tennis"],
+    "reponse": "Le basketball",
+    "categorie": "Sport"
+  },
+  {
+    "id": 100,
+    "question": "Quel pays a remporté le plus de médailles d'or olympiques en athlétisme ?",
+    "Reponse": ["La Russie", "La Chine", "Les États-Unis", "Le Royaume-Uni"],
+    "reponse": "Les États-Unis",
+    "categorie": "Sport"
+  }
+]
