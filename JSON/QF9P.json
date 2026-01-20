@@ -230,7 +230,6 @@
     {
       "id": 39,
       "question": "Qui était Jules César ?",
-      "reponse": "Un empereur romain",
       "Reponse": ["Un philosophe grec","Un empereur romain", "Un roi égyptien", "Un général carthaginois"],"reponse": "Un empereur romain",
       "categorie": "Histoire"
     },
